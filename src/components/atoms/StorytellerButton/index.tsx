@@ -1,11 +1,11 @@
-import { ButtonProps } from "./props";
+import { StorytellerButtonProps } from "./props";
 import { Button } from "@chakra-ui/react";
 
-const StorytellerButton: React.FC<ButtonProps> = (buttonProps) => {
-    const { props, children } = buttonProps;
+const StorytellerButton: React.FC<StorytellerButtonProps> = (props) => {
+    const { children } = props;
 
     // Set default values if no color set
-    let { primaryColor, secondaryColor } = buttonProps;
+    let { primaryColor, secondaryColor } = props;
     if (!primaryColor) {
         primaryColor = "#97CDFF"
     }

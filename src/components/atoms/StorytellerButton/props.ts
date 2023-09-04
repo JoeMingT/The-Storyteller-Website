@@ -1,6 +1,7 @@
-export interface ButtonProps  {
+import { ButtonProps } from "@chakra-ui/react";
+
+export interface StorytellerButtonProps extends ButtonProps {
   primaryColor?: string;
   secondaryColor?: string;
-  props?: any,
   children?: React.ReactElement | string
 }
