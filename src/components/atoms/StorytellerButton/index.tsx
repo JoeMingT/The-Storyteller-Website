@@ -1,26 +1,21 @@
 import { StorytellerButtonProps } from "./props";
 import { Button } from "@chakra-ui/react";
 
-const StorytellerButton: React.FC<StorytellerButtonProps> = (props) => {
-    const { children } = props;
+function renderColor(color: string | undefined, type: string): string {
+    return color ? color : type === 'primary' ? "#97CDFF" : "000000"
+}
 
-    // Set default values if no color set
-    let { primaryColor, secondaryColor } = props;
-    if (!primaryColor) {
-        primaryColor = "#97CDFF"
-    }
-    if (!secondaryColor) {
-        secondaryColor = "#000000"
-    }
+const StorytellerButton: React.FC<StorytellerButtonProps> = (props) => {
+    const { children, primaryColor, secondaryColor } = props;
 
     return (
         <Button
-            backgroundColor={`${primaryColor}`}
-            color={`${secondaryColor}`}
+            backgroundColor={renderColor(primaryColor, 'primary')}
+            color={renderColor(secondaryColor, 'secondary')}
             borderRadius={`3.125rem`}
             _hover={{
-                backgroundColor: `${secondaryColor}`,
-                color: `${primaryColor}`
+                backgroundColor: renderColor(secondaryColor, 'secondary'),
+                color: renderColor(primaryColor, 'primary')
             }}
             {...props}
         >
