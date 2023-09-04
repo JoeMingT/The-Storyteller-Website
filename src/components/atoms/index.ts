@@ -1,5 +1,5 @@
-import Button from "./Button";
+import StorytellerButton from "./StorytellerButton";
 
 export {
-  Button
+  StorytellerButton
 }
