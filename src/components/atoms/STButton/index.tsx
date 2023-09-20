@@ -1,11 +1,11 @@
-import { StorytellerButtonProps } from "./props";
+import { STButtonProps } from "./props";
 import { Button } from "@chakra-ui/react";
 
 function renderColor(color: string | undefined, type: string): string {
     return color ? color : type === 'primary' ? "#97CDFF" : "000000"
 }
 
-const StorytellerButton: React.FC<StorytellerButtonProps> = (props) => {
+const STButton: React.FC<STButtonProps> = (props) => {
     const { children, primaryColor, secondaryColor } = props;
 
     return (
@@ -24,4 +24,4 @@ const StorytellerButton: React.FC<StorytellerButtonProps> = (props) => {
     );
 };
 
-export default StorytellerButton;
+export default STButton;

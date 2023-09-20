@@ -1,7 +1,7 @@
-import StorytellerButton from "./StorytellerButton";
-import StorytellerText from "./StorytellerText";
+import STButton from "./STButton";
+import STText from "./STText";
 
 export {
-  StorytellerButton,
-  StorytellerText
+  STButton,
+  STText
 }

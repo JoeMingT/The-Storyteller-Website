@@ -14,8 +14,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@TheStoryteller/*": ["./src/*"],
-      "@TheStorytellerComponents": ["./src/components/*"],
+      "@Storyteller/*": ["./src/*"],
+      "@StorytellerComponents": ["./src/components/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
