@@ -1,7 +1,8 @@
 import { groq } from "next-sanity";
 import { client } from "../lib/client";
+import { ProjectType } from "@Storyteller/types";
 
-export async function getProjects() {
+export async function getProjects(): Promise<ProjectType[]> {
   // GROQ Query time
   // * Grabs everything in dataset
   // [] Filter or Query (Conditions)
