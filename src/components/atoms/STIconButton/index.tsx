@@ -8,6 +8,7 @@ const STIconButton: React.FC<STIconButtonProps> = (props) => {
         <IconButton
             height={"auto"}
             width="auto"
+            background="transparent"
             {...iconButtonProps}
             icon={
                 <Image
