@@ -2,13 +2,13 @@ import { IconButton, Image } from "@chakra-ui/react";
 import { STIconButtonProps } from "./props";
 
 const STIconButton: React.FC<STIconButtonProps> = (props) => {
-    const { iconHeight, iconWidth, iconSrc, iconAlt } = props;
+    const { iconHeight, iconWidth, iconSrc, iconAlt, ...iconButtonProps } = props;
 
     return (
         <IconButton
             height={"auto"}
             width="auto"
-            {...props}
+            {...iconButtonProps}
             icon={
                 <Image
                     w={`${iconWidth ? iconWidth : "50px"}`}

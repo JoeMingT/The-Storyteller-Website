@@ -6,7 +6,7 @@ function renderColor(color: string | undefined, type: string): string {
 }
 
 const STButton: React.FC<STButtonProps> = (props) => {
-    const { children, primaryColor, secondaryColor } = props;
+    const { children, primaryColor, secondaryColor, ...buttonProps } = props;
 
     return (
         <Button
@@ -17,7 +17,7 @@ const STButton: React.FC<STButtonProps> = (props) => {
                 backgroundColor: renderColor(secondaryColor, 'secondary'),
                 color: renderColor(primaryColor, 'primary')
             }}
-            {...props}
+            {...buttonProps}
         >
             {children}
         </Button>
