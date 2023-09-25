@@ -1,9 +1,13 @@
-import HeaderWrapper from "./HeaderWrapper";
-import HeaderMobileMenu from "./HeaderMobileMenu";
+import FooterIcons from "./FooterIcons";
+import FooterText from "./FooterText";
 import HeaderDesktopMenu from "./HeaderDesktopMenu";
+import HeaderMobileMenu from "./HeaderMobileMenu";
+import HeaderWrapper from "./HeaderWrapper";
 
 export {
-  HeaderWrapper,
-  HeaderMobileMenu,
-  HeaderDesktopMenu
-}
+    FooterIcons,
+    FooterText,
+    HeaderDesktopMenu,
+    HeaderMobileMenu,
+    HeaderWrapper,
+};
