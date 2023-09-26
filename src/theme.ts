@@ -5,11 +5,6 @@ const theme = extendTheme({
         heading: "Roboto Slab, Times New Roman, serif",
         body: "Nunito, Roboto, sans-serif",
     },
-    colors: {
-        primary: "#514EFF",
-        white: "#FFFFFF",
-    },
-    backgroundColor: {},
     fontSizes: {
         xs: "0.625rem", // 10px
         sm: "0.75rem", // 12px
@@ -30,35 +25,6 @@ const theme = extendTheme({
         "container.dashboard": "1350px",
         "container.form": "550px",
     },
-    components: {
-        stepperBox: {
-            baseStyle: {
-                py: "20px",
-                borderRadius: "10px",
-                mb: "28px",
-                w: "500px",
-                justifyContent: "space-between",
-                alignItems: "center",
-                px: "25px",
-            },
-            variants: {
-                normal: {
-                    border: "1px solid #FFFFFF",
-                    color: "#FFFFFF",
-                },
-                success: {
-                    border: "1px solid #4EFF9F",
-                    color: "#4EFF9F",
-                },
-                locked: {
-                    border: "1px solid #407DC1",
-                    color: "#407DC1",
-                },
-            },
-            defaultProps: {
-                variant: "normal",
-            },
-        },
-    },
+    components: {},
 });
 export default theme;

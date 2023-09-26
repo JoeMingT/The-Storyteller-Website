@@ -1,4 +1,5 @@
 import "@Storyteller/styles/globals.css";
+import theme from "@Storyteller/theme";
 import { Footer, Header } from "@StorytellerComponents/organisms";
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
@@ -23,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Head>
-            <ChakraProvider>
+            <ChakraProvider theme={theme}>
                 <Header />
                 <Component {...pageProps} />
                 <Footer />
