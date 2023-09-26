@@ -6,6 +6,7 @@ import STButton from "./STButton";
 import STHeading from "./STHeading";
 import STIconButton from "./STIconButton";
 import STText from "./STText";
+import STImage from "./STImage";
 
 export {
     HeaderIconButtonSection,
@@ -16,4 +17,5 @@ export {
     STHeading,
     STIconButton,
     STText,
+    STImage,
 };
