@@ -18,6 +18,7 @@ const Splash: React.FC<any> = () => {
                 <VStack
                     w={["100%", "100%", "50%"]}
                     h="100vh"
+                    minH={["450px", "600px"]}
                     maxH={["500px", "650px"]}
                     gap={["2rem", "3rem", "4rem"]}
                     alignItems={["center", "flex-start"]}
