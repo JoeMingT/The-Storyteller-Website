@@ -10,7 +10,10 @@ const STHeading: React.FC<STHeadingProps> = (props) => {
     const { children, ...headingProps } = props;
 
     return (
-        <Heading fontSize={["lg", "xl", "2xl", "3xl", "4xl"]} {...headingProps}>
+        <Heading
+            fontSize={["xl", "2xl", "3xl", "4xl", "5xl"]}
+            {...headingProps}
+        >
             {children}
         </Heading>
     );

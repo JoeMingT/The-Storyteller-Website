@@ -10,7 +10,7 @@ const STText: React.FC<STTextProps> = (props) => {
     const { children, ...textProps } = props;
 
     return (
-        <Text fontSize={["sm", "md", "lg", "lg", "xl"]} {...textProps}>
+        <Text fontSize={["md", "lg", "xl", "2xl", "3xl"]} {...textProps}>
             {children}
         </Text>
     );
