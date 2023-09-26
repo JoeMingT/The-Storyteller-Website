@@ -1,6 +1,11 @@
 import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { Box } from "@chakra-ui/react";
 
+/**
+ * Component to render the Text and heading of the splash
+ * All the text section is located here
+ * @returns {React.ReactNode} The rendered component
+ */
 const SplashText: React.FC<any> = () => {
     return (
         <Box textAlign={["center", "initial"]}>

@@ -1,5 +1,10 @@
 import { Box } from "@chakra-ui/react";
 
+/**
+ * Component to render the Splash image background
+ * as well as the white linear gradient for the splash
+ * @returns {React.ReactNode} The Rendered Component
+ */
 const SplashBackground: React.FC<any> = () => {
     return (
         <Box

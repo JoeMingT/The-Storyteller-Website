@@ -6,6 +6,10 @@ import {
 } from "@StorytellerComponents/molecules";
 import { Box, VStack } from "@chakra-ui/react";
 
+/**
+ * The Splash component that is rendered at Landing Page.
+ * @returns {React.ReactNode} The Splash Component for the website
+ */
 const Splash: React.FC<any> = () => {
     return (
         <>
