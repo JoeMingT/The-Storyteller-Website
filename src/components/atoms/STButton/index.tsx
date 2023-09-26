@@ -1,5 +1,5 @@
-import { STButtonProps } from "./props";
 import { Button } from "@chakra-ui/react";
+import { STButtonProps } from "./props";
 
 /**
  * The function to render the color depending on the type of it
@@ -8,7 +8,7 @@ import { Button } from "@chakra-ui/react";
  * @returns {string} The color that will be rendered
  */
 function renderColor(color: string | undefined, type: string): string {
-    return color ? color : type === "primary" ? "#97CDFF" : "000000";
+    return color ? color : type === "primary" ? "#97CDFF" : "#444444";
 }
 
 /**
