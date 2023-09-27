@@ -20,6 +20,10 @@ const theme = extendTheme({
         "8xl": "4.5rem", // 72px
         "9xl": "6rem", // 96px
     },
+    colors: {
+        primary: "#444444",
+        secondary: "#EFEDE7",
+    },
     sizes: {
         "container.xl": "1200px",
         "container.dashboard": "1350px",

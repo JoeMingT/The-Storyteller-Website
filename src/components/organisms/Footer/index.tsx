@@ -15,7 +15,7 @@ const Footer: React.FC<any> = (props) => {
         <Grid
             w="100%"
             h="auto"
-            background="#EFEDE7"
+            backgroundColor="secondary"
             position={isOverflowing ? "relative" : "fixed"}
             bottom="0"
             left="0"
