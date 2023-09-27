@@ -8,7 +8,7 @@ import { STButtonProps } from "./props";
  * @returns {string} The color that will be rendered
  */
 function renderColor(color: string | undefined, type: string): string {
-    return color ? color : type === "primary" ? "#97CDFF" : "#444444";
+    return color ? color : type === "primary" ? "highlight" : "primary";
 }
 
 /**
@@ -28,6 +28,7 @@ const STButton: React.FC<STButtonProps> = (props) => {
                 backgroundColor: renderColor(secondaryColor, "secondary"),
                 color: renderColor(primaryColor, "primary"),
             }}
+            p={["1rem", "1rem", "1.5rem", "2rem"]}
             {...buttonProps}
         >
             {children}
