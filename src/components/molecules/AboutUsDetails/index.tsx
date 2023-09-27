@@ -3,6 +3,12 @@ import { GridItem } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { AboutUsHeading, AboutUsText } from "..";
 
+/**
+ * The component that renders the details of the About Us section.
+ * In other words, it's the first element in the About Us page
+ *
+ * @returns {React.ReactNode} The component containing all details of About Us section
+ */
 const AboutUsDetails: React.FC<any> = () => {
     return (
         <GridItem

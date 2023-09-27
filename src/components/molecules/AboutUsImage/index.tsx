@@ -2,6 +2,12 @@ import AboutUsShowcaseImg from "@/public/assets/images/about/about_us_image.jpg"
 import { GridItem } from "@chakra-ui/react";
 import NextImage from "next/image";
 
+/**
+ * The component that renders the showcase image at the About Us section
+ * It utilizes the NextImage component + some dynamic scaling.
+ *
+ * @returns {React.ReactNode} The rendered showcase Image in the About Us component
+ */
 const AboutUsImage: React.FC<any> = () => {
     return (
         <GridItem

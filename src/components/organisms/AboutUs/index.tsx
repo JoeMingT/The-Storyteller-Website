@@ -1,7 +1,15 @@
 import { STComponentWrapper } from "@StorytellerComponents/atoms";
-import { AboutUsImage, AboutUsDetails } from "@StorytellerComponents/molecules";
+import { AboutUsDetails, AboutUsImage } from "@StorytellerComponents/molecules";
 import { Grid } from "@chakra-ui/react";
 
+/**
+ * The About Us component. Not to be confused with the About Us **PAGE**.
+ * This component is the brief explanation about The Storyteller as a whole.
+ *
+ * For the component in the About Us PAGE, check Our Company and Our Team component.
+ *
+ * @returns The About Us component
+ */
 const AboutUs: React.FC<any> = () => {
     return (
         <STComponentWrapper>

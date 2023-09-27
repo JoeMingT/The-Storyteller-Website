@@ -2,6 +2,13 @@ import { STHeading } from "@StorytellerComponents/atoms";
 import { Box, Divider } from "@chakra-ui/react";
 import { AboutUsHeadingProps } from "./props";
 
+/**
+ * This component renders out the Heading text at the top
+ * as well as the line below the heading as well.
+ *
+ * @param {AboutUsHeadingProps} props The properties of the component. Most important is "text" props that represents the text in the Heading
+ * @returns {React.ReactNode} The Heading text in the About Us section
+ */
 const AboutUsHeading: React.FC<AboutUsHeadingProps> = (props) => {
     const { text } = props;
 
