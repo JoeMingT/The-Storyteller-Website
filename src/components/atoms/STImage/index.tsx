@@ -6,9 +6,10 @@ import { STImageProps } from "./props";
  * The Image component that will be used throughout the application.
  * This utilizes the NextImage optimization + the responsiveness of ChakraUI
  * However, for important images that needs to be rendered immediately, we will not use this
- * and use regular Chakra UI Image component.
+ * and use regular Chakra UI Image component. Either that, or we use the priority tag in NextImage
+ *
  * @param {STImageProps} props The properties of the Image. Mainly height, width, src, and alt
- * @return {React.ReactNode} The rendered component
+ * @return {React.ReactNode} The component Image
  */
 const STImage: React.FC<STImageProps> = (props) => {
     const width = useBreakpointValue(props?.width)?.replace("px", "") || 0;

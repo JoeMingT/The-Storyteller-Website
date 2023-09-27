@@ -2,7 +2,16 @@ import { FooterIcons, FooterText } from "@StorytellerComponents/molecules";
 import { Grid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
+/**
+ * The Footer component that will be rendered out in the application.
+ * This component will be rendered on every page of the application and will render dynamically.
+ *
+ * @returns {React.ReactNode} The rendered Footer component
+ */
 const Footer: React.FC<any> = (props) => {
+    // Check if the body of the page is overflowing or not
+    // If it is, then we set the footer at the end of the page
+    // If not, we will fix it at the bottom (since there's no scrolling to hide it)
     const [isOverflowing, setIsOverflowing] = useState<boolean>(false);
     useEffect(() => {
         const el = document.getElementById("root");

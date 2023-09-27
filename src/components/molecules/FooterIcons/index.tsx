@@ -7,7 +7,8 @@ import { STIconButton } from "@StorytellerComponents/atoms";
  * will redirect to the corresponding pages.
  * Almost one-to-one to HeaderIconButtonSection, with slight
  * styling changes for Footer
- * @return {React.ReactNode} The rendered Component
+ * 
+ * @return {React.ReactNode} The icons in the Footer
  */
 const FooterIcons: React.FC<any> = (props) => {
     return (

@@ -8,7 +8,9 @@ import { useEffect, useRef } from "react";
 
 /**
  * The Header component that will be displayed on top of the website at all times.
- * @returns {React.ReactNode} The rendered component
+ * Will render on all pages and will render dynamically.
+ *
+ * @returns {React.ReactNode} The Header component
  */
 const Header: React.FC<any> = (): React.ReactNode => {
     // Reference for Header (For after the thing rendered)

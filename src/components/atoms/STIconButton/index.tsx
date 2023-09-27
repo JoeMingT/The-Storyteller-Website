@@ -3,8 +3,9 @@ import { STIconButtonProps } from "./props";
 
 /**
  * The basic IconButton component for the application with the base settings.
+ *
  * @param {STIconButtonProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The Button that only contains an Icon
  */
 const STIconButton: React.FC<STIconButtonProps> = (props) => {
     const { iconHeight, iconWidth, iconSrc, iconAlt, ...iconButtonProps } =

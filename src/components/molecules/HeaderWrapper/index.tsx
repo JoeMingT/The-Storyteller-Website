@@ -3,8 +3,9 @@ import { HeaderWrapperProps } from "./props";
 
 /**
  * The wrapper component that wraps around both Mobile and Desktop view Headers
+ *
  * @param {HeaderWrapperProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The wrapper that wraps the entire Header component
  */
 const HeaderWrapper: React.FC<HeaderWrapperProps> = (props) => {
     const { children, headerRef } = props;

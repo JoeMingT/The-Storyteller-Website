@@ -6,8 +6,9 @@ import { Stack, StackProps } from "@chakra-ui/react";
 /**
  * The component where we render all of the HeaderLinks into one group
  * Currently, the links are hard-coded into a file
+ *
  * @param {StackProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The entire section of text in Header that redirect users
  */
 const HeaderLinksSection: React.FC<StackProps> = (props) => {
     return (

@@ -6,8 +6,9 @@ import {
 
 /**
  * The Header component that is rendered when in desktop view
+ *
  * @param {FlexProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The Header for Desktop view / devices
  */
 const HeaderDesktopMenu: React.FC<FlexProps> = (props) => {
     return (

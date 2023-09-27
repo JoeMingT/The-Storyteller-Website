@@ -3,8 +3,9 @@ import { STTextProps } from "./props";
 
 /**
  * The basic Text component for the application with the base settings.
+ * 
  * @param {STTextProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The rendered Text component
  */
 const STText: React.FC<STTextProps> = (props) => {
     const { children, ...textProps } = props;

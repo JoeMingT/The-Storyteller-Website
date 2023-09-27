@@ -3,8 +3,9 @@ import { STHeadingProps } from "./props";
 
 /**
  * The basic Heading component for the application with the base settings.
+ *
  * @param {STHeadingProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The Heading text component
  */
 const STHeading: React.FC<STHeadingProps> = (props) => {
     const { children, ...headingProps } = props;

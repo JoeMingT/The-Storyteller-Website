@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 /**
  * Component to render the Splash image background
  * as well as the white linear gradient for the splash
- * @returns {React.ReactNode} The Rendered Component
+ *
+ * @returns {React.ReactNode} The background image and linear gradient for the splash component
  */
 const SplashBackground: React.FC<any> = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);

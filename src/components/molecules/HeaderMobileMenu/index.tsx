@@ -18,8 +18,9 @@ import { useEffect } from "react";
 
 /**
  * The Header component that is rendered when in mobile view
+ *
  * @param {FlexProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The Header for Mobile view / devices
  */
 const HeaderMobileMenu: React.FC<FlexProps> = (props) => {
     const { isOpen, onOpen, onClose } = useDisclosure();

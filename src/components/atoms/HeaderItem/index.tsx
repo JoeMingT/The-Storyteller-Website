@@ -6,8 +6,9 @@ import { HeaderItemProps } from "./props";
  * This component is responsible for rendering each of the text
  * that redirects you to another page in the Header. For example,
  * the Home, About Us, and Galleries text in the Header.
+ *
  * @param {HeaderItemProps} props Properties for the component
- * @returns {React.ReactNode} The rendered component
+ * @returns {React.ReactNode} The each individual text in the Header that redirects users 
  */
 const HeaderItem: React.FC<HeaderItemProps> = (props) => {
     const { children, href, ...textProps } = props;
