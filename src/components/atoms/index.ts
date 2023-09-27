@@ -7,6 +7,8 @@ import STHeading from "./STHeading";
 import STIconButton from "./STIconButton";
 import STText from "./STText";
 import STImage from "./STImage";
+import STComponentWrapper from "./STComponentWrapper";
+import RedirectButton from "./RedirectButton";
 
 export {
     HeaderIconButtonSection,
@@ -18,4 +20,6 @@ export {
     STIconButton,
     STText,
     STImage,
+    STComponentWrapper,
+    RedirectButton
 };
