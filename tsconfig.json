@@ -17,6 +17,7 @@
       "@StorytellerComponents/*": ["./src/components/*"],
       "@StorytellerSanity/*": ["./sanity/*"],
       "@Storyteller/*": ["./src/*"],
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
