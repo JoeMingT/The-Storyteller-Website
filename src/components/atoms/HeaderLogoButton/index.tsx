@@ -4,7 +4,7 @@ import { ButtonProps, Image } from "@chakra-ui/react";
 /**
  * The component where we render the logo in the header, where it can redirect
  * us back to the home page
- * 
+ *
  * @param {ButtonProps} props Properties for the component
  * @returns {React.ReactNode} The image logo at the Header
  */
@@ -16,6 +16,7 @@ const HeaderLogoButton: React.FC<ButtonProps> = (props) => {
                 _hover={{ background: "transparent" }}
                 w={["110px", "110px", "110px", "130px", "130px"]}
                 h="auto"
+                p="none"
                 {...props}
             >
                 <Image
