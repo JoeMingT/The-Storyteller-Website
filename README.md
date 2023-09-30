@@ -1,8 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The-Storyteller-Website
+
+This is the source code for "The Storyteller by Joe" website. Comissioned by Tham Joe Ping, website created and maintained by Tham Joe Ming.
+This ReadMe document will contain the information regarding the source code itself such as setting up and running the application, what is the packages
+used, what is the third party services used and so on.
+
+<br />
 
 ## Getting Started
 
-First, run the development server:
+This project is built from the [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) command.
+If you are familiar with it then there's not much that you need to do to start the application.
+
+### Step-by-Step to Run the Application
+
+First, install the necessary dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+bun install
+```
+
+Once all the dependencies have been installed, you can start the development server using:
 
 ```bash
 npm run dev
@@ -14,25 +35,119 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br />
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Prerequisites
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+In order to work on this project and repository, here is some of the prerequisites that is required to understand and actually work on it.
+If you do not understand these prerequisites, it is recommended to read and learn these tools or frameworks.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The prerequisites are shown below:
 
-## Learn More
+1. NextJS
+2. ReactJS
+3. TypeScript
+4. ChakraUI
+5. Sanity Client (sanity.io) **Might change in the future**
 
-To learn more about Next.js, take a look at the following resources:
+### Some Pretty Important Packages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+There are also plenty of packages that are used throughout the application. They aren't as major and is not the core of the application
+and as such, they are easier to learn and pick up than the prerequisites. However, it would be great if you already know what these packages
+are and what they do to make your lives easier.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. ESLint & Prettier
+2. Swiper
 
-## Deploy on Vercel
+<br />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Organization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This section details how I had organized all of the codes, assets, and others. I will be touching upon most of the folders
+and files that I have used in this project, and ignore others that I think that is simple / unimportant.
+
+The important files and folders are listed below:
+
+1. `.env`, `.env.local`, and `.env.example`
+2. `sanity` folder and `sanity.config.ts`
+3. `tsconfig.json`
+4. `public`
+5. `src/components`
+6. `src/data`
+7. `src/database`
+8. `src/hooks`
+9. `src/pages`
+10. `src/styles`
+11. `src/types`
+12. `src/theme.ts`
+
+### `.env`, `.env.local`, and `.env.example`
+
+You should have a `.env` and `.env.local` files in this project.
+As the contents of the environment variables will not be shared publicly, you can refer to
+`.env.example` to see what variables and their uses
+
+### `sanity` folder and `sanity.config.ts`
+
+The `sanity` folder will contain everything related to the Sanity.io client. This includes the object schema,
+queries, setup and so on. To access the Sanity Studio, it is embedded in the application under `/studio` route.
+
+`sanity.config.ts` is used to configure the Sanity.io client. Mainly to export schemas and parameters for your Sanity project
+
+### `tsconfig.json`
+
+Most of the settings here are default settings. The only main thing to focus on here is the `path` options.
+I have created 4 different custom paths for this application: `@StorytellerComponents`, `@Storyteller`, `@`, and `@StorytellerSanity`.
+
+This is done in order to have better readability throughout the application while also making it easier to access some of the files and codes
+in the project.
+
+### `public`
+
+If you are well-versed with NextJS, you should know that this folder is the public assets folder which stores static assets.
+
+Essentially, this contains all the hard-coded assets such as icons, logos, images, and other potential assets. Each folder is a
+category of the assets. For example, the `icons` folder will contain all the icons that are used throughout the application.
+
+### `src/components`
+
+The components folder is where all of the smaller, more modular, React components are stored. It is further categorized into 3 different
+parts: `atoms`, `molecules`, and `organisms` (According to the [Atomic Design Pattern](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97))
+
+Essentially, it can be broken down into:
+a. **Atoms:** Main building blocks. Component that does nothing by itself.
+b. **Molecules:** Merging of multiple Atoms to achieve a certain functionality.
+c. **Organisms:** Combining Molecules together to create a distinct section of an interface.
+
+### `src/data`
+
+This folder contains all static data that is exported into the application. It is exported out as a regular JavaScript object.
+
+### `src/database`
+
+This folder contains all the file and code that is related to the database. It may include things like SQL query, ORM code (if any) and so on.
+Currently, it's not in use but in the future it might be used.
+
+### `src/hooks`
+
+This folder contains all of the custom React hooks that will be used in the application.
+Custom hooks are created to reduce redundancy in code where we do the same useEffect process on different component
+
+### `src/pages`
+
+The main pages for the website. Read the NextJS docs to understand how it works as well as its automatic re-routing function.
+It also includes SSR or SSG, which is a NextJS feature
+
+### `src/styles`
+
+The folder that contains all of the styling needed for the website. It can be in CSS module form or a global css file that
+is applied throughout the application. All of the styles are written in pure CSS, and not in transpiled CSS (such as SCSS)
+
+### `src/types`
+
+This folder contains custom types that is required for the Application due to TypeScript constraints. Mainly contains types for the data fetched from Sanity.io
+
+### `src/theme.ts`
+
+This file is the custom / extended theme for Chakra UI. Mainly the font sizes are the biggest change. There may be changes as the application
+continues to develop.
