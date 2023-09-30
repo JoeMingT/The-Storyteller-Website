@@ -32,6 +32,7 @@ const Footer: React.FC<any> = (props) => {
             px={["2rem", "3rem"]}
             gap="10px"
             templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
+            boxShadow={"0px -2px 5px 1px rgba(0, 0, 0, 0.20) "}
         >
             <FooterText />
             <FooterIcons />
