@@ -68,7 +68,7 @@ const HeaderMobileMenu: React.FC<FlexProps> = (props) => {
                         />
                     </DrawerHeader>
                     <DrawerBody pl="3rem">
-                        <HeaderLinksSection />
+                        <HeaderLinksSection onClose={onClose} />
                     </DrawerBody>
                     <DrawerFooter>
                         <HeaderIconButtonSection />
