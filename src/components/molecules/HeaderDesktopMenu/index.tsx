@@ -2,7 +2,7 @@ import { Flex, FlexProps } from "@chakra-ui/react";
 import {
     HeaderIconButtonSection,
     HeaderLinksSection,
-} from "@StorytellerComponents/atoms";
+} from "@StorytellerComponents/molecules";
 
 /**
  * The Header component that is rendered when in desktop view

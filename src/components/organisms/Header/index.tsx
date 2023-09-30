@@ -1,6 +1,6 @@
-import { HeaderLogoButton } from "@StorytellerComponents/atoms";
 import {
     HeaderDesktopMenu,
+    HeaderLogoButton,
     HeaderMobileMenu,
     HeaderWrapper,
 } from "@StorytellerComponents/molecules";

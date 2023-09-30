@@ -1,8 +1,4 @@
-import {
-    HeaderIconButtonSection,
-    HeaderLinksSection,
-    STIconButton,
-} from "@StorytellerComponents/atoms";
+import { STIconButton } from "@StorytellerComponents/atoms";
 import {
     Drawer,
     DrawerBody,
@@ -15,6 +11,7 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
+import { HeaderIconButtonSection, HeaderLinksSection } from "..";
 
 /**
  * The Header component that is rendered when in mobile view

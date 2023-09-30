@@ -1,9 +1,9 @@
 import { galleryPreviewTestData } from "@Storyteller/data/testGalleryPreview";
 import {
-    GalleryPreviewItem,
     STComponentWrapper,
     SwiperWrapper,
 } from "@StorytellerComponents/atoms";
+import { GalleryPreviewItem } from "@StorytellerComponents/molecules";
 import { SwiperSlide } from "swiper/react";
 
 const GalleryPreview: React.FC<any> = () => {
