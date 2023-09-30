@@ -1,5 +1,9 @@
 import { STIconButton } from "@StorytellerComponents/atoms";
 import {
+    HeaderIconButtonSection,
+    HeaderLinksSection,
+} from "@StorytellerComponents/molecules";
+import {
     Drawer,
     DrawerBody,
     DrawerContent,
@@ -11,7 +15,6 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { HeaderIconButtonSection, HeaderLinksSection } from "..";
 
 /**
  * The Header component that is rendered when in mobile view

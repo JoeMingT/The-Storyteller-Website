@@ -1,11 +1,12 @@
-import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { STIconButton } from "..";
+
+import { STIconButton } from "@StorytellerComponents/atoms";
+import { useRef } from "react";
 import { SwiperWrapperProps } from "./props";
 
 /**

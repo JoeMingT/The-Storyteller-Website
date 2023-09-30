@@ -1,6 +1,6 @@
 // Hard-coded links
 import { headerLinks } from "@Storyteller/data/headerLinks";
-import { HeaderItem } from "..";
+import { HeaderItem } from "@StorytellerComponents/molecules";
 import { Stack, StackProps } from "@chakra-ui/react";
 
 /**

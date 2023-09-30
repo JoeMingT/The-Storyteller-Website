@@ -1,7 +1,7 @@
 import { STButton, STText } from "@StorytellerComponents/atoms";
+import { AboutUsHeading, AboutUsText } from "@StorytellerComponents/molecules";
 import { GridItem } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { AboutUsHeading, AboutUsText } from "..";
 
 /**
  * The component that renders the details of the About Us section.
