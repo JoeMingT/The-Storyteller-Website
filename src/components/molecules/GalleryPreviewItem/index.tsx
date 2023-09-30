@@ -1,6 +1,11 @@
 import { Box, Divider, HStack } from "@chakra-ui/react";
 import React from "react";
-import { BackgroundImageBox, RedirectButton, STHeading, STText } from "..";
+import {
+    BackgroundImageBox,
+    RedirectButton,
+    STHeading,
+    STText,
+} from "@StorytellerComponents/atoms";
 
 const GalleryPreviewItem: React.FC<any> = (props) => {
     return (

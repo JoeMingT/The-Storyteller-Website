@@ -1,5 +1,5 @@
+import { STText } from "@StorytellerComponents/atoms";
 import NextLink from "next/link";
-import { STText } from "..";
 import { HeaderItemProps } from "./props";
 
 /**
@@ -8,7 +8,7 @@ import { HeaderItemProps } from "./props";
  * the Home, About Us, and Galleries text in the Header.
  *
  * @param {HeaderItemProps} props Properties for the component
- * @returns {React.ReactNode} The each individual text in the Header that redirects users 
+ * @returns {React.ReactNode} The each individual text in the Header that redirects users
  */
 const HeaderItem: React.FC<HeaderItemProps> = (props) => {
     const { children, href, ...textProps } = props;
