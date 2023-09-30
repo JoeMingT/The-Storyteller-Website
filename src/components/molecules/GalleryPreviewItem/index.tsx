@@ -1,12 +1,18 @@
-import { Box, Divider, HStack } from "@chakra-ui/react";
-import React from "react";
 import {
     BackgroundImageBox,
     RedirectButton,
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
+import { Box, Divider, HStack } from "@chakra-ui/react";
+import React from "react";
 
+/**
+ * The component that renders out each preview of a gallery.
+ * It contains a thumbnail image (as the background), the title of the gallery and a button to redirect them to the gallery.
+ *
+ * @returns {React.ReactNode} One gallery preview
+ */
 const GalleryPreviewItem: React.FC<any> = (props) => {
     return (
         <Box h="100%" display="flex" alignItems="center">

@@ -6,6 +6,13 @@ import {
 import { GalleryPreviewItem } from "@StorytellerComponents/molecules";
 import { SwiperSlide } from "swiper/react";
 
+/**
+ * The Gallery Preview component. Used in the landing page to preview some of the galleries
+ * that is available in the database. Act as a quick way for people to quickly check out
+ * what the company can do.
+ *
+ * @returns {React.ReactNode} The Component that is the Preview for the Galleries
+ */
 const GalleryPreview: React.FC<any> = () => {
     return (
         <STComponentWrapper>

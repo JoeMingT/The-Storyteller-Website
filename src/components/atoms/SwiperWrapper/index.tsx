@@ -8,6 +8,14 @@ import "swiper/swiper-bundle.css";
 import { STIconButton } from "..";
 import { SwiperWrapperProps } from "./props";
 
+/**
+ * The Swiper component that wraps around SwiperSlides with a set of default settings.
+ * It also include 2 custom buttons for the Swiper that is positioned within the Swiper.
+ * Is used whenever we want to utilize Swiper package.
+ *
+ * @param {SwiperWrapperProps} props The properties for the component. The children will be wrapped around by the component while the leftButtonProps and rightButtonProps is used to modify the navigation buttons
+ * @returns {React.ReactNode} The Swiper wrapping around SwiperSlides
+ */
 const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
     const prevButtonRef = useRef<HTMLButtonElement>(null);
     const nextButtonRef = useRef<HTMLButtonElement>(null);
@@ -40,6 +48,7 @@ const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
             }}
             {...swiperProps}
         >
+            {/* Absolute buttons to include it within the swiper */}
             <STIconButton
                 position="absolute"
                 zIndex="2"

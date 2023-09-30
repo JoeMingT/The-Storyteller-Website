@@ -1,6 +1,12 @@
 import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { Box } from "@chakra-ui/react";
 
+/**
+ * The component that is responsible for rendering the text in the Our Company section.
+ * Basically the writeup section talking about the company.
+ *
+ * @returns {React.ReactNode} The rendered Writeup for the About Page
+ */
 const OurCompanyWriteup: React.FC<any> = (props) => {
     return (
         <Box
