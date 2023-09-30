@@ -1,2 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@300;400;700&display=swap");
+
+.swiper-pagination-bullet {
+    width: 50px !important;
+    height: 6px !important;
+    background: #ffffff !important;
+    border-radius: 0px !important;
+    opacity: 0.25 !important;
+    margin: 0px 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 50px !important;
+    height: 6px !important;
+    transition: width 0.5s;
+    border-radius: 0px !important;
+    background: #ffffff !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 480px) {
+    .swiper-pagination-bullet {
+        width: 75px !important;
+        height: 8px !important;
+        margin: 0px 15px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 75px !important;
+    }
+}
