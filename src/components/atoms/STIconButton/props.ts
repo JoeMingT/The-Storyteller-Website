@@ -5,4 +5,5 @@ export interface STIconButtonProps extends IconButtonProps {
     iconHeight?: string | string[];
     iconSrc: string;
     iconAlt: string;
+    ref?: React.MutableRefObject<any>;
 }
