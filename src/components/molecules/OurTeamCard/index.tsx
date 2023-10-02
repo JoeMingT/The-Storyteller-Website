@@ -2,6 +2,13 @@ import { STText } from "@StorytellerComponents/atoms";
 import { Card, CardBody, CardFooter, Image } from "@chakra-ui/react";
 import { OurTeamCardProps } from "./props";
 
+/**
+ * The Card component in the Our Team section.
+ * Each card contains the profile picture of the member as well as their name and position in the company.
+ *
+ * @param {OurTeamCardProps} props The member's information
+ * @returns {React.ReactNode} The rendered Card with the member's details
+ */
 const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
     const { name, companyPos, imgUrl, ...cardProps } = props;
     return (
@@ -12,14 +19,12 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
             boxShadow="0 0 20px 1px rgba(0,0,0,0.50)"
             {...cardProps}
         >
+            {/* Body is the image */}
             <CardBody
                 p="0"
-                // background="linear-gradient(90deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.81) 53.13%, rgba(255, 255, 255, 0.55) 83.33%, rgba(255, 255, 255, 0.05) 100%)"
-                // zIndex="1"
-                // borderTopRadius={"50px"}
                 position="relative"
                 display="inline-block"
-                // background=""
+                // After pseudo-element for the linear gradient overlay.
                 _after={{
                     content: '""',
                     position: "absolute",
@@ -41,6 +46,7 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     w="auto"
                 />
             </CardBody>
+            {/* Footer is the name and position */}
             <CardFooter
                 display="flex"
                 flexDir="column"

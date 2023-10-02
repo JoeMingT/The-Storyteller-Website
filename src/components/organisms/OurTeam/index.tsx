@@ -8,7 +8,18 @@ import { OurTeamCard } from "@StorytellerComponents/molecules";
 import { Box } from "@chakra-ui/react";
 import { SwiperSlide } from "swiper/react";
 
+/**
+ * The component that renders the Our Team section in the About Page.
+ * This component is very, very scuffed. Mainly due to SwiperWrapper component.
+ * It mainly contains the short profile of all the members in the company.
+ * ** Plan to add a modal popup that will show more details of the selected members.
+ *
+ * @returns {React.ReactNode} The rendered Our Team component in the About Page
+ */
 const OurTeam: React.FC<any> = () => {
+    // Props for the buttons
+    // This includes the styling (to make it look round + the hover effects)
+    // and also the position and display, that makes it below the swiper
     const leftButtonProps = {
         "aria-label": "Previous Team Member",
         iconSrc: "/assets/icon/left-nav-arrow-white.svg",
@@ -79,11 +90,13 @@ const OurTeam: React.FC<any> = () => {
                         position: "relative",
                     }}
                     boxProps={{ display: "block" }}
+                    // Properties for the Swiper
                     slidesPerView={3}
                     spaceBetween={"50px"}
                     pagination={{ enabled: false }}
                     loop={false}
                     autoCorrect="true"
+                    // Breakpoints for the swiper. To do responsiveness for the number of slides shown
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         480: { slidesPerView: 2 },
