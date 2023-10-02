@@ -16,7 +16,6 @@ const OurCompanyLogo: React.FC<any> = (props) => {
             display="flex"
             alignItems="center"
             justifyContent={"center"}
-            mt={"3rem"}
         >
             <STImage
                 src={StorytellerLogo}

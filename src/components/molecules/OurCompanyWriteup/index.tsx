@@ -17,10 +17,10 @@ const OurCompanyWriteup: React.FC<any> = (props) => {
             justifyContent="center"
             flexDir="column"
         >
-            <STHeading textDecoration="underline" py={["1rem", "2rem", "3rem"]}>
+            <STHeading textDecoration="underline" py={["2rem", "2rem", "3rem"]}>
                 About The Storytller
             </STHeading>
-            <STText width="80%" pb="3rem">
+            <STText width="80%">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
