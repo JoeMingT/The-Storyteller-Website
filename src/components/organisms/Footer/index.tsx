@@ -12,7 +12,7 @@ const Footer: React.FC<any> = (props) => {
     // Check if the body of the page is overflowing or not
     // If it is, then we set the footer at the end of the page
     // If not, we will fix it at the bottom (since there's no scrolling to hide it)
-    const [isOverflowing, setIsOverflowing] = useState<boolean>(false);
+    const [isOverflowing, setIsOverflowing] = useState<boolean>(true);
     useEffect(() => {
         const el = document.getElementById("root");
         if (el) {
@@ -33,6 +33,7 @@ const Footer: React.FC<any> = (props) => {
             gap="10px"
             templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
             boxShadow={"0px -2px 5px 1px rgba(0, 0, 0, 0.20) "}
+            zIndex={4}
         >
             <FooterText />
             <FooterIcons />
