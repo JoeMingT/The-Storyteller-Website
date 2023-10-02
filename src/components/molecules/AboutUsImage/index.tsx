@@ -18,7 +18,7 @@ const AboutUsImage: React.FC<any> = () => {
         >
             <NextImage
                 src={AboutUsShowcaseImg}
-                alt={"Testing Image"}
+                alt={"About Us Showcase Image"}
                 fill={true}
                 style={{
                     borderRadius: "50px",
