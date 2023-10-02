@@ -14,6 +14,8 @@ import HeaderMobileMenu from "./HeaderMobileMenu";
 import HeaderWrapper from "./HeaderWrapper";
 import OurCompanyLogo from "./OurCompanyLogo";
 import OurCompanyWriteup from "./OurCompanyWriteup";
+import OurTeamCard from "./OurTeamCard";
+import OurTeamModal from "./OurTeamModal";
 import SplashBackground from "./SplashBackground";
 import SplashText from "./SplashText";
 
@@ -34,6 +36,8 @@ export {
     HeaderWrapper,
     OurCompanyLogo,
     OurCompanyWriteup,
+    OurTeamCard,
+    OurTeamModal,
     SplashBackground,
     SplashText,
 };
