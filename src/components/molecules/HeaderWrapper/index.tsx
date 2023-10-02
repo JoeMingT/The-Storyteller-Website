@@ -18,7 +18,7 @@ const HeaderWrapper: React.FC<HeaderWrapperProps> = (props) => {
             background="#FFFFFF"
             top="0"
             left="0"
-            zIndex={2}
+            zIndex={5}
             className="header"
             ref={headerRef}
             transition="200ms cubic-bezier(0.215,0.61,0.355,1);"
