@@ -23,7 +23,9 @@ const theme = extendTheme({
     colors: {
         primary: "#444444",
         secondary: "#EFEDE7",
-        highlight: "#97CDFF"
+        highlight: "#97CDFF",
+        lightAccent: "#CAB8B9",
+        darkAccent: "#7E7F7A",
     },
     sizes: {
         "container.xl": "1200px",
