@@ -23,8 +23,6 @@ const GalleryPreview: React.FC<any> = () => {
                     iconAlt: "White Colored Left Arrow",
                     iconWidth: ["0px", "50px", "60px", "80px", "100px"],
                     display: ["none", "initial"],
-                    px: ["1rem", "1rem", "1.25rem", "1.5rem", "2rem"],
-                    h: "100%",
                 }}
                 rightButtonProps={{
                     "aria-label": "Next Gallery",
@@ -32,8 +30,6 @@ const GalleryPreview: React.FC<any> = () => {
                     iconAlt: "White Colored Right Arrow",
                     iconWidth: ["0px", "50px", "60px", "80px", "100px"],
                     display: ["none", "initial"],
-                    px: ["1rem", "1rem", "1.25rem", "1.5rem", "2rem"],
-                    h: "100%",
                 }}
                 breakpoints={{
                     0: { allowTouchMove: true },
