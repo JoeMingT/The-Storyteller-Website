@@ -18,7 +18,7 @@ const OurCompanyWriteup: React.FC<any> = (props) => {
             flexDir="column"
         >
             <STHeading textDecoration="underline" py={["2rem", "2rem", "3rem"]}>
-                About The Storytller
+                About The Storyteller
             </STHeading>
             <STText width="80%">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
