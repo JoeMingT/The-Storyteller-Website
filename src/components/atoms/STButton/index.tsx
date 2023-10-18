@@ -29,7 +29,7 @@ const STButton: React.FC<STButtonProps> = (props) => {
                 backgroundColor: renderColor(secondaryColor, "secondary"),
                 color: renderColor(primaryColor, "primary"),
             }}
-            p={["1rem", "1rem", "1.5rem", "2rem"]}
+            p={["1rem", "1rem", "1.5rem", "1.5rem"]}
             {...buttonProps}
         >
             {children}
