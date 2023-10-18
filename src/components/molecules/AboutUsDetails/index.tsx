@@ -23,7 +23,6 @@ const AboutUsDetails: React.FC<any> = () => {
             <NextLink href="/about">
                 <STButton
                     _hover={{ backgroundColor: "secondary", color: "primary" }}
-                    p={["1rem", "1rem", "1.5rem", "2rem"]}
                     w={["100%", "100%", "initial"]}
                 >
                     <STText>Read More!</STText>
