@@ -1,5 +1,6 @@
+import { ThumbnailGalleryType } from "@Storyteller/types";
 import { STIconButton } from "@StorytellerComponents/atoms";
-import { getGalleries } from "@StorytellerSanity/queries";
+import { getThumbnailGalleries } from "@StorytellerSanity/queries";
 import {
     Center,
     Grid,
@@ -8,18 +9,22 @@ import {
     useBreakpointValue,
     useToast,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import ReactPagination from "react-paginate";
 import AllGalleriesCard from "../AllGalleriesCard";
+import { AllGalleriesContentProps } from "./props";
 
-const AllGalleriesContent: React.FC<any> = (props) => {
-    const { noOfPages, initialData, itemsPerPage } = props;
+const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
+    const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
     const toast = useToast();
+    const router = useRouter();
 
-    const [galleryData, setGalleryData] = useState<any>(initialData);
+    const [galleryData, setGalleryData] =
+        useState<ThumbnailGalleryType[]>(initialData);
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [currPage, setCurrPage] = useState<number>(0);
+    const [currPage, setCurrPage] = useState<number>(initialPage);
 
     const pageRangeDisplayed = useBreakpointValue({ base: 1, sm: 2 });
     const marginPagesDisplayed = useBreakpointValue({ base: 1, sm: 2, md: 3 });
@@ -58,7 +63,7 @@ const AllGalleriesContent: React.FC<any> = (props) => {
                 ]}
                 gap={["1.5rem", "2.5rem", "2.5rem"]}
             >
-                {galleryData.map((gallery: any) => {
+                {galleryData.map((gallery) => {
                     return (
                         <GridItem key={`${gallery._id}`}>
                             <AllGalleriesCard
@@ -114,7 +119,12 @@ const AllGalleriesContent: React.FC<any> = (props) => {
                         behavior: "smooth",
                     });
                     setIsLoading(true);
-                    getGalleries(itemsPerPage, page.selected)
+                    await router.push(
+                        { query: { page: `${page.selected + 1}` } },
+                        undefined,
+                        { shallow: true }
+                    );
+                    getThumbnailGalleries(itemsPerPage, page.selected)
                         .then((data) => {
                             setGalleryData(data);
                             setCurrPage(page.selected);
@@ -131,8 +141,6 @@ const AllGalleriesContent: React.FC<any> = (props) => {
                         .finally(() => {
                             setIsLoading(false);
                         });
-                    // console.log(selectedData);
-                    // console.log("In onPageChange function");
                 }}
                 onClick={(event) => {
                     if (

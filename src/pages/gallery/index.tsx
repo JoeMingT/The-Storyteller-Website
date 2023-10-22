@@ -1,6 +1,6 @@
 import { AllGalleries } from "@StorytellerComponents/organisms";
 import {
-    getGalleries,
+    getThumbnailGalleries,
     getTotalGalleryLength,
 } from "@StorytellerSanity/queries";
 import { type GetServerSideProps } from "next";
@@ -9,12 +9,14 @@ interface GalleriesProps {
     totalGalleries: number;
     initialData: any;
     itemsPerPage: number;
+    initialPage: number;
 }
 
 export default function Galleries({
     totalGalleries,
     initialData,
     itemsPerPage,
+    initialPage,
 }: GalleriesProps) {
     const noOfPages = Math.ceil(totalGalleries / itemsPerPage);
 
@@ -24,6 +26,7 @@ export default function Galleries({
                 noOfPages={noOfPages}
                 initialData={initialData}
                 itemsPerPage={itemsPerPage}
+                initialPage={initialPage}
             />
         </>
     );
@@ -32,14 +35,16 @@ export default function Galleries({
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const totalGalleries = await getTotalGalleryLength();
     const itemsPerPage = 9;
-    const initialData = await getGalleries(itemsPerPage, 0);
+    const { page } = context.query;
+    const initialPage = page ? Number(page) - 1 : 0;
+    const initialData = await getThumbnailGalleries(itemsPerPage, initialPage);
 
     return {
         props: {
-            test: "test text",
             totalGalleries,
             initialData,
             itemsPerPage,
+            initialPage,
         },
     };
 };

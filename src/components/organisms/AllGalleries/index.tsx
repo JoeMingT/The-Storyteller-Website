@@ -4,9 +4,10 @@ import {
     AllGalleriesHeader,
 } from "@StorytellerComponents/molecules";
 import { Box } from "@chakra-ui/react";
+import { AllGalleriesProps } from "./props";
 
-const AllGalleries: React.FC<any> = (props) => {
-    const { noOfPages, initialData, itemsPerPage } = props;
+const AllGalleries: React.FC<AllGalleriesProps> = (props) => {
+    const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
     return (
         <STComponentWrapper>
@@ -24,6 +25,7 @@ const AllGalleries: React.FC<any> = (props) => {
                     noOfPages={noOfPages}
                     initialData={initialData}
                     itemsPerPage={itemsPerPage}
+                    initialPage={initialPage}
                 />
             </Box>
         </STComponentWrapper>
