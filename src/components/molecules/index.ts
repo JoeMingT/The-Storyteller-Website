@@ -2,6 +2,9 @@ import AboutUsDetails from "./AboutUsDetails";
 import AboutUsHeading from "./AboutUsHeading";
 import AboutUsImage from "./AboutUsImage";
 import AboutUsText from "./AboutUsText";
+import AllGalleriesCard from "./AllGalleriesCard";
+import AllGalleriesContent from "./AllGalleriesContent";
+import AllGalleriesHeader from "./AllGalleriesHeader";
 import FooterIcons from "./FooterIcons";
 import FooterText from "./FooterText";
 import GalleryPreviewItem from "./GalleryPreviewItem";
@@ -24,6 +27,9 @@ export {
     AboutUsHeading,
     AboutUsImage,
     AboutUsText,
+    AllGalleriesCard,
+    AllGalleriesContent,
+    AllGalleriesHeader,
     FooterIcons,
     FooterText,
     GalleryPreviewItem,

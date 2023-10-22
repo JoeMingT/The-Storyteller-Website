@@ -5,5 +5,15 @@ import Header from "./Header";
 import OurCompany from "./OurCompany";
 import OurTeam from "./OurTeam";
 import Splash from "./Splash";
+import AllGalleries from "./AllGalleries";
 
-export { AboutUs, Footer, GalleryPreview, Header, OurCompany, OurTeam, Splash };
+export {
+    AboutUs,
+    AllGalleries,
+    Footer,
+    GalleryPreview,
+    Header,
+    OurCompany,
+    OurTeam,
+    Splash,
+};
