@@ -1,12 +1,8 @@
 import { OurCompany, OurTeam } from "@StorytellerComponents/organisms";
-import { getProjects } from "@StorytellerSanity/queries";
-import { type GetServerSideProps } from "next";
 
-interface AboutPageProps {
-    test: string;
-}
+interface AboutPageProps {}
 
-export default function About({ test }: AboutPageProps) {
+export default function About(props: AboutPageProps) {
     return (
         <>
             <OurCompany />
@@ -14,14 +10,3 @@ export default function About({ test }: AboutPageProps) {
         </>
     );
 }
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    const data = await getProjects();
-
-    return {
-        props: {
-            test: "test text",
-            data: data,
-        },
-    };
-};
