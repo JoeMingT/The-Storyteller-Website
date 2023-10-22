@@ -1,5 +1,6 @@
 import { FooterIcons, FooterText } from "@StorytellerComponents/molecules";
 import { Grid } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 /**
@@ -9,6 +10,8 @@ import { useEffect, useState } from "react";
  * @returns {React.ReactNode} The rendered Footer component
  */
 const Footer: React.FC<any> = (props) => {
+    const router = useRouter();
+
     // Check if the body of the page is overflowing or not
     // If it is, then we set the footer at the end of the page
     // If not, we will fix it at the bottom (since there's no scrolling to hide it)
@@ -18,7 +21,7 @@ const Footer: React.FC<any> = (props) => {
         if (el) {
             setIsOverflowing(el.scrollHeight > window.innerHeight);
         }
-    }, []);
+    }, [router.pathname]);
 
     return (
         <Grid
