@@ -1,14 +1,11 @@
 import StorytellerLogo from "@/public/assets/logo/storyteller_logo_rectangle.png";
 import { RedirectButton, STImage, STText } from "@StorytellerComponents/atoms";
-import {
-    SplashBackground,
-    SplashText,
-} from "@StorytellerComponents/molecules";
+import { SplashBackground, SplashText } from "@StorytellerComponents/molecules";
 import { VStack } from "@chakra-ui/react";
 
 /**
  * The Splash component that is rendered at Landing Page.
- * 
+ *
  * @returns {React.ReactNode} The Splash Component for the website
  */
 const Splash: React.FC<any> = () => {
