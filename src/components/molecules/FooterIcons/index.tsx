@@ -1,13 +1,14 @@
-import { GridItem } from "@chakra-ui/react";
 import { socialMediaLinks } from "@Storyteller/data/socialMediaLinks";
 import { STIconButton } from "@StorytellerComponents/atoms";
+
+import { GridItem } from "@chakra-ui/react";
 
 /**
  * Component to render the Icons in the Footer which
  * will redirect to the corresponding pages.
  * Almost one-to-one to HeaderIconButtonSection, with slight
  * styling changes for Footer
- * 
+ *
  * @return {React.ReactNode} The icons in the Footer
  */
 const FooterIcons: React.FC<any> = (props) => {

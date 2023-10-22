@@ -1,6 +1,8 @@
-import { IconButton, Image } from "@chakra-ui/react";
-import { ForwardRefExoticComponent, ForwardedRef, forwardRef } from "react";
 import { STIconButtonProps } from "./props";
+
+import { IconButton, Image } from "@chakra-ui/react";
+
+import { ForwardRefExoticComponent, ForwardedRef, forwardRef } from "react";
 
 /**
  * The basic IconButton component for the application with the base settings.

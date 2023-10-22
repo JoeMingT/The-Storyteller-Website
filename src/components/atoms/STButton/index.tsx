@@ -1,5 +1,6 @@
-import { Button } from "@chakra-ui/react";
 import { STButtonProps } from "./props";
+
+import { Button } from "@chakra-ui/react";
 
 /**
  * The function to render the color depending on the type of it

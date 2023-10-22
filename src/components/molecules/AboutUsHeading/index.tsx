@@ -1,6 +1,7 @@
 import { STHeading } from "@StorytellerComponents/atoms";
-import { Box, Divider } from "@chakra-ui/react";
 import { AboutUsHeadingProps } from "./props";
+
+import { Box, Divider } from "@chakra-ui/react";
 
 /**
  * This component renders out the Heading text at the top

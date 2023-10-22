@@ -1,5 +1,6 @@
 import StorytellerLogo from "@/public/assets/logo/storyteller_logo_rectangle.png";
 import { STImage } from "@StorytellerComponents/atoms";
+
 import { Box } from "@chakra-ui/react";
 
 /**

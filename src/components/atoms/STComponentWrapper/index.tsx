@@ -1,5 +1,6 @@
-import { Box } from "@chakra-ui/react";
 import { STComponentWrapperProps } from "./props";
+
+import { Box } from "@chakra-ui/react";
 
 /**
  * The component that wraps around other main components in the application

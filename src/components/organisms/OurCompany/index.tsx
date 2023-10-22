@@ -2,6 +2,7 @@ import {
     OurCompanyLogo,
     OurCompanyWriteup,
 } from "@StorytellerComponents/molecules";
+
 import { VStack } from "@chakra-ui/react";
 
 /**

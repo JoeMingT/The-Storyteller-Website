@@ -1,5 +1,6 @@
-import { Flex } from "@chakra-ui/react";
 import { HeaderWrapperProps } from "./props";
+
+import { Flex } from "@chakra-ui/react";
 
 /**
  * The wrapper component that wraps around both Mobile and Desktop view Headers

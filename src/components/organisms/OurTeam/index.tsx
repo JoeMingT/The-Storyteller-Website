@@ -5,6 +5,7 @@ import {
     SwiperWrapper,
 } from "@StorytellerComponents/atoms";
 import { OurTeamCard } from "@StorytellerComponents/molecules";
+
 import { Box } from "@chakra-ui/react";
 import { SwiperSlide } from "swiper/react";
 

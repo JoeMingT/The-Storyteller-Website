@@ -1,8 +1,9 @@
 // Hard-coded links
 import { headerLinks } from "@Storyteller/data/headerLinks";
 import { HeaderItem } from "@StorytellerComponents/molecules";
-import { Stack } from "@chakra-ui/react";
 import { HeaderLinksSectionProps } from "./props";
+
+import { Stack } from "@chakra-ui/react";
 
 /**
  * The component where we render all of the HeaderLinks into one group

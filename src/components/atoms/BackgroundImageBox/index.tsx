@@ -1,5 +1,6 @@
-import { Box } from "@chakra-ui/react";
 import { BackgroundImageBoxProps } from "./props";
+
+import { Box } from "@chakra-ui/react";
 
 /**
  * The component that is used to render a background image + any gradient overlapping the image

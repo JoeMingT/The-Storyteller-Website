@@ -1,5 +1,6 @@
 import { STButton, STText } from "@StorytellerComponents/atoms";
 import { AboutUsHeading, AboutUsText } from "@StorytellerComponents/molecules";
+
 import { GridItem } from "@chakra-ui/react";
 import NextLink from "next/link";
 

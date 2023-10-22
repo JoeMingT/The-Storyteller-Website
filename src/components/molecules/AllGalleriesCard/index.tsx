@@ -3,6 +3,8 @@ import {
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
+import { AllGalleriesCardProps } from "./props";
+
 import {
     Box,
     Card,
@@ -12,7 +14,6 @@ import {
     useBreakpointValue,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
-import { AllGalleriesCardProps } from "./props";
 
 const AllGalleriesCard: React.FC<AllGalleriesCardProps> = (props) => {
     const { imgUrl, galleryTitle, galleryUrl, ...cardProps } = props;

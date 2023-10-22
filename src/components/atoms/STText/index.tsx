@@ -1,6 +1,6 @@
-import { Text } from "@chakra-ui/react";
-
 import { STTextProps } from "./props";
+
+import { Text } from "@chakra-ui/react";
 
 /**
  * The basic Text component for the application with the base settings.

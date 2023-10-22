@@ -1,5 +1,6 @@
-import { Heading } from "@chakra-ui/react";
 import { STHeadingProps } from "./props";
+
+import { Heading } from "@chakra-ui/react";
 
 /**
  * The basic Heading component for the application with the base settings.

@@ -1,5 +1,7 @@
 import { FooterIcons, FooterText } from "@StorytellerComponents/molecules";
+
 import { Grid } from "@chakra-ui/react";
+
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 

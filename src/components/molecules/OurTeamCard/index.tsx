@@ -1,6 +1,7 @@
 import { STText } from "@StorytellerComponents/atoms";
-import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
 import { OurTeamCardProps } from "./props";
+
+import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
 
 /**
  * The Card component in the Our Team section.

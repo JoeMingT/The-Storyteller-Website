@@ -1,6 +1,7 @@
 import { STButton } from "@StorytellerComponents/atoms";
-import NextLink from "next/link";
 import { RedirectButtonProps } from "./props";
+
+import NextLink from "next/link";
 
 /**
  * The component that renders a button that redirects users

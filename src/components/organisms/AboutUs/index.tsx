@@ -1,5 +1,6 @@
 import { STComponentWrapper } from "@StorytellerComponents/atoms";
 import { AboutUsDetails, AboutUsImage } from "@StorytellerComponents/molecules";
+
 import { Grid } from "@chakra-ui/react";
 
 /**

@@ -1,14 +1,16 @@
+import { STIconButton } from "@StorytellerComponents/atoms";
+import { SwiperWrapperProps } from "./props";
+
+import { Box } from "@chakra-ui/react";
+
+import { useRef } from "react";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
-
-import { STIconButton } from "@StorytellerComponents/atoms";
-import { Box } from "@chakra-ui/react";
-import { useRef } from "react";
-import { SwiperWrapperProps } from "./props";
 
 /**
  * The Swiper component that wraps around SwiperSlides with a set of default settings.

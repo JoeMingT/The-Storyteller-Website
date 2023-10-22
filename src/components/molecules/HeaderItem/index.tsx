@@ -1,6 +1,7 @@
 import { STText } from "@StorytellerComponents/atoms";
-import NextLink from "next/link";
 import { HeaderItemProps } from "./props";
+
+import NextLink from "next/link";
 
 /**
  * This component is responsible for rendering each of the text

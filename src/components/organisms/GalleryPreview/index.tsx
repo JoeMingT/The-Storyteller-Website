@@ -1,11 +1,11 @@
-import { galleryPreviewTestData } from "@Storyteller/data/testGalleryPreview";
 import {
     STComponentWrapper,
     SwiperWrapper,
 } from "@StorytellerComponents/atoms";
 import { GalleryPreviewItem } from "@StorytellerComponents/molecules";
-import { SwiperSlide } from "swiper/react";
 import { GalleryPreviewProps } from "./props";
+
+import { SwiperSlide } from "swiper/react";
 
 /**
  * The Gallery Preview component. Used in the landing page to preview some of the galleries

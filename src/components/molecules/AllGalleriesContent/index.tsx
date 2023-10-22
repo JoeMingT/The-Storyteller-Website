@@ -1,6 +1,8 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
 import { STIconButton } from "@StorytellerComponents/atoms";
+import { AllGalleriesCard } from "@StorytellerComponents/molecules";
 import { getThumbnailGalleries } from "@StorytellerSanity/queries";
+
 import {
     Center,
     Grid,
@@ -9,10 +11,10 @@ import {
     useBreakpointValue,
     useToast,
 } from "@chakra-ui/react";
+import ReactPagination from "react-paginate";
+
 import { useRouter } from "next/router";
 import { useState } from "react";
-import ReactPagination from "react-paginate";
-import AllGalleriesCard from "../AllGalleriesCard";
 import { AllGalleriesContentProps } from "./props";
 
 const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {

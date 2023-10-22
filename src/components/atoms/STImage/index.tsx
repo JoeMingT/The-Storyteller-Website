@@ -1,6 +1,7 @@
+import { STImageProps } from "./props";
+
 import { useBreakpointValue } from "@chakra-ui/react";
 import NextImage from "next/image";
-import { STImageProps } from "./props";
 
 /**
  * The Image component that will be used throughout the application.

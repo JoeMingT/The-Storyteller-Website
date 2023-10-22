@@ -3,8 +3,9 @@ import {
     AllGalleriesContent,
     AllGalleriesHeader,
 } from "@StorytellerComponents/molecules";
-import { Box } from "@chakra-ui/react";
 import { AllGalleriesProps } from "./props";
+
+import { Box } from "@chakra-ui/react";
 
 const AllGalleries: React.FC<AllGalleriesProps> = (props) => {
     const { noOfPages, initialData, itemsPerPage, initialPage } = props;

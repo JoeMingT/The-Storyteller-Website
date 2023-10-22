@@ -1,4 +1,5 @@
 import AboutUsShowcaseImg from "@/public/assets/images/about/about_us_image.jpg";
+
 import { GridItem } from "@chakra-ui/react";
 import NextImage from "next/image";
 

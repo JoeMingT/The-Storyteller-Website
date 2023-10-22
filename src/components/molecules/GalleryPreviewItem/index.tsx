@@ -4,9 +4,9 @@ import {
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
-import { Box, Divider, HStack } from "@chakra-ui/react";
-import React from "react";
 import { GalleryPreviewItemProps } from "./props";
+
+import { Box, Divider, HStack } from "@chakra-ui/react";
 
 /**
  * The component that renders out each preview of a gallery.
