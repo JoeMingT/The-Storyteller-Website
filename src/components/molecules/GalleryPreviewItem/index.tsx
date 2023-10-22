@@ -6,6 +6,7 @@ import {
 } from "@StorytellerComponents/atoms";
 import { Box, Divider, HStack } from "@chakra-ui/react";
 import React from "react";
+import { GalleryPreviewItemProps } from "./props";
 
 /**
  * The component that renders out each preview of a gallery.
@@ -13,12 +14,13 @@ import React from "react";
  *
  * @returns {React.ReactNode} One gallery preview
  */
-const GalleryPreviewItem: React.FC<any> = (props) => {
+const GalleryPreviewItem: React.FC<GalleryPreviewItemProps> = (props) => {
+    const { imgUrl, galleryTitle, galleryUrl } = props;
     return (
         <Box h="100%" display="flex" alignItems="center">
             {/* The Background image for the gallery showcase */}
             <BackgroundImageBox
-                backgroundImage={`linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(${props.url})`}
+                backgroundImage={`linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(${imgUrl})`}
                 h="100%"
                 minH={["450px", "1000px"]}
                 maxH={["1000px", "2000px"]}
@@ -39,7 +41,7 @@ const GalleryPreviewItem: React.FC<any> = (props) => {
                     noOfLines={3}
                     color="#fff"
                 >
-                    {props.title}
+                    {galleryTitle}
                 </STHeading>
                 {/* The seperator line */}
                 <HStack
@@ -73,7 +75,7 @@ const GalleryPreviewItem: React.FC<any> = (props) => {
                     border="3px solid #97CDFF"
                     color="highlight"
                     _hover={{ backgroundColor: "highlight", color: "white" }}
-                    href="#"
+                    href={`/gallery/${galleryUrl}`}
                 >
                     <STText>View Here</STText>
                 </RedirectButton>

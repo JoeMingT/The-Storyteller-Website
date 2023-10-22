@@ -5,6 +5,7 @@ import {
 } from "@StorytellerComponents/atoms";
 import { GalleryPreviewItem } from "@StorytellerComponents/molecules";
 import { SwiperSlide } from "swiper/react";
+import { GalleryPreviewProps } from "./props";
 
 /**
  * The Gallery Preview component. Used in the landing page to preview some of the galleries
@@ -13,7 +14,9 @@ import { SwiperSlide } from "swiper/react";
  *
  * @returns {React.ReactNode} The Component that is the Preview for the Galleries
  */
-const GalleryPreview: React.FC<any> = () => {
+const GalleryPreview: React.FC<GalleryPreviewProps> = (props) => {
+    const { galleryPreviewData } = props;
+
     return (
         <STComponentWrapper>
             <SwiperWrapper
@@ -36,12 +39,13 @@ const GalleryPreview: React.FC<any> = () => {
                     480: { allowTouchMove: false },
                 }}
             >
-                {galleryPreviewTestData.map((data) => {
+                {galleryPreviewData.map((data) => {
                     return (
-                        <SwiperSlide key={data.url} style={{ height: "auto" }}>
+                        <SwiperSlide key={data._id} style={{ height: "auto" }}>
                             <GalleryPreviewItem
-                                url={data.url}
-                                title={data.title}
+                                imgUrl={data.thumbnail}
+                                galleryTitle={data.name}
+                                galleryUrl={data.slug}
                             />
                         </SwiperSlide>
                     );

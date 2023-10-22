@@ -1,32 +1,32 @@
+import { ThumbnailGalleryType } from "@Storyteller/types";
 import {
     AboutUs,
     GalleryPreview,
     Splash,
 } from "@StorytellerComponents/organisms";
-import { getProjects } from "@StorytellerSanity/queries";
+import { getThumbnailGalleries } from "@StorytellerSanity/queries";
 import { type GetServerSideProps } from "next";
 
 interface LandingPageProps {
-    test: string;
+    galleryPreviewData: ThumbnailGalleryType[];
 }
 
-export default function Landing({ test }: LandingPageProps) {
+export default function Landing({ galleryPreviewData }: LandingPageProps) {
     return (
         <>
             <Splash />
             <AboutUs />
-            <GalleryPreview />
+            <GalleryPreview galleryPreviewData={galleryPreviewData} />
         </>
     );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const data = await getProjects();
+    const galleryPreviewData = await getThumbnailGalleries(3, 0);
 
     return {
         props: {
-            test: "test text",
-            data: data,
+            galleryPreviewData: galleryPreviewData,
         },
     };
 };
