@@ -1,6 +1,6 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
 import { groq } from "next-sanity";
-import { client } from "../lib/client";
+import { client } from "../../lib/client";
 
 export async function getThumbnailGalleries(
     itemsPerPage: number,

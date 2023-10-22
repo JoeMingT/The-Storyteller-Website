@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { client } from "../lib/client";
+import { client } from "../../lib/client";
 
 export async function getGalleries(
     slug: string,

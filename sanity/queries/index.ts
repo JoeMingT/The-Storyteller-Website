@@ -1,4 +1,4 @@
-import { getThumbnailGalleries } from "./getThumbnailGallery";
-import { getTotalGalleryLength } from "./getTotalGalleryLength";
+import { getThumbnailGalleries } from "./gallery/getThumbnailGallery";
+import { getTotalGalleryLength } from "./gallery/getTotalGalleryLength";
 
 export { getThumbnailGalleries, getTotalGalleryLength };
