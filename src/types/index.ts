@@ -1,3 +1,4 @@
 import { ProjectType } from "./ProjectType";
+import { ThumbnailGalleryType } from "./ThumbnailGalleryType";
 
-export type { ProjectType };
+export type { ProjectType, ThumbnailGalleryType };
