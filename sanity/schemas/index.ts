@@ -1,5 +1,4 @@
+import GallerySchema from "./gallery";
 import ProjectSchema from "./project";
 
-export {
-  ProjectSchema
-}
+export { GallerySchema, ProjectSchema };

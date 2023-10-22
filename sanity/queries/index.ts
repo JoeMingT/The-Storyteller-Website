@@ -1,3 +1,4 @@
-import { getProjects } from "./getProjects";
+import { getThumbnailGalleries } from "./getThumbnailGallery";
+import { getTotalGalleryLength } from "./getTotalGalleryLength";
 
-export { getProjects };
+export { getThumbnailGalleries, getTotalGalleryLength };
