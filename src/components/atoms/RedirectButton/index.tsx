@@ -10,9 +10,9 @@ import { RedirectButtonProps } from "./props";
  * @returns {React.ReactNode} The Button that redirects users
  */
 const RedirectButton: React.FC<RedirectButtonProps> = (props) => {
-    const { href, children, ...buttonProps } = props;
+    const { href, children, nextLinkProps, ...buttonProps } = props;
     return (
-        <NextLink href={href}>
+        <NextLink {...nextLinkProps} href={href}>
             <STButton {...buttonProps}>{children}</STButton>
         </NextLink>
     );
