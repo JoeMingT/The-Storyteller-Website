@@ -9,7 +9,7 @@ import { Grid } from "@chakra-ui/react";
  *
  * For the component in the About Us PAGE, check Our Company and Our Team component.
  *
- * @returns The About Us component
+ * @returns {React.ReactNode} The About Us component
  */
 const AboutUs: React.FC<any> = () => {
     return (

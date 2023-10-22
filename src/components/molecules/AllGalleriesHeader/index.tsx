@@ -4,13 +4,24 @@ import { Divider, FormControl, Input, Stack } from "@chakra-ui/react";
 
 import { ChangeEvent, FormEvent, useState } from "react";
 
+/**
+ * The Header of the All Gallery component. It contains 2 things. First is the title, the second is a search bar.
+ * The title is straightforward so no explanation will be given.
+ *
+ * The search bar is a form in disguise, containing an Input field with a Button. When submitted it will make a request to the backend
+ * to query and get data back. **Currently not implemented**
+ *
+ * @returns {React.ReactNode} The rendered header for the all gallery component
+ */
 const AllGalleriesHeader: React.FC<any> = () => {
     const [query, setQuery] = useState<string>("");
 
+    // Whenever there's change in input update it
     const handleQueryChange = (event: ChangeEvent<HTMLInputElement>) => {
         setQuery(event?.currentTarget ? event.currentTarget.value : "");
     };
 
+    // Submit thte query to the backend
     const handleQuerySubmit = (event: FormEvent<HTMLFormElement>) => {
         console.log("Test");
         console.log(query);

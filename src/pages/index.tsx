@@ -11,6 +11,13 @@ interface LandingPageProps {
     galleryPreviewData: ThumbnailGalleryType[];
 }
 
+/**
+ * Route: "/"
+ * 
+ * Components Related: "Splash", "AboutUs", "GalleryPreview"
+ * 
+ * This is the landing page component. It is the first page that people will reach when they access the website normally.
+ */
 export default function Landing({ galleryPreviewData }: LandingPageProps) {
     return (
         <>

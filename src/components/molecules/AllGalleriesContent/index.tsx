@@ -17,6 +17,12 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { AllGalleriesContentProps } from "./props";
 
+/**
+ * The component rendering the conttent for the All Gallery component. Utilizes regular Chakra UI with custom React Paginate component for pagination.
+ *
+ * @param {AllGalleriesContentProps} props The properties for the component. All of it is mainly used for the first load of the component. Subsequent loads are fetched from backend database.
+ * @returns {React.ReactNode} The rendered content of the component with pagination.
+ */
 const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
     const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
@@ -28,9 +34,11 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [currPage, setCurrPage] = useState<number>(initialPage);
 
+    // To have responsive Page Range and Margin Pages for React Paginate
     const pageRangeDisplayed = useBreakpointValue({ base: 1, sm: 2 });
     const marginPagesDisplayed = useBreakpointValue({ base: 1, sm: 2, md: 3 });
 
+    // Default Props for the pagination buttons
     const buttonProps = {
         borderRadius: "100%",
         border: "2px solid #EFEDE7",
@@ -43,8 +51,10 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
         },
     };
 
+    // Function to return the component according to whether it is currently fetching data or not
     const renderMainContent = () => {
         return isLoading ? (
+            /* If it is loading */
             <Center>
                 <Spinner
                     color="secondary"
@@ -56,6 +66,7 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                 />
             </Center>
         ) : (
+            /* If not, return the fetched data in a Grid-Card format */
             <Grid
                 templateColumns={[
                     "repeat(1, 1fr)",
@@ -84,10 +95,21 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
         <>
             {renderMainContent()}
             <ReactPagination
+                // How many pages total
                 pageCount={noOfPages}
+                // The range to display around the current active page
+                //       This Part
+                // 1 2 ... 5 6 7 ... 19 20
                 pageRangeDisplayed={pageRangeDisplayed}
+                // The amount of pages to display at the end of the pagination
+                // This               Part
+                // 1 2 ... 5 6 7 ... 19 20
                 marginPagesDisplayed={marginPagesDisplayed}
+                // Force current active page. Used this instead of Initial page
+                // due to the fact it fetches data dynamically (when page change occurs)
+                // and not all data is fetched in one single go
                 forcePage={currPage}
+                // Custom Class Names for styling
                 containerClassName="pagination"
                 breakClassName="pagination-break"
                 breakLinkClassName="pagination-break-link"
@@ -101,6 +123,7 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                 nextLinkClassName="pagination-next-link"
                 disabledClassName="pagination-disabled"
                 disabledLinkClassName="pagination-disabled-link"
+                // Buttons for Next and Previous page
                 previousLabel={
                     <STIconButton
                         iconSrc="/assets/icon/left-nav-arrow-white.svg"
@@ -115,23 +138,43 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                         {...buttonProps}
                     />
                 }
+                onClick={(event) => {
+                    // When we click on the pagination, check for these conditions
+                    // IF these conditions occurs, don't transition the page
+                    // (as transition will trigger onPageChange, causing it to fetch data again)
+                    if (
+                        event.isActive ||
+                        (event.isNext && event.selected === noOfPages - 1) ||
+                        (event.isPrevious && event.selected === 0) ||
+                        isLoading
+                    ) {
+                        return false;
+                    }
+                }}
                 onPageChange={async (page) => {
+                    // When the page is successfully changed:
+                    // Scroll to the top
                     window.scroll({
                         top: 0,
                         behavior: "smooth",
                     });
+                    // Se loading is true, so it will render a loading indicator
                     setIsLoading(true);
+                    // Update the href to include a query parameter (for users who want to access it in the future)
                     await router.push(
                         { query: { page: `${page.selected + 1}` } },
                         undefined,
                         { shallow: true }
                     );
+                    // Get the data from backend
                     getThumbnailGalleries(itemsPerPage, page.selected)
                         .then((data) => {
+                            // If success update the data accordinfly
                             setGalleryData(data);
                             setCurrPage(page.selected);
                         })
                         .catch((err) => {
+                            // Else present an error, and revert to original / initial data
                             toast({
                                 title: "Error!",
                                 description: "Failed to retrieve data!",
@@ -141,18 +184,9 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                             });
                         })
                         .finally(() => {
+                            // Then say loading is completed, so it will display the content body again
                             setIsLoading(false);
                         });
-                }}
-                onClick={(event) => {
-                    if (
-                        event.isActive ||
-                        (event.isNext && event.selected === noOfPages - 1) ||
-                        (event.isPrevious && event.selected === 0) ||
-                        isLoading
-                    ) {
-                        return false;
-                    }
                 }}
             />
         </>

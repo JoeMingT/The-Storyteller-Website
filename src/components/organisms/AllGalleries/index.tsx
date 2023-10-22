@@ -7,6 +7,11 @@ import { AllGalleriesProps } from "./props";
 
 import { Box } from "@chakra-ui/react";
 
+/**
+ * The component used to render out the all galleries page. Fetches and showcases data stored in the server.
+ *
+ * @returns {React.ReactNode} The rendered component with the initial data pre-rendered
+ */
 const AllGalleries: React.FC<AllGalleriesProps> = (props) => {
     const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
