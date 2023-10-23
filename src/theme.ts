@@ -1,9 +1,27 @@
 import { extendTheme } from "@chakra-ui/react";
 
+import { Nunito, Roboto_Slab } from "next/font/google";
+
+const roboto_slab = Roboto_Slab({
+    subsets: ["latin"],
+    weight: ["300", "400", "700"],
+    style: ["normal"],
+    variable: "--heading-font",
+    display: "swap",
+});
+
+const nunito = Nunito({
+    subsets: ["latin"],
+    style: ["normal", "italic"],
+    weight: ["300", "400", "700"],
+    variable: "--text-font",
+    display: "swap",
+});
+
 const theme = extendTheme({
     fonts: {
-        heading: "Roboto Slab, Times New Roman, serif",
-        body: "Nunito, Roboto, sans-serif",
+        heading: `${roboto_slab.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
+        body: `${nunito.style.fontFamily}, Nunito, Roboto, sans-serif`,
     },
     fontSizes: {
         "3xs": "0.45rem",
