@@ -3,9 +3,17 @@ import {
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
-import { Box, Center, Divider } from "@chakra-ui/react";
 import { SelectedGalleryTitleProps } from "./props";
 
+import { Box, Center, Divider } from "@chakra-ui/react";
+
+/**
+ * The component that renders the title at the top of the component. The component includes details such as the
+ * clients who commissioned for the session, the photographers for the session, the venue, and the title of the gallery.
+ *
+ * @param {SelectedGalleryTitleProps} props The props containing the information required for the title section.
+ * @returns {React.ReactNode} The rendered Selected Gallery title / top part
+ */
 const SelectedGalleryTitle: React.FC<SelectedGalleryTitleProps> = (props) => {
     const { galleryName, clients, photographers, venue } = props;
 
