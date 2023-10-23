@@ -1,6 +1,7 @@
+import { useCheckIsMobile } from "@Storyteller/hooks";
 import { BackgroundImageBox } from "@StorytellerComponents/atoms";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 /**
  * Component to render the Splash image background
@@ -9,23 +10,11 @@ import { useEffect, useState } from "react";
  * @returns {React.ReactNode} The background image and linear gradient for the splash component
  */
 const SplashBackground: React.FC<any> = () => {
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const { isMobile, checkIsMobile } = useCheckIsMobile();
 
     useEffect(() => {
-        /* Storing user's device details in a variable*/
-        let details = navigator.userAgent;
-
-        /* Creating a regular expression 
-        containing some mobile devices keywords 
-        to search it in details string*/
-        let regexp = /android|iphone|kindle|ipad/i;
-
-        /* Using test() method to search regexp in details
-        it returns boolean value*/
-        let isMobileDevice = regexp.test(details);
-
-        setIsMobile(isMobileDevice);
-    }, []);
+        checkIsMobile();
+    });
 
     return (
         <BackgroundImageBox
