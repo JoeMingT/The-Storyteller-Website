@@ -23,9 +23,6 @@ import "swiper/swiper-bundle.css";
  * @returns {React.ReactNode} The Swiper wrapping around SwiperSlides
  */
 const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
-    const prevButtonRef = useRef<HTMLButtonElement>(null);
-    const nextButtonRef = useRef<HTMLButtonElement>(null);
-
     const {
         children,
         leftButtonProps,
@@ -33,29 +30,14 @@ const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
         boxProps,
         ...swiperProps
     } = props;
+
+    const prevButtonRef = useRef<HTMLButtonElement>(null);
+    const nextButtonRef = useRef<HTMLButtonElement>(null);
+
     return (
         <Box display="flex" alignItems="center" {...boxProps}>
-            {/* Absolute buttons to include it within the swiper */}
-            <STIconButton
-                position="absolute"
-                zIndex="2"
-                left="0"
-                ref={prevButtonRef}
-                {...leftButtonProps}
-            />
-            <STIconButton
-                position="absolute"
-                zIndex="2"
-                right="0"
-                ref={nextButtonRef}
-                {...rightButtonProps}
-            />
             <Swiper
                 modules={[Navigation, Pagination, A11y, Autoplay]}
-                navigation={{
-                    prevEl: prevButtonRef.current,
-                    nextEl: nextButtonRef.current,
-                }}
                 pagination={{
                     clickable: true,
                 }}
@@ -75,6 +57,21 @@ const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
                 {...swiperProps}
             >
                 {children}
+                {/* Absolute buttons to include it within the swiper */}
+                <STIconButton
+                    position="absolute"
+                    zIndex="2"
+                    left="0"
+                    ref={prevButtonRef}
+                    {...leftButtonProps}
+                />
+                <STIconButton
+                    position="absolute"
+                    zIndex="2"
+                    right="0"
+                    ref={nextButtonRef}
+                    {...rightButtonProps}
+                />
             </Swiper>
         </Box>
     );
