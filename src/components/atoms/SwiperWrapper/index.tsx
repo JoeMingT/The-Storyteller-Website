@@ -35,6 +35,21 @@ const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
     } = props;
     return (
         <Box display="flex" alignItems="center" {...boxProps}>
+            {/* Absolute buttons to include it within the swiper */}
+            <STIconButton
+                position="absolute"
+                zIndex="2"
+                left="0"
+                ref={prevButtonRef}
+                {...leftButtonProps}
+            />
+            <STIconButton
+                position="absolute"
+                zIndex="2"
+                right="0"
+                ref={nextButtonRef}
+                {...rightButtonProps}
+            />
             <Swiper
                 modules={[Navigation, Pagination, A11y, Autoplay]}
                 navigation={{
@@ -61,21 +76,6 @@ const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
             >
                 {children}
             </Swiper>
-            {/* Absolute buttons to include it within the swiper */}
-            <STIconButton
-                position="absolute"
-                zIndex="2"
-                left="0"
-                ref={prevButtonRef}
-                {...leftButtonProps}
-            />
-            <STIconButton
-                position="absolute"
-                zIndex="2"
-                right="0"
-                ref={nextButtonRef}
-                {...rightButtonProps}
-            />
         </Box>
     );
 };
