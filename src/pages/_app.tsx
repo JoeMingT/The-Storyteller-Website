@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
                 <meta
                     name="keyword"
-                    content="TheStoryteller, TheStoryteller by Joe, Tham Joe Ping"
+                    content="TheStoryteller, TheStoryteller by Joe, Tham Joe Ping, Photography, Studio, Photographer, Photographers, Photography Studio, Professional Photography"
                 />
                 <meta
                     name="viewport"
