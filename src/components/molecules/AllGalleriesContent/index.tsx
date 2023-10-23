@@ -160,28 +160,30 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                     });
                     // Se loading is true, so it will render a loading indicator
                     setIsLoading(true);
-                    // Update the href to include a query parameter (for users who want to access it in the future)
-                    await router.push(
-                        { query: { page: `${page.selected + 1}` } },
-                        undefined,
-                        { shallow: true }
-                    );
+
                     // Get the data from backend
                     getThumbnailGalleries(itemsPerPage, page.selected)
                         .then((data) => {
                             // If success update the data accordinfly
                             setGalleryData(data);
                             setCurrPage(page.selected);
+                            // Update the href to include a query parameter (for users who want to access it in the future)
+                            router.push(
+                                { query: { page: `${page.selected + 1}` } },
+                                undefined,
+                                { shallow: true }
+                            );
                         })
                         .catch((err) => {
                             // Else present an error, and revert to original / initial data
                             toast({
                                 title: "Error!",
-                                description: "Failed to retrieve data!",
+                                description: `Failed to retrieve data! Error Message: ${err}`,
                                 status: "error",
                                 duration: 5000,
                                 isClosable: true,
                             });
+                            setCurrPage(currPage);
                         })
                         .finally(() => {
                             // Then say loading is completed, so it will display the content body again

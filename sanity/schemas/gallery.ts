@@ -17,6 +17,35 @@ const GallerySchema = {
             options: { source: "name" },
         },
         {
+            name: "clients",
+            title: "Clients",
+            type: "array",
+            of: [
+                {
+                    name: "name",
+                    title: "Name",
+                    type: "string",
+                },
+            ],
+        },
+        {
+            name: "photographers",
+            title: "Photographers",
+            type: "array",
+            of: [
+                {
+                    name: "name",
+                    title: "Name",
+                    type: "string",
+                },
+            ],
+        },
+        {
+            name: "venue",
+            title: "Venue",
+            type: "string",
+        },
+        {
             name: "thumbnail",
             title: "Thumbnail",
             // For image, check out what other types you can use in docs

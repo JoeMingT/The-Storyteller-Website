@@ -1,25 +1,24 @@
+import { SelectedGalleryType } from "@Storyteller/types/sanity/SelectedGalleryType";
 import { groq } from "next-sanity";
 import { client } from "../../lib/client";
 
-export async function getGalleries(
-    slug: string,
-    itemsPerPage: number,
-    page: number
-): Promise<any[]> {
-    const offSet = itemsPerPage * page;
-    let startIndex = offSet;
-    let endIndex = startIndex + itemsPerPage;
-
+export async function getSelectedGallery(
+    slug: string
+): Promise<SelectedGalleryType[]> {
     // GROQ Query time
     // * Grabs everything in dataset
     // [] Filter or Query (Conditions)
     // {} Fields that you want from the things you queried
-    const query = `*[_type == "gallery" && slug.current == $slug] | order(_createdAt desc) [$startIndex...$endIndex]{
+    const query = `*[_type == "gallery" && slug.current == $slug][0]{
         _id,
         name,
-        "slug": slug.current,
-        "thumbnail": thumbnail.asset->url,
+        venue,
+        "clients": clients[],
+        "photographers": photographers[],
+        "images": images[] {
+            "url": asset->url
+        }
     }`;
 
-    return client.fetch(groq`${query}`, { startIndex, endIndex, slug });
+    return client.fetch(groq`${query}`, { slug });
 }
