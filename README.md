@@ -151,3 +151,14 @@ This folder contains custom types that is required for the Application due to Ty
 
 This file is the custom / extended theme for Chakra UI. Mainly the font sizes are the biggest change. There may be changes as the application
 continues to develop.
+
+## To Do List
+
+Essentially this is a compilation of future features, ideas, and items that will be good to include for the website whether for extra user-friendliness, accessibility, or even documentation purposes.
+
+-   [ ] Add a Custom 404 Page
+-   [ ] Add a Modal Feature that displays more information regarding a member when clicking on the portrait in OurTeam
+-   [ ] Consider using NextImage for optimizing the SelectedGallery images
+-   [ ] Rework some of the designs to make it more stand out
+-   [ ] Add a logger for the application to log any problems and errors encountered
+-   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
