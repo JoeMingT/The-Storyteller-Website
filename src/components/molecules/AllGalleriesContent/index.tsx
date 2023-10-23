@@ -55,7 +55,7 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
     const renderMainContent = () => {
         return isLoading ? (
             /* If it is loading */
-            <Center>
+            <Center h="100vh">
                 <Spinner
                     color="secondary"
                     width={["100px", "200px"]}
