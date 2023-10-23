@@ -178,7 +178,7 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                             // Else present an error, and revert to original / initial data
                             toast({
                                 title: "Error!",
-                                description: `Failed to retrieve data! Error Message: ${err}`,
+                                description: `Failed to retrieve data for page ${page.selected}! Error Message: ${err}`,
                                 status: "error",
                                 duration: 5000,
                                 isClosable: true,
