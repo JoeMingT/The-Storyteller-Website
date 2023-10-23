@@ -19,6 +19,9 @@ import OurCompanyLogo from "./OurCompanyLogo";
 import OurCompanyWriteup from "./OurCompanyWriteup";
 import OurTeamCard from "./OurTeamCard";
 import OurTeamModal from "./OurTeamModal";
+import SelectedGalleryContent from "./SelectedGalleryContent";
+import SelectedGalleryModal from "./SelectedGalleryModal";
+import SelectedGalleryTitle from "./SelectedGalleryTitle";
 import SplashBackground from "./SplashBackground";
 import SplashText from "./SplashText";
 
@@ -44,6 +47,9 @@ export {
     OurCompanyWriteup,
     OurTeamCard,
     OurTeamModal,
+    SelectedGalleryContent,
+    SelectedGalleryModal,
+    SelectedGalleryTitle,
     SplashBackground,
     SplashText,
 };

@@ -1,11 +1,12 @@
 import AboutUs from "./AboutUs";
+import AllGalleries from "./AllGalleries";
 import Footer from "./Footer";
 import GalleryPreview from "./GalleryPreview";
 import Header from "./Header";
 import OurCompany from "./OurCompany";
 import OurTeam from "./OurTeam";
+import SelectedGallery from "./SelectedGallery";
 import Splash from "./Splash";
-import AllGalleries from "./AllGalleries";
 
 export {
     AboutUs,
@@ -15,5 +16,6 @@ export {
     Header,
     OurCompany,
     OurTeam,
+    SelectedGallery,
     Splash,
 };
