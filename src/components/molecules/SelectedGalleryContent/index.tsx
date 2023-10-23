@@ -23,7 +23,12 @@ const SelectedGalleryContent: React.FC<SelectedGalleryContentProps> = (
             />
             <Box padding="5rem" background="secondary">
                 <ResponsiveMasonry
-                    columnsCountBreakPoins={{ 480: 1, 768: 2, 992: 3, 1280: 3 }}
+                    columnsCountBreakPoints={{
+                        480: 1,
+                        768: 2,
+                        992: 3,
+                        1280: 3,
+                    }}
                 >
                     <Masonry gutter="2rem">
                         {images.map((image, index) => {
