@@ -1,15 +1,23 @@
+import { SelectedGalleryType } from "@Storyteller/types/sanity/SelectedGalleryType";
 import { SelectedGallery } from "@StorytellerComponents/organisms";
 import { getSelectedGallery } from "@StorytellerSanity/queries";
+
 import { GetServerSideProps } from "next";
-import { useRouter } from "next/router";
 
-interface SelectedGalleryProps {}
+interface SelectedGalleryPageProps {
+    selectedGalleryData: SelectedGalleryType;
+}
 
-const GallerySlug: React.FC<any> = (props) => {
+/**
+ * Route: "/gallery/..."
+ *
+ * Components Related: "SelectedGallery"
+ *
+ * This is page you will be redirected to when you want to view a specific gallery and its related data.
+ * This is a catch all route as the id / slugs are changing depending on the gallery name and id.
+ */
+const SelectedGalleryPage: React.FC<SelectedGalleryPageProps> = (props) => {
     const { selectedGalleryData } = props;
-
-    console.log(selectedGalleryData);
-    const router = useRouter();
 
     return (
         <>
@@ -18,7 +26,7 @@ const GallerySlug: React.FC<any> = (props) => {
     );
 };
 
-export default GallerySlug;
+export default SelectedGalleryPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const currSlug = context.params?.gallerySlug;
@@ -26,7 +34,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     return {
         props: {
-            currSlug,
             selectedGalleryData,
         },
         notFound: !selectedGalleryData,
