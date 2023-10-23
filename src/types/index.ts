@@ -1,4 +1,4 @@
-import { ProjectType } from "./ProjectType";
-import { ThumbnailGalleryType } from "./ThumbnailGalleryType";
+import { ProjectType } from "./sanity/ProjectType";
+import { ThumbnailGalleryType } from "./sanity/ThumbnailGalleryType";
 
 export type { ProjectType, ThumbnailGalleryType };
