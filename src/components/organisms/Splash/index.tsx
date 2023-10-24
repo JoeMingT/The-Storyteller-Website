@@ -32,9 +32,9 @@ const Splash: React.FC<any> = () => {
                     height=""
                 />
                 <SplashText />
-                <RedirectButton href="/contact-us">
+                {/* <RedirectButton href="/contact-us">
                     <STText>Contact Us!</STText>
-                </RedirectButton>
+                </RedirectButton> */}
             </VStack>
         </>
     );

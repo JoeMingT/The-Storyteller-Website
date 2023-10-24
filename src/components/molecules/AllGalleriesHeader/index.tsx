@@ -1,6 +1,6 @@
-import { STHeading, STIconButton } from "@StorytellerComponents/atoms";
+import { STHeading } from "@StorytellerComponents/atoms";
 
-import { Divider, FormControl, Input, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 import { ChangeEvent, FormEvent, useState } from "react";
 
@@ -36,7 +36,7 @@ const AllGalleriesHeader: React.FC<any> = () => {
             <STHeading textDecoration={"underline"} color="white">
                 Galleries
             </STHeading>
-            <form onSubmit={handleQuerySubmit}>
+            {/* <form onSubmit={handleQuerySubmit}>
                 <FormControl
                     display="flex"
                     flexDir={"row"}
@@ -71,7 +71,7 @@ const AllGalleriesHeader: React.FC<any> = () => {
                         type="submit"
                     />
                 </FormControl>
-            </form>
+            </form> */}
         </Stack>
     );
 };
