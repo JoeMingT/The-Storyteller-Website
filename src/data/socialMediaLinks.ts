@@ -13,8 +13,8 @@ export const socialMediaLinks = [
     },
     {
         iconSrc: "/assets/icon/xiao-hong-shu-black.svg",
-        iconAlt: "Xiao Hong SHu Icon",
+        iconAlt: "Xiao Hong Shu Icon",
         ariaLabel: "The Storyteller Xiao Hong Shu",
-        url: "https://www.google.com",
+        url: "https://www.xiaohongshu.com/user/profile/60dd1630000000000101c184?xhsshare=CopyLink&appuid=60dd1630000000000101c184&apptime=1698048190",
     },
 ];
