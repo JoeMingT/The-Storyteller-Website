@@ -41,7 +41,7 @@ const SelectedGalleryContent: React.FC<SelectedGalleryContentProps> = (
     };
 
     const renderImageNodes = () => {
-        return images.map((image, index) => {
+        return images?.map((image, index) => {
             return (
                 <Image
                     key={`${index}`}

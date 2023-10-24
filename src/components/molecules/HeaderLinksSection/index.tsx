@@ -22,7 +22,7 @@ const HeaderLinksSection: React.FC<HeaderLinksSectionProps> = (props) => {
             flexDir={["column", "column", "row", "row", "row"]}
             {...stackProps}
         >
-            {headerLinks.map((headerLink) => {
+            {headerLinks?.map((headerLink) => {
                 return (
                     <HeaderItem
                         onClick={onClose ? onClose : () => {}}
