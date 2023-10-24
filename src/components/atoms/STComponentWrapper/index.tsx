@@ -17,7 +17,8 @@ const STComponentWrapper: React.FC<STComponentWrapperProps> = (props) => {
             background="secondary"
             w="100%"
             h="100%"
-            py={["3rem", "5rem"]}
+            pb={["3rem", "5rem"]}
+            pt={["3rem", "5rem"]}
             {...containerProps}
         >
             {children}

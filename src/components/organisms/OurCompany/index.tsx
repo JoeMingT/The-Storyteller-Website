@@ -17,7 +17,7 @@ const OurCompany: React.FC<any> = (props) => {
             alignItems="center"
             justifyContent="center"
             background="primary"
-            py={["5rem"]}
+            pb="5rem"
         >
             <OurCompanyLogo />
             <OurCompanyWriteup />

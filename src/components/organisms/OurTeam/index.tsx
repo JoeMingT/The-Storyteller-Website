@@ -25,33 +25,33 @@ const OurTeam: React.FC<OurTeamProps> = (props) => {
     // and also the position and display, that makes it below the swiper
     const leftButtonProps = {
         "aria-label": "Previous Team Member",
-        iconSrc: "/assets/icon/left-nav-arrow-white.svg",
+        iconSrc: "/assets/icon/left-nav-arrow-black.svg",
         iconAlt: "Nav Arrow Left",
-        border: "2px solid #EFEDE7",
+        border: "2px solid #444444",
         iconWidth: ["20px", "30px", "40px", "50px"],
         borderRadius: "100%",
         p: "15px",
         mr: ["0.5rem", "1rem"],
         ml: ["1rem"],
-        mt: ["1rem", "2rem"],
+        mt: ["2rem", "3rem"],
         _hover: {
-            backgroundColor: "#7E7F7A",
+            backgroundColor: "#CAB8B9",
             border: "2px solid transparent",
         },
     };
 
     const rightButtonProps = {
         "aria-label": "Next Team Member",
-        iconSrc: "/assets/icon/right-nav-arrow-white.svg",
+        iconSrc: "/assets/icon/right-nav-arrow-black.svg",
         iconAlt: "Nav Arrow Right",
         iconWidth: ["20px", "30px", "40px", "50px"],
-        border: "2px solid #EFEDE7",
+        border: "2px solid #444444",
         borderRadius: "100%",
         p: "15px",
         ml: ["0.5rem", "1rem"],
-        mt: ["1rem", "2rem"],
+        mt: ["2rem", "3rem"],
         _hover: {
-            backgroundColor: "#7E7F7A",
+            backgroundColor: "#CAB8B9",
             border: "2px solid transparent",
         },
     };
@@ -61,18 +61,17 @@ const OurTeam: React.FC<OurTeamProps> = (props) => {
             display="flex"
             w="100%"
             flexDir={"column"}
-            py="0rem"
-            pb={["3rem", "5rem"]}
+            pt="0rem"
             // borderTop="2px solid #EFEDE7"
         >
             <Box
                 w="100%"
-                background="#444444"
+                backgroundColor="secondary"
                 px={["0rem", "2rem", "5rem"]}
                 py={["5rem"]}
             >
                 <STHeading
-                    color="white"
+                    color="black"
                     textDecor="underline"
                     pb={["2rem", "3rem"]}
                     pl={["1rem", "0rem"]}

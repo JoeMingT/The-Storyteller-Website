@@ -22,9 +22,13 @@ const AboutUs: React.FC<any> = () => {
                     "repeat(1, 1fr)",
                     "repeat(2, 1fr)",
                 ]}
-                px={["0rem", "5rem", "7.5rem", "10rem"]}
+                px={["0rem", "2.5rem", "3.75rem", "5rem"]}
                 py={["3rem", "3rem", "5rem"]}
+                mx={["0rem", "2.5rem", "3.75rem", "5rem"]}
+                my={["1.5rem", "1.5rem", "2.5rem"]}
                 gap={["3rem", "3rem", "5rem"]}
+                borderRadius={"25px"}
+                boxShadow={"10px 10px 5px 0 rgb(0,0,0,0.2)"}
             >
                 <AboutUsDetails />
                 <AboutUsImage />

@@ -18,7 +18,7 @@ const GalleryPreview: React.FC<GalleryPreviewProps> = (props) => {
     const { galleryPreviewData } = props;
 
     return (
-        <STComponentWrapper>
+        <STComponentWrapper pt="0rem">
             <SwiperWrapper
                 leftButtonProps={{
                     "aria-label": "Previous Gallery",

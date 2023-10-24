@@ -1,4 +1,4 @@
-import { STText } from "@StorytellerComponents/atoms";
+import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { OurTeamCardProps } from "./props";
 
 import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
@@ -36,6 +36,7 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     background:
                         "linear-gradient(45deg, rgba(68, 68, 68, 0.90) 0%, rgba(68, 68, 68, 0.22) 100%, rgba(68, 68, 68, 0.09) 100%)",
                     zIndex: "10",
+                    borderTopRadius: "50px",
                 }}
             >
                 <Image
@@ -64,9 +65,13 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     justifyContent={"center"}
                     h={["6.5rem", "8rem"]}
                 >
-                    <STText fontWeight="bold" noOfLines={2}>
+                    <STHeading
+                        fontSize={["lg", "lg", "xl", "2xl", "2xl"]}
+                        fontWeight="bold"
+                        noOfLines={2}
+                    >
                         {name}
-                    </STText>
+                    </STHeading>
                     <STText noOfLines={2}>&mdash; {companyPos}</STText>
                 </VStack>
             </CardFooter>
