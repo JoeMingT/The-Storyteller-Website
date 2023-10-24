@@ -1,15 +1,14 @@
 # The-Storyteller-Website
 
 This is the source code for "The Storyteller by Joe" website. Comissioned by Tham Joe Ping, website created and maintained by Tham Joe Ming.
-This ReadMe document will contain the information regarding the source code itself such as setting up and running the application, what is the packages
-used, what is the third party services used and so on.
+This ReadMe document will contain the information regarding the source code itself such as setting up and running the application, what is the packages used, what is the third party services used and so on.
 
 <br />
 
 ## Getting Started
 
 This project is built from the [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) command.
-If you are familiar with it then there's not much that you need to do to start the application.
+If you are familiar with it then you should know that there's not much that you need to do to start the application.
 
 ### Step-by-Step to Run the Application
 
@@ -162,3 +161,5 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Rework some of the designs to make it more stand out
 -   [ ] Add a logger for the application to log any problems and errors encountered
 -   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
+-   [ ] Add a Contact Us / Availability Page
+-   [ ] Add a Search Result Function / Feature
