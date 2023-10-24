@@ -1,6 +1,11 @@
+import { TeamMemberType } from "@Storyteller/types/sanity/TeamMemberType";
 import { OurCompany, OurTeam } from "@StorytellerComponents/organisms";
+import { getAllTeamMembers } from "@StorytellerSanity/queries";
+import { GetServerSideProps } from "next";
 
-interface AboutPageProps {}
+interface AboutPageProps {
+    ourTeamData: TeamMemberType[];
+}
 
 /**
  * Route: "/about"
@@ -11,10 +16,22 @@ interface AboutPageProps {}
  * about the companies achievements, visions and missions, and the person in charge.
  */
 export default function About(props: AboutPageProps) {
+    const { ourTeamData } = props;
+
     return (
         <>
             <OurCompany />
-            <OurTeam />
+            <OurTeam ourTeamData={ourTeamData} />
         </>
     );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const ourTeamData = await getAllTeamMembers();
+
+    return {
+        props: {
+            ourTeamData,
+        },
+    };
+};

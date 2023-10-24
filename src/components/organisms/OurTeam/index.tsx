@@ -1,4 +1,3 @@
-import { ourTeamData } from "@Storyteller/data/ourTeamData";
 import {
     STComponentWrapper,
     STHeading,
@@ -8,6 +7,7 @@ import { OurTeamCard } from "@StorytellerComponents/molecules";
 
 import { Box } from "@chakra-ui/react";
 import { SwiperSlide } from "swiper/react";
+import { OurTeamProps } from "./props";
 
 /**
  * The component that renders the Our Team section in the About Page.
@@ -17,7 +17,9 @@ import { SwiperSlide } from "swiper/react";
  *
  * @returns {React.ReactNode} The rendered Our Team component in the About Page
  */
-const OurTeam: React.FC<any> = () => {
+const OurTeam: React.FC<OurTeamProps> = (props) => {
+    const { ourTeamData } = props;
+
     // Props for the buttons
     // This includes the styling (to make it look round + the hover effects)
     // and also the position and display, that makes it below the swiper
@@ -105,13 +107,13 @@ const OurTeam: React.FC<any> = () => {
                         1280: { slidesPerView: 3 },
                     }}
                 >
-                    {ourTeamData.map((member) => {
+                    {ourTeamData?.map((member) => {
                         return (
-                            <SwiperSlide key={member.name}>
+                            <SwiperSlide key={member.id}>
                                 <OurTeamCard
                                     name={member.name}
-                                    imgUrl={member.imgUrl}
-                                    companyPos={member.companyPos}
+                                    imgUrl={member.profilePic}
+                                    companyPos={member.position}
                                 />
                             </SwiperSlide>
                         );
