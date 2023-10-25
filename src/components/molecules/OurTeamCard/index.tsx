@@ -1,4 +1,4 @@
-import { STText } from "@StorytellerComponents/atoms";
+import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { OurTeamCardProps } from "./props";
 
 import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
@@ -15,7 +15,6 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
     return (
         <Card
             minH="100px"
-            h="100%"
             borderRadius="50px"
             boxShadow="0 0 20px 1px rgba(0,0,0,0.50)"
             {...cardProps}
@@ -37,6 +36,7 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     background:
                         "linear-gradient(45deg, rgba(68, 68, 68, 0.90) 0%, rgba(68, 68, 68, 0.22) 100%, rgba(68, 68, 68, 0.09) 100%)",
                     zIndex: "10",
+                    borderTopRadius: "50px",
                 }}
             >
                 <Image
@@ -44,7 +44,11 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     alt={"Profile Pic"}
                     borderTopRadius={"50px"}
                     display="block"
-                    w="auto"
+                    objectFit="cover"
+                    objectPosition={"center"}
+                    h="400px"
+                    w="100%"
+                    fill="turqoise"
                 />
             </CardBody>
             {/* Footer is the name and position */}
@@ -61,9 +65,13 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                     justifyContent={"center"}
                     h={["6.5rem", "8rem"]}
                 >
-                    <STText fontWeight="bold" noOfLines={2}>
+                    <STHeading
+                        fontSize={["lg", "lg", "xl", "2xl", "2xl"]}
+                        fontWeight="bold"
+                        noOfLines={2}
+                    >
                         {name}
-                    </STText>
+                    </STHeading>
                     <STText noOfLines={2}>&mdash; {companyPos}</STText>
                 </VStack>
             </CardFooter>

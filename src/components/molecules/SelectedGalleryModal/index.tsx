@@ -78,7 +78,7 @@ const SelectedGalleryModal: React.FC<SelectedGalleryModalProps> = (props) => {
                 <Image
                     p="3rem"
                     maxH="90vh"
-                    src={images[selectedImageIndex].url}
+                    src={images ? images[selectedImageIndex].url : ""}
                     alt={`Selected Image ${selectedImageIndex + 1}`}
                     animation={"imageFadeInAnimation ease 0.5s"}
                 />

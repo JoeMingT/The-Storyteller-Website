@@ -18,7 +18,7 @@ const GalleryPreview: React.FC<GalleryPreviewProps> = (props) => {
     const { galleryPreviewData } = props;
 
     return (
-        <STComponentWrapper>
+        <STComponentWrapper pt="0rem">
             <SwiperWrapper
                 leftButtonProps={{
                     "aria-label": "Previous Gallery",
@@ -39,7 +39,7 @@ const GalleryPreview: React.FC<GalleryPreviewProps> = (props) => {
                     480: { allowTouchMove: false },
                 }}
             >
-                {galleryPreviewData.map((data) => {
+                {galleryPreviewData?.map((data) => {
                     return (
                         <SwiperSlide key={data._id} style={{ height: "auto" }}>
                             <GalleryPreviewItem

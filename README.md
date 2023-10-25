@@ -163,3 +163,4 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
 -   [ ] Add a Contact Us / Availability Page
 -   [ ] Add a Search Result Function / Feature
+-   [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)

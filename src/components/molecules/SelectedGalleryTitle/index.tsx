@@ -31,6 +31,7 @@ const SelectedGalleryTitle: React.FC<SelectedGalleryTitleProps> = (props) => {
                 backgroundColor="primary"
                 py="5rem"
                 color="secondary"
+                boxShadow={"0px 0px 15px 5px rgb(0,0,0,0.2)"}
             >
                 <STHeading w="80%">{galleryName}</STHeading>
                 <STText w={["80%", "65%", "50%"]}>{mergeNames(clients)}</STText>

@@ -76,7 +76,7 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                 ]}
                 gap={["1.5rem", "2.5rem", "2.5rem"]}
             >
-                {galleryData.map((gallery) => {
+                {galleryData?.map((gallery) => {
                     return (
                         <GridItem key={`${gallery._id}`}>
                             <AllGalleriesCard

@@ -20,7 +20,7 @@ const FooterIcons: React.FC<any> = (props) => {
             flexDir="row"
             gap={["1rem", "1.5rem", "2rem"]}
         >
-            {socialMediaLinks.map((link) => {
+            {socialMediaLinks?.map((link) => {
                 return (
                     <STIconButton
                         iconSrc={`${link.iconSrc}`}

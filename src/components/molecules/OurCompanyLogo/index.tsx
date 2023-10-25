@@ -13,7 +13,7 @@ const OurCompanyLogo: React.FC<any> = (props) => {
         <Box
             background={"secondary"}
             w="100%"
-            py={["1rem", "2rem"]}
+            py={["3rem", "5rem"]}
             display="flex"
             alignItems="center"
             justifyContent={"center"}
