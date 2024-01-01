@@ -1,6 +1,7 @@
 import { STHeading, STText } from "@StorytellerComponents/atoms";
 
 import { Box } from "@chakra-ui/react";
+import { OurCompanyWriteupProps } from "./props";
 
 /**
  * The component that is responsible for rendering the text in the Our Company section.
@@ -8,7 +9,8 @@ import { Box } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The rendered Writeup for the About Page
  */
-const OurCompanyWriteup: React.FC<any> = (props) => {
+const OurCompanyWriteup: React.FC<OurCompanyWriteupProps> = (props) => {
+    const { aboutUsFullText } = props;
     return (
         <Box
             textAlign="center"
@@ -21,19 +23,7 @@ const OurCompanyWriteup: React.FC<any> = (props) => {
             <STHeading textDecoration="underline" py={["2rem", "2rem", "3rem"]}>
                 About The Storyteller
             </STHeading>
-            <STText width="80%">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur.
-            </STText>
+            <STText width="80%">{aboutUsFullText}</STText>
         </Box>
     );
 };

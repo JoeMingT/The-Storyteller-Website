@@ -1,10 +1,14 @@
 import { TeamMemberType } from "@Storyteller/types/sanity/TeamMemberType";
 import { OurCompany, OurTeam } from "@StorytellerComponents/organisms";
-import { getAllTeamMembers } from "@StorytellerSanity/queries";
+import {
+    getAboutUsFullText,
+    getAllTeamMembers,
+} from "@StorytellerSanity/queries";
 import { GetServerSideProps } from "next";
 
 interface AboutPageProps {
     ourTeamData: TeamMemberType[];
+    aboutUsFullText: string;
 }
 
 /**
@@ -16,11 +20,10 @@ interface AboutPageProps {
  * about the companies achievements, visions and missions, and the person in charge.
  */
 export default function About(props: AboutPageProps) {
-    const { ourTeamData } = props;
-
+    const { ourTeamData, aboutUsFullText } = props;
     return (
         <>
-            <OurCompany />
+            <OurCompany aboutUsFullText={aboutUsFullText} />
             <OurTeam ourTeamData={ourTeamData} />
         </>
     );
@@ -28,10 +31,25 @@ export default function About(props: AboutPageProps) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const ourTeamData = await getAllTeamMembers();
-
+    const aboutUsFullText = await getAboutUsFullText();
+    const formattedAboutUsText = aboutUsFullText.full
+        // loop through each block
+        .map((block) => {
+            // if it's not a text block with children,
+            // return nothing
+            if (block._type !== "block" || !block.children) {
+                return "";
+            }
+            // loop through the children spans, and join the
+            // text strings
+            return block.children.map((child: any) => child.text).join("");
+        })
+        // join the paragraphs leaving split by two linebreaks
+        .join("\n\n");
     return {
         props: {
             ourTeamData,
+            aboutUsFullText: formattedAboutUsText,
         },
     };
 };
