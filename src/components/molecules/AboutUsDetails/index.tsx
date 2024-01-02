@@ -3,6 +3,7 @@ import { AboutUsHeading, AboutUsText } from "@StorytellerComponents/molecules";
 
 import { GridItem } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { AboutUsDetailsProps } from "./props";
 
 /**
  * The component that renders the details of the About Us section.
@@ -10,7 +11,8 @@ import NextLink from "next/link";
  *
  * @returns {React.ReactNode} The component containing all details of About Us section
  */
-const AboutUsDetails: React.FC<any> = () => {
+const AboutUsDetails: React.FC<AboutUsDetailsProps> = (props) => {
+    const { aboutUsPreviewText } = props;
     return (
         <GridItem
             display="flex"
@@ -20,7 +22,7 @@ const AboutUsDetails: React.FC<any> = () => {
             px={["2.5rem", "0rem"]}
         >
             <AboutUsHeading text="About Us!" />
-            <AboutUsText />
+            <AboutUsText aboutUsPreviewText={aboutUsPreviewText} />
             <NextLink href="/about">
                 <STButton
                     _hover={{ backgroundColor: "secondary", color: "primary" }}

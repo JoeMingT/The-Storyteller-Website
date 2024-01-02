@@ -4,6 +4,7 @@ import {
 } from "@StorytellerComponents/molecules";
 
 import { VStack } from "@chakra-ui/react";
+import { OurCompanyProps } from "./props";
 
 /**
  * The component that displays the details of the company. It's a more specific version of About Us.
@@ -11,7 +12,8 @@ import { VStack } from "@chakra-ui/react";
  *
  * @returns The rendered Our Company component.
  */
-const OurCompany: React.FC<any> = (props) => {
+const OurCompany: React.FC<OurCompanyProps> = (props) => {
+    const { aboutUsFullText } = props;
     return (
         <VStack
             alignItems="center"
@@ -20,7 +22,7 @@ const OurCompany: React.FC<any> = (props) => {
             pb="5rem"
         >
             <OurCompanyLogo />
-            <OurCompanyWriteup />
+            <OurCompanyWriteup aboutUsFullText={aboutUsFullText} />
         </VStack>
     );
 };
