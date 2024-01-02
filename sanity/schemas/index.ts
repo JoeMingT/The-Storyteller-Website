@@ -1,5 +1,6 @@
+import AboutSchema from "./about";
 import GallerySchema from "./gallery";
 import ProjectSchema from "./project";
 import TeamMemberSchema from "./teamMember";
 
-export { GallerySchema, ProjectSchema, TeamMemberSchema };
+export { AboutSchema, GallerySchema, ProjectSchema, TeamMemberSchema };

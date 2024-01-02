@@ -2,6 +2,7 @@ import { STComponentWrapper } from "@StorytellerComponents/atoms";
 import { AboutUsDetails, AboutUsImage } from "@StorytellerComponents/molecules";
 
 import { Grid } from "@chakra-ui/react";
+import { AboutUsProps } from "./props";
 
 /**
  * The About Us component. Not to be confused with the About Us **PAGE**.
@@ -11,7 +12,8 @@ import { Grid } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The About Us component
  */
-const AboutUs: React.FC<any> = () => {
+const AboutUs: React.FC<AboutUsProps> = (props) => {
+    const { aboutUsPreviewText } = props;
     return (
         <STComponentWrapper>
             <Grid
@@ -30,7 +32,7 @@ const AboutUs: React.FC<any> = () => {
                 borderRadius={"25px"}
                 boxShadow={"10px 10px 5px 0 rgb(0,0,0,0.2)"}
             >
-                <AboutUsDetails />
+                <AboutUsDetails aboutUsPreviewText={aboutUsPreviewText} />
                 <AboutUsImage />
             </Grid>
         </STComponentWrapper>
