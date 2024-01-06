@@ -17,4 +17,10 @@ export const socialMediaLinks = [
         ariaLabel: "The Storyteller Xiao Hong Shu",
         url: "https://www.xiaohongshu.com/user/profile/60dd1630000000000101c184?xhsshare=CopyLink&appuid=60dd1630000000000101c184&apptime=1698048190",
     },
+    {
+        iconSrc: "/assets/icon/whatsapp-black.svg",
+        iconAlt: "WhatsApp Icon",
+        ariaLabel: "The Storyteller WhatsApp",
+        url: "https://api.whatsapp.com/send/?phone=60167336083&text=I%27m+interested+in+photography+service&type=phone_number&app_absent=0",
+    },
 ];
