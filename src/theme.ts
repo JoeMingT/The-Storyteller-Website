@@ -1,24 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
+import { Prompt, Red_Hat_Display } from "next/font/google";
 
-import { EB_Garamond, Nunito, Roboto_Slab } from "next/font/google";
-
-const roboto_slab = Roboto_Slab({
+const prompt = Prompt({
     subsets: ["latin"],
-    weight: ["300", "400", "700"],
-    style: ["normal"],
+    style: ["normal", "italic"],
+    weight: ["400", "500", "700"],
     variable: "--heading-font",
     display: "swap",
 });
 
-const nunito = Nunito({
-    subsets: ["latin"],
-    style: ["normal", "italic"],
-    weight: ["300", "400", "700"],
-    variable: "--text-font",
-    display: "swap",
-});
-
-const eb_garamond = EB_Garamond({
+const red_hat_display = Red_Hat_Display({
     subsets: ["latin"],
     style: ["normal", "italic"],
     weight: ["400", "500", "700"],
@@ -28,8 +19,8 @@ const eb_garamond = EB_Garamond({
 
 const theme = extendTheme({
     fonts: {
-        heading: `${eb_garamond.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
-        body: `${eb_garamond.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
+        heading: `${prompt.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
+        body: `${red_hat_display.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
     },
     fontSizes: {
         "3xs": "0.45rem",
