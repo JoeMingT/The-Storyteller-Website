@@ -20,7 +20,7 @@ const OurCompanyWriteup: React.FC<OurCompanyWriteupProps> = (props) => {
             justifyContent="center"
             flexDir="column"
         >
-            <STHeading textDecoration="underline" py={["2rem", "2rem", "3rem"]}>
+            <STHeading py={["2rem", "2rem", "3rem"]}>
                 About The Storyteller
             </STHeading>
             <STText width="80%">{aboutUsFullText}</STText>

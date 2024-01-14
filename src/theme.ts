@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
-import { Nunito, Roboto_Slab } from "next/font/google";
+import { EB_Garamond, Nunito, Roboto_Slab } from "next/font/google";
 
 const roboto_slab = Roboto_Slab({
     subsets: ["latin"],
@@ -18,10 +18,18 @@ const nunito = Nunito({
     display: "swap",
 });
 
+const eb_garamond = EB_Garamond({
+    subsets: ["latin"],
+    style: ["normal", "italic"],
+    weight: ["400", "500", "700"],
+    variable: "--text-font",
+    display: "swap",
+});
+
 const theme = extendTheme({
     fonts: {
-        heading: `${roboto_slab.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
-        body: `${nunito.style.fontFamily}, Nunito, Roboto, sans-serif`,
+        heading: `${eb_garamond.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
+        body: `${eb_garamond.style.fontFamily}, Roboto Slab, Times New Roman, serif`,
     },
     fontSizes: {
         "3xs": "0.45rem",
