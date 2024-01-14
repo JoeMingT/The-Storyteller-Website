@@ -162,5 +162,8 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Add a logger for the application to log any problems and errors encountered
 -   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
 -   [ ] Add a Contact Us / Availability Page
--   [ ] Add a Search Result Function / Feature
+-   [ ] Add a Search Result Function / Feature for the Gallery
+-   [ ] Add a Category Field and Filter by Category for the Gallery
 -   [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)
+-   [ ] Bug: When There's no Gallery in database, the display is wrong.
+-   [ ] Bug: When no ImgSrc for Our Team, it will display a wrong text. Should display a default profile picture image.
