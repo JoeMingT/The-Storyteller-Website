@@ -25,19 +25,19 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                 position="relative"
                 display="inline-block"
                 // After pseudo-element for the linear gradient overlay.
-                _after={{
-                    content: '""',
-                    position: "absolute",
-                    left: "0",
-                    top: "0",
-                    width: "100%",
-                    height: "100%",
-                    display: "inline-block",
-                    background:
-                        "linear-gradient(45deg, rgba(68, 68, 68, 0.90) 0%, rgba(68, 68, 68, 0.22) 100%, rgba(68, 68, 68, 0.09) 100%)",
-                    zIndex: "10",
-                    borderTopRadius: "50px",
-                }}
+                // _after={{
+                //     content: '""',
+                //     position: "absolute",
+                //     left: "0",
+                //     top: "0",
+                //     width: "100%",
+                //     height: "100%",
+                //     display: "inline-block",
+                //     background:
+                //         "linear-gradient(45deg, rgba(68, 68, 68, 0.90) 0%, rgba(68, 68, 68, 0.22) 100%, rgba(68, 68, 68, 0.09) 100%)",
+                //     zIndex: "10",
+                //     borderTopRadius: "50px",
+                // }}
             >
                 <Image
                     src={imgUrl}
