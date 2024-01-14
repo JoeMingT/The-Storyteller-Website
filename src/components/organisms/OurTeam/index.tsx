@@ -72,7 +72,6 @@ const OurTeam: React.FC<OurTeamProps> = (props) => {
             >
                 <STHeading
                     color="black"
-                    textDecor="underline"
                     pb={["2rem", "3rem"]}
                     pl={["1rem", "0rem"]}
                     fontSize={["4xl", "4xl", "5xl", "5xl", "6xl", "6xl"]}

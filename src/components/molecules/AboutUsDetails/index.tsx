@@ -21,7 +21,7 @@ const AboutUsDetails: React.FC<AboutUsDetailsProps> = (props) => {
             flexDir="column"
             px={["2.5rem", "0rem"]}
         >
-            <AboutUsHeading text="About Us!" />
+            <AboutUsHeading text="ABOUT US" />
             <AboutUsText aboutUsPreviewText={aboutUsPreviewText} />
             <NextLink href="/about">
                 <STButton

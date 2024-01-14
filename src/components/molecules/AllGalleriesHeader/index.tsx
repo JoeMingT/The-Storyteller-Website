@@ -33,7 +33,7 @@ const AllGalleriesHeader: React.FC<any> = () => {
             flexDir={["column", "row"]}
             gap={["0.5rem", "2.5rem"]}
         >
-            <STHeading textDecoration={"underline"} color="white">
+            <STHeading color="white">
                 Galleries
             </STHeading>
             {/* <form onSubmit={handleQuerySubmit}>
