@@ -1,6 +1,7 @@
 import { STButton } from "@StorytellerComponents/atoms";
 
 import { ButtonProps, Image } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 /**
  * The component where we render the logo in the header, where it can redirect
@@ -11,7 +12,7 @@ import { ButtonProps, Image } from "@chakra-ui/react";
  */
 const HeaderLogoButton: React.FC<ButtonProps> = (props) => {
     return (
-        <>
+        <NextLink href="/">
             <STButton
                 backgroundColor={"transparent"}
                 _hover={{ background: "transparent" }}
@@ -27,7 +28,7 @@ const HeaderLogoButton: React.FC<ButtonProps> = (props) => {
                     h="auto"
                 />
             </STButton>
-        </>
+        </NextLink>
     );
 };
 

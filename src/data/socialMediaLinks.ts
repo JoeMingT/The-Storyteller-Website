@@ -3,7 +3,7 @@ export const socialMediaLinks = [
         iconSrc: "/assets/icon/instagram-black.svg",
         iconAlt: "Instagram Icon",
         ariaLabel: "The Storyteller Instagram",
-        url: "https://www.instagram.com/joe_thestoryteller/",
+        url: "https://www.instagram.com/thestoryteller_studio/",
     },
     {
         iconSrc: "/assets/icon/facebook-black.svg",
