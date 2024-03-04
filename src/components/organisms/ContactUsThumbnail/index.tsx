@@ -25,7 +25,7 @@ const ContactUsThumbnail: React.FC<any> = () => {
         >
             <Box
                 textAlign={["center", "center", "center", "left"]}
-                p={["3rem", "3rem", "5rem", "2.5rem", "5rem"]}
+                p={["2.5rem", "5rem", "7.5rem", "5rem", "7.5rem"]}
                 color="white"
                 display="flex"
                 flexDir="column"
@@ -47,12 +47,8 @@ const ContactUsThumbnail: React.FC<any> = () => {
                     />
                 </Box>
                 <STText>
-                    Thank you for considering us for your photography and
-                    videography needs. Please feel free to contact us through
-                    the form below or via the channels povided to ask any
-                    questions or book an appointment with us. We look forward to
-                    hearing from you and discussing how we can help capture your
-                    special moments beautifully.
+                    Please feel free to contact us through the form below or via
+                    the channels to enquire or book an appointment with us.
                 </STText>
             </Box>
         </BackgroundImageBox>
