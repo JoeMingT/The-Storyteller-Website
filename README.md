@@ -167,3 +167,7 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)
 -   [ ] Bug: When There's no Gallery in database, the display is wrong.
 -   [ ] Bug: When no ImgSrc for Our Team, it will display a wrong text. Should display a default profile picture image.
+-   [ ] Reformat all code to follow the same format (All use Arrow function, all have props, etc.)
+-   [ ] Add features where users can change the image from sanity itself
+-   [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
+-   [ ] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
