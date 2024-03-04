@@ -22,6 +22,26 @@ const ContactUsInfoGrid: React.FC<any> = () => {
                 justifyContent={"center"}
             >
                 {socialMediaLinks.map((link, index) => {
+                    // const linkData = {
+                    //     type: link.type !== "WhatsApp" ? link.type : "Phone",
+                    //     iconSrc:
+                    //         link.type !== "WhatsApp"
+                    //             ? link.iconSrc
+                    //             : "/assets/icon/phone-no-black.svg",
+                    //     iconAlt:
+                    //         link.type !== "WhatsApp"
+                    //             ? link.iconAlt
+                    //             : "Phone Icon",
+                    //     ariaLabel:
+                    //         link.type !== "WhatsApp"
+                    //             ? link.ariaLabel
+                    //             : "The Storyteller Studio Contact",
+                    //     url: link.type !== "WhatsApp" ? link.url : "",
+                    //     mediaHandle:
+                    //         link.type !== "WhatsApp"
+                    //             ? link.mediaHandle
+                    //             : "+60 17-687 6276",
+                    // };
                     return (
                         <GridItem
                             key={link.iconAlt}
@@ -57,6 +77,7 @@ const ContactUsInfoGrid: React.FC<any> = () => {
                                         "50px",
                                     ]}
                                     pb="1rem"
+                                    aria-label={link.ariaLabel}
                                     disabled
                                 />
                                 <STText
