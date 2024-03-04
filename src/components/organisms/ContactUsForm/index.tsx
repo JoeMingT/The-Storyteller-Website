@@ -132,6 +132,12 @@ const ContactUsForm: React.FC<any> = () => {
                                         type="email"
                                         placeholder="Your Email"
                                     />
+                                    <STFormTextField
+                                        name="phoneNo"
+                                        label="Phone No. (Required)"
+                                        type="tel"
+                                        placeholder="Your WhatsApp Phone No."
+                                    />
                                     <STFormTextArea
                                         name="message"
                                         label="Message (Required)"
