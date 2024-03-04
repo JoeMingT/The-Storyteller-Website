@@ -56,8 +56,10 @@ const Header: React.FC<any> = (): React.ReactNode => {
     return (
         <HeaderWrapper headerRef={headerRef}>
             <HeaderLogoButton />
-            <HeaderDesktopMenu display={["none", "none", "flex"]} />
-            <HeaderMobileMenu display={["default", "default", "none"]} />
+            <HeaderDesktopMenu display={["none", "none", "none", "flex"]} />
+            <HeaderMobileMenu
+                display={["default", "default", "default", "none"]}
+            />
         </HeaderWrapper>
     );
 };

@@ -8,9 +8,16 @@ import OurTeam from "./OurTeam";
 import SelectedGallery from "./SelectedGallery";
 import Splash from "./Splash";
 
+import ContactUsForm from "../organisms/ContactUsForm";
+import ContactUsInfoGrid from "../organisms/ContactUsInfoGrid";
+import ContactUsThumbnail from "../organisms/ContactUsThumbnail";
+
 export {
     AboutUs,
     AllGalleries,
+    ContactUsForm,
+    ContactUsInfoGrid,
+    ContactUsThumbnail,
     Footer,
     GalleryPreview,
     Header,

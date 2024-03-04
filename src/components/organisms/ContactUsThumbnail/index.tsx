@@ -1,0 +1,62 @@
+import {
+    BackgroundImageBox,
+    STHeading,
+    STText,
+} from "@StorytellerComponents/atoms";
+import { Box, Divider } from "@chakra-ui/react";
+
+const ContactUsThumbnail: React.FC<any> = () => {
+    return (
+        <BackgroundImageBox
+            backgroundImage={[
+                "linear-gradient(90deg, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
+                "linear-gradient(90deg, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
+                "linear-gradient(90deg, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
+                "linear-gradient(to left, rgba(68, 68, 68, 0.90) 0%, rgba(68, 68, 68, 0.81) 53.13%, rgba(68, 68, 68, 0.65) 83.33%, rgba(68, 68, 68, 0.40) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
+            ]}
+            h={["100%", "100%", "100%", "100vh"]}
+            w={["100%", "100%", "100%", "50%"]}
+            filter="none"
+            overflow="hidden"
+            position={["relative", "relative", "relative", "fixed", "fixed"]}
+            top="0"
+            left="0"
+            mb={["100px"]}
+        >
+            <Box
+                textAlign={["center", "center", "center", "left"]}
+                p={["3rem", "3rem", "5rem", "2.5rem", "5rem"]}
+                color="white"
+                display="flex"
+                flexDir="column"
+                justifyContent={"center"}
+                minH={["400px"]}
+                w="100%"
+                h="100%"
+            >
+                <STHeading>CONTACT US</STHeading>
+                <Box
+                    display={"flex"}
+                    flexDir="row"
+                    py={["1.5rem", "1.5rem", "1.5rem", "3rem"]}
+                >
+                    <Divider border="2px solid #ffffff" w="33.33%" />
+                    <Divider
+                        border="2px solid rgba(255, 255, 255, 0.5)"
+                        w="66.67%"
+                    />
+                </Box>
+                <STText>
+                    Thank you for considering us for your photography and
+                    videography needs. Please feel free to contact us through
+                    the form below or via the channels povided to ask any
+                    questions or book an appointment with us. We look forward to
+                    hearing from you and discussing how we can help capture your
+                    special moments beautifully.
+                </STText>
+            </Box>
+        </BackgroundImageBox>
+    );
+};
+
+export default ContactUsThumbnail;
