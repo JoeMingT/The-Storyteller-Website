@@ -12,7 +12,10 @@ import { HStack, StackProps } from "@chakra-ui/react";
  */
 const HeaderIconButtonSection: React.FC<StackProps> = (props) => {
     return (
-        <HStack gap={["1rem", "1rem", "1.5rem", "2rem", "2rem"]} {...props}>
+        <HStack
+            gap={["1rem", "1rem", "1rem", "1.5rem", "2rem", "2rem"]}
+            {...props}
+        >
             {socialMediaLinks?.map((link) => {
                 return (
                     <STIconButton
@@ -23,7 +26,14 @@ const HeaderIconButtonSection: React.FC<StackProps> = (props) => {
                             window.open(`${link.url}`, "_blank");
                         }}
                         key={`${link.iconSrc}`}
-                        iconWidth={["30px", "30px", "40px", "50px", "50px"]}
+                        iconWidth={[
+                            "30px",
+                            "30px",
+                            "30px",
+                            "40px",
+                            "50px",
+                            "50px",
+                        ]}
                     />
                 );
             })}
