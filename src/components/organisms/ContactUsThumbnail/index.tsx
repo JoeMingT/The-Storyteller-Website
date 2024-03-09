@@ -1,9 +1,10 @@
 import {
     BackgroundImageBox,
+    STDivider2,
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
-import { Box, Divider } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const ContactUsThumbnail: React.FC<any> = () => {
     return (
@@ -35,17 +36,12 @@ const ContactUsThumbnail: React.FC<any> = () => {
                 h="100%"
             >
                 <STHeading>CONTACT US</STHeading>
-                <Box
-                    display={"flex"}
-                    flexDir="row"
-                    py={["1.5rem", "1.5rem", "1.5rem", "3rem"]}
-                >
-                    <Divider border="2px solid #ffffff" w="33.33%" />
-                    <Divider
-                        border="2px solid rgba(255, 255, 255, 0.5)"
-                        w="66.67%"
-                    />
-                </Box>
+                <STDivider2
+                    boxProps={{ py: ["1.5rem", "1.5rem", "1.5rem", "3rem"] }}
+                    rightLineProps={{
+                        border: "2px solid rgba(255, 255, 255, 0.5)",
+                    }}
+                />
                 <STText>
                     Please feel free to contact us through the form below or via
                     the channels to enquire or book an appointment with us.
