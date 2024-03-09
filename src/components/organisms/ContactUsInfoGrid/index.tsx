@@ -50,6 +50,7 @@ const ContactUsInfoGrid: React.FC<any> = () => {
                             display="flex"
                             justifyContent="center"
                             alignItems="center"
+                            borderRadius={"25px"}
                         >
                             <Box
                                 display="flex"
@@ -58,6 +59,7 @@ const ContactUsInfoGrid: React.FC<any> = () => {
                                 w="100%"
                                 p="1rem"
                                 cursor="pointer"
+                                borderRadius={"25px"}
                                 onClick={() => {
                                     window.open(`${link.url}`, "_blank");
                                 }}
