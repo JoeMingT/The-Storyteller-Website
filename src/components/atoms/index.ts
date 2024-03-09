@@ -2,6 +2,7 @@ import BackgroundImageBox from "./BackgroundImageBox";
 import RedirectButton from "./RedirectButton";
 import STButton from "./STButton";
 import STComponentWrapper from "./STComponentWrapper";
+import STDivider1 from "./STDivider1";
 import STFormTextArea from "./STFormTextArea";
 import STFormTextField from "./STFormTextField";
 import STHeading from "./STHeading";
@@ -15,6 +16,7 @@ export {
     RedirectButton,
     STButton,
     STComponentWrapper,
+    STDivider1,
     STFormTextArea,
     STFormTextField,
     STHeading,
