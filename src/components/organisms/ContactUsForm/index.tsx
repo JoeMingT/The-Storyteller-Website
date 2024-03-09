@@ -40,8 +40,6 @@ const ContactUsForm: React.FC<any> = () => {
         }
     };
 
-    console.log(windowSize);
-
     return (
         <Container
             boxShadow={"0px 8px 20px rgba(158, 158, 158, 0.50)"}
