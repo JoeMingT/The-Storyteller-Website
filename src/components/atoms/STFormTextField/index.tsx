@@ -7,9 +7,16 @@ import {
 import { useField } from "formik";
 import React from "react";
 
+/**
+ * This is a form field utilising both Chakra UI form component and Formik Field / useField.
+ * Essentially Chakra UI Form components make the form looks nice while the Formik stuff
+ * is used to integrate the field into the Form component.
+ * 
+ * This is specifically the Form Field for a Text Input (One line).
+ *
+ * @returns {React.ReactNode} The Component of a customized form field.
+ */
 export const STFormTextField: React.FC<any> = (props) => {
-    // const { field, form, label, customLabel, type = "text", ...rest } = props;
-
     const { label, placeholder } = props;
     const [field, meta] = useField(props);
 

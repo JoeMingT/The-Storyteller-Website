@@ -3,6 +3,13 @@ import { socialMediaLinks } from "@Storyteller/data/socialMediaLinks";
 import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { ContactUsInfoGridItem } from "@StorytellerComponents/molecules";
 
+/**
+ * The Info Grid in the Contact Us Page, consisting of all the social media links and
+ * platforms that the user can use to reach out to the team. Allow them to be redirected
+ * to the selected social media site.
+ *
+ * @returns {React.ReactNode} The Component containing the Contact Us Info Grid of the studio's social media
+ */
 const ContactUsInfoGrid: React.FC<any> = () => {
     return (
         <VStack gap={["1rem", "1.5rem", "2.5rem"]}>

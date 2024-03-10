@@ -6,9 +6,17 @@ import {
 } from "@StorytellerComponents/atoms";
 import { Box } from "@chakra-ui/react";
 
+/**
+ * The ContactUsThumbnail component. Essentially this is the thumbnail section of the Contact Us with flashy image and grphics.
+ * Meant to grab user's attention so they will read the text.
+ *
+ * @returns {React.ReactNode} The Component that displays the thumbnail for Contact Us Page
+ */
 const ContactUsThumbnail: React.FC<any> = () => {
     return (
         <BackgroundImageBox
+            // Require a lot of tinkering
+            // Essentially, used Fixed position to fix the background image so it doesn't scroll.
             backgroundImage={[
                 "linear-gradient(90deg, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
                 "linear-gradient(90deg, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%, rgba(68, 68, 68, 0.90) 100%), url(/assets/images/thumbnail/thumbnail_image_1.jpg)",
@@ -25,6 +33,7 @@ const ContactUsThumbnail: React.FC<any> = () => {
             mb={["100px"]}
         >
             <Box
+                // The text within the image
                 textAlign={["center", "center", "center", "left"]}
                 p={["2.5rem", "5rem", "7.5rem", "5rem", "7.5rem"]}
                 color="white"

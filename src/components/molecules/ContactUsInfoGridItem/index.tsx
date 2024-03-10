@@ -2,6 +2,13 @@ import { STIconButton, STText } from "@StorytellerComponents/atoms";
 import { Box, GridItem } from "@chakra-ui/react";
 import { ContactUsInfoGridItemProps } from "./props";
 
+/**
+ * The boxes inside the Info Grid. It shows the logo, the social media type, the media handle and so on.
+ * Allows users to click on it to redirect them to the selected social media page.
+ *
+ * @param props The data needed to show each social media
+ * @returns {React.ReactNode} The Component containing the Contact Us Info Grid of the studio's social media
+ */
 const ContactUsInfoGridItem: React.FC<ContactUsInfoGridItemProps> = (props) => {
     const { key, iconAlt, iconSrc, url, ariaLabel, type, mediaHandle } = props;
 

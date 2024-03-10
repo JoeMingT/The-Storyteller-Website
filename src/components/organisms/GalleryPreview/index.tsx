@@ -12,9 +12,12 @@ import { SwiperSlide } from "swiper/react";
  * that is available in the database. Act as a quick way for people to quickly check out
  * what the company can do.
  *
+ * @param props The object containing the data for the gallery preview
  * @returns {React.ReactNode} The Component that is the Preview for the Galleries
  */
-const GalleryPreview: React.FC<GalleryPreviewProps> = (props) => {
+const GalleryPreview: React.FC<GalleryPreviewProps> = (
+    props
+): React.ReactNode => {
     const { galleryPreviewData } = props;
 
     return (
