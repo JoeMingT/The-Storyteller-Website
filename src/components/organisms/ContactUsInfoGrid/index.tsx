@@ -1,6 +1,7 @@
-import { Box, Grid, GridItem, VStack } from "@chakra-ui/react";
+import { Box, Grid, VStack } from "@chakra-ui/react";
 import { socialMediaLinks } from "@Storyteller/data/socialMediaLinks";
-import { STHeading, STIconButton, STText } from "@StorytellerComponents/atoms";
+import { STHeading, STText } from "@StorytellerComponents/atoms";
+import { ContactUsInfoGridItem } from "@StorytellerComponents/molecules";
 
 const ContactUsInfoGrid: React.FC<any> = () => {
     return (
@@ -23,59 +24,15 @@ const ContactUsInfoGrid: React.FC<any> = () => {
             >
                 {socialMediaLinks.map((link) => {
                     return (
-                        <GridItem
-                            key={link.iconAlt}
-                            backgroundColor="secondary"
-                            p="2rem"
-                            display="flex"
-                            justifyContent="center"
-                            alignItems="center"
-                            borderRadius={"25px"}
-                        >
-                            <Box
-                                display="flex"
-                                flexDir="column"
-                                h="100%"
-                                w="100%"
-                                p="1rem"
-                                cursor="pointer"
-                                borderRadius={"25px"}
-                                onClick={() => {
-                                    window.open(`${link.url}`, "_blank");
-                                }}
-                                textAlign="center"
-                                _hover={{
-                                    backgroundColor: "#E5DFD7",
-                                }}
-                            >
-                                <STIconButton
-                                    iconAlt={link.iconAlt}
-                                    iconSrc={link.iconSrc}
-                                    iconWidth={[
-                                        "30px",
-                                        "30px",
-                                        "30px",
-                                        "40px",
-                                        "50px",
-                                    ]}
-                                    pb="1rem"
-                                    aria-label={link.ariaLabel}
-                                    disabled
-                                />
-                                <STText
-                                    fontSize={["sm", "sm", "md", "lg", "lg"]}
-                                    color="black"
-                                >
-                                    {link.type}
-                                </STText>
-                                <STText
-                                    fontSize={["xs", "xs", "sm", "sm", "sm"]}
-                                    color="darkAccent"
-                                >
-                                    {link.mediaHandle}
-                                </STText>
-                            </Box>
-                        </GridItem>
+                        <ContactUsInfoGridItem
+                            key={link.iconSrc}
+                            iconAlt={link.iconAlt}
+                            iconSrc={link.iconSrc}
+                            url={link.url}
+                            ariaLabel={link.ariaLabel}
+                            type={link.type}
+                            mediaHandle={link.mediaHandle}
+                        />
                     );
                 })}
             </Grid>
