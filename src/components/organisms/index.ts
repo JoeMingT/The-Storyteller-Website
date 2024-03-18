@@ -11,6 +11,7 @@ import Splash from "./Splash";
 import ContactUsForm from "../organisms/ContactUsForm";
 import ContactUsInfoGrid from "../organisms/ContactUsInfoGrid";
 import ContactUsThumbnail from "../organisms/ContactUsThumbnail";
+import GallerySearchPage from "./GallerySearchPage";
 
 export {
     AboutUs,
@@ -20,6 +21,7 @@ export {
     ContactUsThumbnail,
     Footer,
     GalleryPreview,
+    GallerySearchPage,
     Header,
     OurCompany,
     OurTeam,
