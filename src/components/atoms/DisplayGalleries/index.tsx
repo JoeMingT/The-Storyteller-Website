@@ -22,7 +22,9 @@ import { useEffect, useState } from "react";
 import { DisplayGalleriesProps } from "./props";
 
 /**
- * The component rendering the conttent for the All Gallery component. Utilizes regular Chakra UI with custom React Paginate component for pagination.
+ * The component rendering the thumbnails for all galleries that is passed into this component.
+ * Data passed includes the Title / Name, a URL for the thumbnail image and the slug
+ *
  *
  * @param {DisplayGalleriesProps} props The properties for the component. All of it is mainly used for the first load of the component. Subsequent loads are fetched from backend database.
  * @returns {React.ReactNode} The rendered content of the component with pagination.

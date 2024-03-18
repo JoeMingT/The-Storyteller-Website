@@ -4,6 +4,13 @@ import { Form, Formik } from "formik";
 import { useRouter } from "next/router";
 import { SearchBarProps } from "./props";
 
+/**
+ * The component for a reusable search bar. Allow for taking in an input and redirecting the user to the
+ * search page (/search) when submitting the input. There is no validation on the form, except for ensuring that there's no empty string.
+ *
+ * @param {SearchBarProps} props The properties for the component. Mainly properties for styling purposes.
+ * @returns {React.ReactNode} The search bar component.
+ */
 const SearchBar: React.FC<SearchBarProps> = (props) => {
     const { type = "primary", hStackProps, inputFieldProps } = props;
     const router = useRouter();

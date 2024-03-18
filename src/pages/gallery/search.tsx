@@ -15,9 +15,13 @@ interface GallerySearchPageProps {
 }
 
 /**
- * Route: "/gallery/search"
+ * Route: "/gallery"
  *
+ * Components Related: "GallerySearchPage"
  *
+ * This is the search result page, redirected after the user have submitted a search query from the Gallery page.
+ * (Or technically manually reaching this page). The data fetching is similar to the gallery home page, with slight modifications.
+ * This page is normally accompanied with 2 query params: "page" and "searchQuery" which are used to fetch related search results.
  */
 export default function GallerySearchPageProps({
     queryParams,
