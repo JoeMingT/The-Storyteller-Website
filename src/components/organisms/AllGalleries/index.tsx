@@ -1,10 +1,8 @@
-import {
-    AllGalleriesContent,
-    AllGalleriesHeader,
-} from "@StorytellerComponents/molecules";
+import { AllGalleriesHeader } from "@StorytellerComponents/molecules";
 import { AllGalleriesProps } from "./props";
 
 import { Box } from "@chakra-ui/react";
+import { DisplayGalleries } from "@StorytellerComponents/atoms";
 
 /**
  * The component used to render out the all galleries page. Fetches and showcases data stored in the server.
@@ -25,7 +23,7 @@ const AllGalleries: React.FC<AllGalleriesProps> = (props) => {
             gap={["3rem", "3rem", "5rem"]}
         >
             <AllGalleriesHeader />
-            <AllGalleriesContent
+            <DisplayGalleries
                 noOfPages={noOfPages}
                 initialData={initialData}
                 itemsPerPage={itemsPerPage}

@@ -1,9 +1,13 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
-import { STIconButton } from "@StorytellerComponents/atoms";
+import { STHeading, STIconButton } from "@StorytellerComponents/atoms";
 import { AllGalleriesCard } from "@StorytellerComponents/molecules";
-import { getThumbnailGalleries } from "@StorytellerSanity/queries";
+import {
+    getAllGalleriesThumbnail,
+    getQueriedGalleriesThumbnail,
+} from "@StorytellerSanity/queries";
 
 import {
+    Box,
     Center,
     Grid,
     GridItem,
@@ -14,16 +18,16 @@ import {
 import ReactPagination from "react-paginate";
 
 import { useRouter } from "next/router";
-import { useState } from "react";
-import { AllGalleriesContentProps } from "./props";
+import { useEffect, useState } from "react";
+import { DisplayGalleriesProps } from "./props";
 
 /**
  * The component rendering the conttent for the All Gallery component. Utilizes regular Chakra UI with custom React Paginate component for pagination.
  *
- * @param {AllGalleriesContentProps} props The properties for the component. All of it is mainly used for the first load of the component. Subsequent loads are fetched from backend database.
+ * @param {DisplayGalleriesProps} props The properties for the component. All of it is mainly used for the first load of the component. Subsequent loads are fetched from backend database.
  * @returns {React.ReactNode} The rendered content of the component with pagination.
  */
-const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
+const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props) => {
     const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
     const toast = useToast();
@@ -51,6 +55,13 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
         },
     };
 
+    // useEffect triggers on page load
+    // Whenever the query params for "searchQuery" gets updated (meaning when the user makes another search)
+    // Trigger useEffect code inside, which triggers the setState function, which allows for re-rendering of the grid component.
+    useEffect(() => {
+        setGalleryData(initialData);
+    }, [router.query.searchQuery]);
+
     // Function to return the component according to whether it is currently fetching data or not
     const renderMainContent = () => {
         return isLoading ? (
@@ -65,8 +76,9 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                     margin={["1.5rem", "3rem"]}
                 />
             </Center>
-        ) : (
-            /* If not, return the fetched data in a Grid-Card format */
+        ) : /* If there is any data in the galleryData field */
+        galleryData.length !== 0 ? (
+            /* Return the fetched data in a Grid-Card format if got data */
             <Grid
                 templateColumns={[
                     "repeat(1, 1fr)",
@@ -75,8 +87,9 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                     "repeat(3, 1fr)",
                 ]}
                 gap={["1.5rem", "2.5rem", "2.5rem"]}
+                minH="100vh"
             >
-                {galleryData?.map((gallery) => {
+                {galleryData.map((gallery) => {
                     return (
                         <GridItem key={`${gallery._id}`}>
                             <AllGalleriesCard
@@ -88,6 +101,17 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                     );
                 })}
             </Grid>
+        ) : (
+            /* If not, return the fetched data in a Grid-Card format */
+            <Box
+                h="100vh"
+                justifyContent={"center"}
+                alignItems={"center"}
+                textAlign={"center"}
+                display="flex"
+            >
+                <STHeading color="white">There are no Gallery Found!</STHeading>
+            </Box>
         );
     };
 
@@ -162,14 +186,29 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
                     setIsLoading(true);
 
                     // Get the data from backend
-                    getThumbnailGalleries(itemsPerPage, page.selected)
+                    (router.query.searchQuery
+                        ? getQueriedGalleriesThumbnail(
+                              itemsPerPage,
+                              page.selected,
+                              router.query.searchQuery.toString().split(" ")
+                          )
+                        : getAllGalleriesThumbnail(itemsPerPage, page.selected)
+                    )
                         .then((data) => {
-                            // If success update the data accordinfly
+                            // If success update the data accordingly
                             setGalleryData(data);
                             setCurrPage(page.selected);
                             // Update the href to include a query parameter (for users who want to access it in the future)
                             router.push(
-                                { query: { page: `${page.selected + 1}` } },
+                                {
+                                    query: {
+                                        // We destructure the query params
+                                        // Mainly to retain the "searchQuery" param
+                                        ...router.query,
+                                        // Overwrite the page query params
+                                        page: `${page.selected + 1}`,
+                                    },
+                                },
                                 undefined,
                                 { shallow: true }
                             );
@@ -195,4 +234,4 @@ const AllGalleriesContent: React.FC<AllGalleriesContentProps> = (props) => {
     );
 };
 
-export default AllGalleriesContent;
+export default DisplayGalleries;
