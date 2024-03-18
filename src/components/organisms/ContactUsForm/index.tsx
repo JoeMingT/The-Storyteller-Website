@@ -40,8 +40,6 @@ const ContactUsForm: React.FC<any> = () => {
         }
     };
 
-    console.log(windowSize);
-
     return (
         <Container
             boxShadow={"0px 8px 20px rgba(158, 158, 158, 0.50)"}
@@ -96,7 +94,7 @@ const ContactUsForm: React.FC<any> = () => {
                                     duration: 7500,
                                 });
                             })
-                            .catch((err) => {
+                            .catch((err: any) => {
                                 toast({
                                     title: "Email Has Failed to Sent!",
                                     description: `There seems to be some problem with sending the email! The error is shown below: \n${err.text}`,
