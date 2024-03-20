@@ -28,7 +28,7 @@ export const socialMediaLinks = [
         iconSrc: "/assets/icon/whatsapp-black.svg",
         iconAlt: "WhatsApp Icon",
         ariaLabel: "The Storyteller WhatsApp",
-        url: "https://api.whatsapp.com/send/?phone=60167336083&text=I%27m+interested+in+photography+service&type=phone_number&app_absent=0",
-        mediaHandle: "+60 16-733 6083",
+        url: "https://api.whatsapp.com/send/?phone=60176876276&text=I%27m+interested+in+photography+service&type=phone_number&app_absent=0",
+        mediaHandle: "+60 17-687 6276",
     },
 ];

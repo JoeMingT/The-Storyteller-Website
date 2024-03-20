@@ -1,4 +1,4 @@
-import { STHeading } from "@StorytellerComponents/atoms";
+import { STDivider2, STHeading } from "@StorytellerComponents/atoms";
 import { AboutUsHeadingProps } from "./props";
 
 import { Box, Divider } from "@chakra-ui/react";
@@ -18,13 +18,7 @@ const AboutUsHeading: React.FC<AboutUsHeadingProps> = (props) => {
             <STHeading color="#fff" textAlign={["center", "center", "left"]}>
                 {text}
             </STHeading>
-            <Box display={"flex"} flexDir="row" pt="1.5rem">
-                <Divider border="2px solid #ffffff" w="33.33%" />
-                <Divider
-                    border="2px solid rgba(202, 184, 185, 0.23)"
-                    w="66.67%"
-                />
-            </Box>
+            <STDivider2 />
         </Box>
     );
 };

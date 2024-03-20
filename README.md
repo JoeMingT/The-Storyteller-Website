@@ -161,13 +161,13 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Rework some of the designs to make it more stand out
 -   [ ] Add a logger for the application to log any problems and errors encountered
 -   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
--   [ ] Add a Contact Us / Availability Page
+-   [x] Add a Contact Us Page
 -   [ ] Add a Search Result Function / Feature for the Gallery
 -   [ ] Add a Category Field and Filter by Category for the Gallery
 -   [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)
 -   [ ] Bug: When There's no Gallery in database, the display is wrong.
--   [ ] Bug: When no ImgSrc for Our Team, it will display a wrong text. Should display a default profile picture image.
+-   [ ] Bug: When no ImgSrc for Our Team, it will display a text. Should display a default profile picture image.
 -   [ ] Reformat all code to follow the same format (All use Arrow function, all have props, etc.)
--   [ ] Add features where users can change the image from sanity itself
+-   [ ] Add features where users can change the image or most of the other info in the website from sanity itself
 -   [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
--   [ ] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
+-   [x] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)

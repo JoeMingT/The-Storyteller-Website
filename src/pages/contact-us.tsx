@@ -1,10 +1,19 @@
+import { STDivider1 } from "@StorytellerComponents/atoms";
 import {
     ContactUsForm,
     ContactUsInfoGrid,
     ContactUsThumbnail,
 } from "@StorytellerComponents/organisms";
-import { Box, Divider, HStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
+/**
+ * Route: "/contact-us"
+ *
+ * Components Related: "ContactUsThumbnail", "ContactUsInfoGrid", "ContactUsForm"
+ *
+ * This is the Contact Us Page. This is the page where the user will navigate to in order to get in contact with the team.
+ * Allow the user to send email or redirected to the selected social media site.
+ */
 export default function ContactUs() {
     return (
         <Box>
@@ -12,6 +21,8 @@ export default function ContactUs() {
             <Box
                 w={["100%", "100%", "100%", "50%"]}
                 p={["1rem", "2.5rem", "5rem", "2.5rem", "5rem"]}
+                // Margin Left 50% as the thumbnail is fixed to the right for 50% of the width
+                // 0% when the thumbnail is not fixed anymore
                 ml={["0%", "0%", "0%", "50%"]}
                 overflow={"auto"}
                 gap="2.5rem"
@@ -19,32 +30,23 @@ export default function ContactUs() {
                 flexDir="column"
             >
                 <ContactUsInfoGrid />
-                <HStack
-                    w="100%"
-                    justifyContent="center"
-                    alignItems="center"
-                    gap={["0rem", "1rem", "2rem"]}
-                    display={["none", "none", "flex", "none", "flex"]}
-                >
-                    <Divider
-                        border="1px solid #000"
-                        w={["85vw", "30vw"]}
-                        opacity={"1"}
-                    />
-                    <Box
-                        minW="10px"
-                        minH="10px"
-                        transform="rotate(45deg)"
-                        background={"black"}
-                        display={["none", "initial"]}
-                    ></Box>
-                    <Divider
-                        border="1px solid #000"
-                        w="30vw"
-                        opacity={"1"}
-                        display={["none", "initial"]}
-                    />
-                </HStack>
+                <STDivider1
+                    hStackProps={{
+                        display: ["none", "none", "flex", "none", "flex"],
+                    }}
+                    leftLineProps={{
+                        borderColor: "black",
+                        display: "initial",
+                    }}
+                    rightLineProps={{
+                        borderColor: "black",
+                        display: "initial",
+                    }}
+                    centerDiamondProps={{
+                        backgroundColor: "black",
+                        display: "initial",
+                    }}
+                />
                 <ContactUsForm />
             </Box>
         </Box>
