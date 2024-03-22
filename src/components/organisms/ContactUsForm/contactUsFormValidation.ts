@@ -1,5 +1,6 @@
 import * as yup from "yup";
 
+// Regular Expression for Malaysia's Phone Numbers
 const phoneNoRegex = /^(\+?6?01)[0-46-9](-?)*[0-9]{7,8}$/;
 
 export const contactUsFormValidation = yup.object({

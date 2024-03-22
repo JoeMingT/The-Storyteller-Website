@@ -1,12 +1,13 @@
 import {
     BackgroundImageBox,
     RedirectButton,
+    STDivider1,
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
 import { GalleryPreviewItemProps } from "./props";
 
-import { Box, Divider, HStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 /**
  * The component that renders out each preview of a gallery.
@@ -44,31 +45,7 @@ const GalleryPreviewItem: React.FC<GalleryPreviewItemProps> = (props) => {
                     {galleryTitle}
                 </STHeading>
                 {/* The seperator line */}
-                <HStack
-                    w="100%"
-                    justifyContent="center"
-                    alignItems="center"
-                    gap={["0rem", "1rem", "2rem"]}
-                >
-                    <Divider
-                        border="1px solid #fff"
-                        w={["85vw", "30vw"]}
-                        opacity={"1"}
-                    />
-                    <Box
-                        w="10px"
-                        h="10px"
-                        transform="rotate(45deg)"
-                        background={"white"}
-                        display={["none", "initial"]}
-                    ></Box>
-                    <Divider
-                        border="1px solid #fff"
-                        w="30vw"
-                        opacity={"1"}
-                        display={["none", "initial"]}
-                    />
-                </HStack>
+                <STDivider1 />
                 {/* Redirect Button */}
                 <RedirectButton
                     backgroundColor="transparent"

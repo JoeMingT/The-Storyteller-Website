@@ -1,7 +1,15 @@
-import { Box, Grid, GridItem, VStack } from "@chakra-ui/react";
+import { Box, Grid, VStack } from "@chakra-ui/react";
 import { socialMediaLinks } from "@Storyteller/data/socialMediaLinks";
-import { STHeading, STIconButton, STText } from "@StorytellerComponents/atoms";
+import { STHeading, STText } from "@StorytellerComponents/atoms";
+import { ContactUsInfoGridItem } from "@StorytellerComponents/molecules";
 
+/**
+ * The Info Grid in the Contact Us Page, consisting of all the social media links and
+ * platforms that the user can use to reach out to the team. Allow them to be redirected
+ * to the selected social media site.
+ *
+ * @returns {React.ReactNode} The Component containing the Contact Us Info Grid of the studio's social media
+ */
 const ContactUsInfoGrid: React.FC<any> = () => {
     return (
         <VStack gap={["1rem", "1.5rem", "2.5rem"]}>
@@ -21,79 +29,17 @@ const ContactUsInfoGrid: React.FC<any> = () => {
                 w="100%"
                 justifyContent={"center"}
             >
-                {socialMediaLinks.map((link, index) => {
-                    // const linkData = {
-                    //     type: link.type !== "WhatsApp" ? link.type : "Phone",
-                    //     iconSrc:
-                    //         link.type !== "WhatsApp"
-                    //             ? link.iconSrc
-                    //             : "/assets/icon/phone-no-black.svg",
-                    //     iconAlt:
-                    //         link.type !== "WhatsApp"
-                    //             ? link.iconAlt
-                    //             : "Phone Icon",
-                    //     ariaLabel:
-                    //         link.type !== "WhatsApp"
-                    //             ? link.ariaLabel
-                    //             : "The Storyteller Studio Contact",
-                    //     url: link.type !== "WhatsApp" ? link.url : "",
-                    //     mediaHandle:
-                    //         link.type !== "WhatsApp"
-                    //             ? link.mediaHandle
-                    //             : "+60 17-687 6276",
-                    // };
+                {socialMediaLinks.map((link) => {
                     return (
-                        <GridItem
-                            key={link.iconAlt}
-                            backgroundColor="secondary"
-                            p="2rem"
-                            display="flex"
-                            justifyContent="center"
-                            alignItems="center"
-                        >
-                            <Box
-                                display="flex"
-                                flexDir="column"
-                                h="100%"
-                                w="100%"
-                                p="1rem"
-                                cursor="pointer"
-                                onClick={() => {
-                                    window.open(`${link.url}`, "_blank");
-                                }}
-                                textAlign="center"
-                                _hover={{
-                                    backgroundColor: "#E5DFD7",
-                                }}
-                            >
-                                <STIconButton
-                                    iconAlt={link.iconAlt}
-                                    iconSrc={link.iconSrc}
-                                    iconWidth={[
-                                        "30px",
-                                        "30px",
-                                        "30px",
-                                        "40px",
-                                        "50px",
-                                    ]}
-                                    pb="1rem"
-                                    aria-label={link.ariaLabel}
-                                    disabled
-                                />
-                                <STText
-                                    fontSize={["sm", "sm", "md", "lg", "lg"]}
-                                    color="black"
-                                >
-                                    {link.type}
-                                </STText>
-                                <STText
-                                    fontSize={["xs", "xs", "sm", "sm", "sm"]}
-                                    color="darkAccent"
-                                >
-                                    {link.mediaHandle}
-                                </STText>
-                            </Box>
-                        </GridItem>
+                        <ContactUsInfoGridItem
+                            key={link.iconSrc}
+                            iconAlt={link.iconAlt}
+                            iconSrc={link.iconSrc}
+                            url={link.url}
+                            ariaLabel={link.ariaLabel}
+                            type={link.type}
+                            mediaHandle={link.mediaHandle}
+                        />
                     );
                 })}
             </Grid>
