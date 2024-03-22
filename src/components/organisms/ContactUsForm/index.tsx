@@ -115,7 +115,7 @@ const ContactUsForm: React.FC<any> = () => {
                                 });
                             })
                             // If failure...
-                            .catch((err) => {
+                            .catch((err: any) => {
                                 toast({
                                     title: "Email Has Failed to Sent!",
                                     description: `There seems to be some problem with sending the email! The error is shown below: \n${err.text}`,

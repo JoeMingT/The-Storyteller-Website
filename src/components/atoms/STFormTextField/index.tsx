@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { useField } from "formik";
 import React from "react";
+import { STFormTextFieldProps } from "./props";
 
 /**
  * This is a form field utilising both Chakra UI form component and Formik Field / useField.
@@ -16,16 +17,16 @@ import React from "react";
  *
  * @returns {React.ReactNode} The Component of a customized form field.
  */
-export const STFormTextField: React.FC<any> = (props) => {
-    const { label, placeholder } = props;
-    const [field, meta] = useField(props);
+export const STFormTextField: React.FC<STFormTextFieldProps> = (props) => {
+    const { name, label, placeholder, ...rest } = props;
+    const [field, meta] = useField(name);
 
     return (
         <FormControl
             w="100%"
             isInvalid={meta.touched && meta.error ? true : false}
         >
-            <FormLabel>{label}</FormLabel>
+            {label ? <FormLabel>{label}</FormLabel> : <></>}
             <Input
                 w="100%"
                 size="md"
@@ -36,6 +37,7 @@ export const STFormTextField: React.FC<any> = (props) => {
                 onChange={field.onChange}
                 id={field.name}
                 borderColor={"darkAccent"}
+                {...rest}
             />
             <FormErrorMessage fontSize="sm">{meta.error}</FormErrorMessage>
         </FormControl>
