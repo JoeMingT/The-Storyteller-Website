@@ -27,31 +27,28 @@ export default function NotFoundPage(props: NotFoundPageProps) {
                 w="100%"
             >
                 <VStack
-                    gap="2.5rem"
+                    gap={["1rem", "2.5rem"]}
                     background="secondary"
-                    p="5rem"
+                    mx={["1rem", "0rem"]}
+                    p={["2.5rem", "5rem"]}
                     borderRadius="50px"
                     boxShadow="5px 5px 10px rgb(100,100,100, 0.5)"
+                    textAlign={"center"}
+                    alignContent="center"
+                    justifyContent={"center"}
                 >
                     <Box textAlign={"center"}>
                         <STHeading>404</STHeading>
                         <STHeading>Page Not Found!</STHeading>
                     </Box>
-                    <Box
-                        textAlign="center"
-                        display="flex"
-                        flexDir="column"
-                        gap="2.5rem"
-                    >
-                        <STText maxW="33vw">
-                            The page you are looking for does not exist or is
-                            not available. Click the button below to return to
-                            Home Page.
-                        </STText>
-                        <RedirectButton href="/">
-                            Click Here to Return Home
-                        </RedirectButton>
-                    </Box>
+                    <STText maxW={["100%", "50vw", "33vw"]}>
+                        The page you are looking for does not exist or is not
+                        available. Click the button below to return to Home
+                        Page.
+                    </STText>
+                    <RedirectButton href="/">
+                        Click Here to Return Home
+                    </RedirectButton>
                 </VStack>
             </Center>
         </>
