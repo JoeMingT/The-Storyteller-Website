@@ -10,10 +10,10 @@ interface NotFoundPageProps {}
 /**
  * Route: "Any Route not found"
  *
- * Components Related: "OurCompany", "OurTeam"
+ * Components Related: N/A
  *
- * This is the about page component. It provides more details regarding the company and the team behind the company. Meant to be informative for users to find our more
- * about the companies achievements, visions and missions, and the person in charge.
+ * This is the page that will be displayed when the user enters a link or page that does not exists or unavailable to them.
+ * Contains a button to redirect to Home Page "/"
  */
 export default function NotFoundPage(props: NotFoundPageProps) {
     return (
