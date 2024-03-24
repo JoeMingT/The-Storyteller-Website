@@ -1,5 +1,6 @@
 import { STHeading, STText } from "@StorytellerComponents/atoms";
 
+import { defaultAboutUsData } from "@Storyteller/data/defaultAboutUsData";
 import { Box } from "@chakra-ui/react";
 import { OurCompanyWriteupProps } from "./props";
 
@@ -23,7 +24,11 @@ const OurCompanyWriteup: React.FC<OurCompanyWriteupProps> = (props) => {
             <STHeading py={["2rem", "2rem", "3rem"]}>
                 About The Storyteller
             </STHeading>
-            <STText width="80%">{aboutUsFullText}</STText>
+            <STText width="80%">
+                {aboutUsFullText
+                    ? aboutUsFullText
+                    : defaultAboutUsData.full.body}
+            </STText>
         </Box>
     );
 };
