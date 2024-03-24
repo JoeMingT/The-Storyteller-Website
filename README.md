@@ -43,7 +43,7 @@ If you do not understand these prerequisites, it is recommended to read and lear
 
 The prerequisites are shown below:
 
-1. NextJS
+1. NextJS (Page Directory)
 2. ReactJS
 3. TypeScript
 4. ChakraUI
@@ -57,6 +57,7 @@ are and what they do to make your lives easier.
 
 1. ESLint & Prettier
 2. Swiper
+3. Formik (For form creation and form control)
 
 <br />
 
@@ -170,4 +171,6 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Add features where users can change the image or most of the other info in the website from sanity itself
 -   [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
 -   [x] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
--   [ ] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux)
+-   [ ] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context)
+-   [ ] Gallery Preview No Data Check
+-   [ ] Recheck Display and View in Larger Monitor Screen. Probably have to set MaxWidth or MaxHeight for some components so it doesn't become too big.
