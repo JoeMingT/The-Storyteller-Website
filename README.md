@@ -171,6 +171,6 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [ ] Add features where users can change the image or most of the other info in the website from sanity itself
 -   [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
 -   [x] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
--   [ ] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context)
+-   [x] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context) [Dropped, could not figure out a good method to do this. Considered to check at server side, but can't check state at SSR. Considered using default data before fetching but may caused visual glitching.]
 -   [ ] Gallery Preview No Data Check
 -   [ ] Recheck Display and View in Larger Monitor Screen. Probably have to set MaxWidth or MaxHeight for some components so it doesn't become too big.
