@@ -2,6 +2,7 @@ import { STHeading, STText } from "@StorytellerComponents/atoms";
 import { OurTeamCardProps } from "./props";
 
 import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
+import { useState } from "react";
 
 /**
  * The Card component in the Our Team section.
@@ -12,6 +13,13 @@ import { Card, CardBody, CardFooter, Image, VStack } from "@chakra-ui/react";
  */
 const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
     const { name, companyPos, imgUrl, ...cardProps } = props;
+
+    const [imgSrc, setImgSrc] = useState<string | undefined>(imgUrl);
+
+    const onImageFailedToLoad = () => {
+        setImgSrc("/assets/images/profile/default.png");
+    };
+
     return (
         <Card
             minH="100px"
@@ -40,8 +48,9 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                 // }}
             >
                 <Image
-                    src={imgUrl}
-                    alt={"Profile Pic"}
+                    src={imgSrc ? imgSrc : "/assets/images/profile/default.png"}
+                    onError={onImageFailedToLoad}
+                    alt={"Member Profile Picture"}
                     borderTopRadius={"50px"}
                     display="block"
                     objectFit="cover"
@@ -70,9 +79,14 @@ const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
                         fontWeight="bold"
                         noOfLines={2}
                     >
-                        {name}
+                        {name && name !== "" ? name : "Failed to Fetch Data"}
                     </STHeading>
-                    <STText noOfLines={2}>&mdash; {companyPos}</STText>
+                    <STText noOfLines={2}>
+                        &mdash;{" "}
+                        {companyPos && companyPos !== ""
+                            ? companyPos
+                            : "Failed to Fetch Data"}
+                    </STText>
                 </VStack>
             </CardFooter>
         </Card>

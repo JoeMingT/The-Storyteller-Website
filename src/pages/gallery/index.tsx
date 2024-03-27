@@ -1,7 +1,7 @@
 import { AllGalleries } from "@StorytellerComponents/organisms";
 import {
-    getThumbnailGalleries,
-    getTotalGalleryLength,
+    getAllGalleriesThumbnail,
+    getTotalGalleriesLength,
 } from "@StorytellerSanity/queries";
 import { type GetServerSideProps } from "next";
 
@@ -42,7 +42,7 @@ export default function Galleries({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     // Get total amount of galleries, used to calculate total amount of pages needed to render in the component
-    const totalGalleries = await getTotalGalleryLength();
+    const totalGalleries = await getTotalGalleriesLength();
     // Items per single page
     const itemsPerPage = 9;
     // The query parameter used to allow users to navigate to their specified page quickly
@@ -51,7 +51,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     // Initial Page, if there is any existing query parameters, if not, redirect to page 1
     const initialPage = page ? Number(page) - 1 : 0;
     // Initial Data for the first page, fetched and rendered server-side beforehand
-    const initialData = await getThumbnailGalleries(itemsPerPage, initialPage);
+    const initialData = await getAllGalleriesThumbnail(
+        itemsPerPage,
+        initialPage
+    );
 
     return {
         props: {

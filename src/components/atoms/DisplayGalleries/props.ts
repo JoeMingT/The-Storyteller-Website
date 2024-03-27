@@ -1,6 +1,6 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
 
-export interface AllGalleriesContentProps {
+export interface DisplayGalleriesProps {
     noOfPages: number;
     initialData: ThumbnailGalleryType[];
     itemsPerPage: number;

@@ -2,7 +2,7 @@ import { ThumbnailGalleryType } from "@Storyteller/types";
 import { groq } from "next-sanity";
 import { client } from "../../lib/client";
 
-export async function getThumbnailGalleries(
+export async function getAllGalleriesThumbnail(
     itemsPerPage: number,
     page: number
 ): Promise<ThumbnailGalleryType[]> {

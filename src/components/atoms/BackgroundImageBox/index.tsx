@@ -11,7 +11,7 @@ import { Box } from "@chakra-ui/react";
  * @returns {React.ReactNode} The rendered Background Image Box component
  */
 const BackgroundImageBox: React.FC<BackgroundImageBoxProps> = (props) => {
-    const { backgroundImage, ...boxProps } = props;
+    const { backgroundImage, children, ...boxProps } = props;
     return (
         <Box
             w="100%"
@@ -25,7 +25,9 @@ const BackgroundImageBox: React.FC<BackgroundImageBoxProps> = (props) => {
             zIndex="-1"
             position="absolute"
             {...boxProps}
-        ></Box>
+        >
+            {children}
+        </Box>
     );
 };
 

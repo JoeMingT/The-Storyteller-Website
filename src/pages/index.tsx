@@ -6,7 +6,7 @@ import {
 } from "@StorytellerComponents/organisms";
 import {
     getAboutUsPreviewText,
-    getThumbnailGalleries,
+    getAllGalleriesThumbnail,
 } from "@StorytellerSanity/queries";
 import { type GetServerSideProps } from "next";
 
@@ -36,7 +36,7 @@ export default function Landing({
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const galleryPreviewData = await getThumbnailGalleries(3, 0);
+    const galleryPreviewData = await getAllGalleriesThumbnail(3, 0);
     const aboutUsPreviewText = await getAboutUsPreviewText();
     const formattedAboutUsText = aboutUsPreviewText.preview
         // loop through each block

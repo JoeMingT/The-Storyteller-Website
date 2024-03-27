@@ -3,8 +3,8 @@ import AboutUsHeading from "./AboutUsHeading";
 import AboutUsImage from "./AboutUsImage";
 import AboutUsText from "./AboutUsText";
 import AllGalleriesCard from "./AllGalleriesCard";
-import AllGalleriesContent from "./AllGalleriesContent";
 import AllGalleriesHeader from "./AllGalleriesHeader";
+import ContactUsInfoGridItem from "./ContactUsInfoGridItem";
 import FooterIcons from "./FooterIcons";
 import FooterText from "./FooterText";
 import GalleryPreviewItem from "./GalleryPreviewItem";
@@ -31,8 +31,8 @@ export {
     AboutUsImage,
     AboutUsText,
     AllGalleriesCard,
-    AllGalleriesContent,
     AllGalleriesHeader,
+    ContactUsInfoGridItem,
     FooterIcons,
     FooterText,
     GalleryPreviewItem,
