@@ -174,3 +174,5 @@ Essentially this is a compilation of future features, ideas, and items that will
 -   [x] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context) [Dropped, could not figure out a good method to do this. Considered to check at server side, but can't check state at SSR. Considered using default data before fetching but may caused visual glitching.]
 -   [ ] Gallery Preview No Data Check
 -   [ ] Recheck Display and View in Larger Monitor Screen. Probably have to set MaxWidth or MaxHeight for some components so it doesn't become too big.
+-   [ ] Add Accessibilities (type in inputs / buttons, alt in images, etc.)
+-   [x] Check all data value (In case there are invalid values or unable to load cases)

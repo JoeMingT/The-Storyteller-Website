@@ -1,3 +1,4 @@
+import { defaultAboutUsData } from "@Storyteller/data/defaultAboutUsData";
 import { STText } from "@StorytellerComponents/atoms";
 import { AboutUsTextProps } from "./props";
 
@@ -11,7 +12,9 @@ const AboutUsText: React.FC<AboutUsTextProps> = (props) => {
     const { aboutUsPreviewText } = props;
     return (
         <STText color="#fff" textAlign={["center", "center", "left"]}>
-            {aboutUsPreviewText}
+            {aboutUsPreviewText
+                ? aboutUsPreviewText
+                : defaultAboutUsData.preview.body}
         </STText>
     );
 };
