@@ -10,10 +10,10 @@ import { GallerySearchPageProps } from "./props";
  * The component to render out the search results. Mainly to tell the users what they have searched, and what
  * corresponding results has been obtained from the search query.
  *
- * @param {SearchBarProps} props The properties for the component. Mainly properties for styling purposes.
+ * @param {GallerySearchPageProps} props The properties for the component. Mainly properties for styling purposes.
  * @returns {React.ReactNode} The search bar component.
  */
-const GallerySearchPage: React.FC<GallerySearchPageProps> = (props) => {
+const GallerySearchPage: React.FC<GallerySearchPageProps> = (props: GallerySearchPageProps): React.ReactNode => {
     const { queryParams, noOfPages, initialData, itemsPerPage, initialPage } =
         props;
     return (

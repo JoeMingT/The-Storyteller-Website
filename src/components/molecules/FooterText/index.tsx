@@ -7,7 +7,7 @@ import { GridItem } from "@chakra-ui/react";
  *
  * @return {React.ReactNode} The copyright text in the Footer
  */
-const FooterText: React.FC<any> = (props) => {
+const FooterText: React.FC<any> = (): React.ReactNode => {
     return (
         <GridItem
             display="flex"

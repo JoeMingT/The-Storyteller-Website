@@ -21,12 +21,13 @@ import { useEffect } from "react";
 /**
  * The Header component that is rendered when in mobile view
  *
- * @param {FlexProps} props Properties for the component
+ * @param {FlexProps} props Properties for the component, mainly for styling
  * @returns {React.ReactNode} The Header for Mobile view / devices
  */
-const HeaderMobileMenu: React.FC<FlexProps> = (props) => {
+const HeaderMobileMenu: React.FC<FlexProps> = (props: FlexProps): React.ReactNode => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
+    // Set event listener "resize" and close the drawer when resize width
     useEffect(() => {
         window.addEventListener("resize", (e) => {
             if (window.outerWidth >= 768) {

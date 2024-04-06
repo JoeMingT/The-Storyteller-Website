@@ -10,7 +10,7 @@ import NextLink from "next/link";
  * @param {ButtonProps} props Properties for the component
  * @returns {React.ReactNode} The image logo at the Header
  */
-const HeaderLogoButton: React.FC<ButtonProps> = (props) => {
+const HeaderLogoButton: React.FC<ButtonProps> = (props: ButtonProps): React.ReactNode => {
     return (
         <NextLink href="/">
             <STButton

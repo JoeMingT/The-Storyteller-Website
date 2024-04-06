@@ -19,7 +19,7 @@ import { useEffect } from "react";
  * @param {SelectedGalleryModalProps} props The props required for opening closing modal and loading the images
  * @returns {React.ReactNode} The rendered Selected Gallery title / top part
  */
-const SelectedGalleryModal: React.FC<SelectedGalleryModalProps> = (props) => {
+const SelectedGalleryModal: React.FC<SelectedGalleryModalProps> = (props: SelectedGalleryModalProps): React.ReactNode => {
     const {
         isOpen,
         onClose,

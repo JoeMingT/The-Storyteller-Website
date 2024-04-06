@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
  *
  * @returns {React.ReactNode} The rendered Footer component
  */
-const Footer: React.FC<any> = (props) => {
+const Footer: React.FC<any> = (): React.ReactNode => {
     const router = useRouter();
 
     // Check if the body of the page is overflowing or not

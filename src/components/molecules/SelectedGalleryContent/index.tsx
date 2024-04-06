@@ -17,8 +17,8 @@ import { useState } from "react";
  * @returns {React.ReactNode} The rendered images with the correct layout
  */
 const SelectedGalleryContent: React.FC<SelectedGalleryContentProps> = (
-    props
-) => {
+    props: SelectedGalleryContentProps
+): React.ReactNode => {
     const { galleryName, images } = props;
 
     const { isOpen, onOpen, onClose } = useDisclosure();

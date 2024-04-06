@@ -7,10 +7,10 @@ import { HStack, StackProps } from "@chakra-ui/react";
  * Component that renders the Facebook, Instagram and Xiao Hong Shu logos
  * located in the header
  *
- * @param {StackProps} props Properties that can be passed into the component
+ * @param {StackProps} props Properties that can be passed into the component. Mainly for the styling of the stack.
  * @returns {React.ReactNode} The entire Header Icon section
  */
-const HeaderIconButtonSection: React.FC<StackProps> = (props) => {
+const HeaderIconButtonSection: React.FC<StackProps> = (props: StackProps): React.ReactNode => {
     return (
         <HStack
             gap={["1rem", "1rem", "1rem", "1.5rem", "2rem", "2rem"]}

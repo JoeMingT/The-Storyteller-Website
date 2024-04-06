@@ -13,6 +13,7 @@ import { Box } from "@chakra-ui/react";
  * The component that renders out each preview of a gallery.
  * It contains a thumbnail image (as the background), the title of the gallery and a button to redirect them to the gallery.
  *
+ * @param {GalleryPreviewItemProps} props The props for the preview. It contains the img url, title, and the redirect link
  * @returns {React.ReactNode} One gallery preview
  */
 const GalleryPreviewItem: React.FC<GalleryPreviewItemProps> = (props) => {

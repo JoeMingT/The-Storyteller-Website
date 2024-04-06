@@ -8,7 +8,7 @@ import { Box } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The rendered text in the Splash component
  */
-const SplashText: React.FC<any> = () => {
+const SplashText: React.FC<any> = (): React.ReactNode => {
     return (
         <Box textAlign={["center", "initial"]}>
             <STHeading>&quot;Storyteller&quot;</STHeading>

@@ -11,7 +11,7 @@ import { useState } from "react";
  * @param {OurTeamCardProps} props The member's information
  * @returns {React.ReactNode} The rendered Card with the member's details
  */
-const OurTeamCard: React.FC<OurTeamCardProps> = (props) => {
+const OurTeamCard: React.FC<OurTeamCardProps> = (props: OurTeamCardProps): React.ReactNode => {
     const { name, companyPos, imgUrl, ...cardProps } = props;
 
     const [imgSrc, setImgSrc] = useState<string | undefined>(imgUrl);

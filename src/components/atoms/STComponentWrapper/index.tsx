@@ -10,7 +10,7 @@ import { Box } from "@chakra-ui/react";
  * @param {STComponentWrapperProps} props The properties for the component, Children will be wrapped around the padding
  * @returns {React.ReactNode} The children component wrapped with this component
  */
-const STComponentWrapper: React.FC<STComponentWrapperProps> = (props) => {
+const STComponentWrapper: React.FC<STComponentWrapperProps> = (props: STComponentWrapperProps): React.ReactNode => {
     const { children, ...containerProps } = props;
     return (
         <Box
