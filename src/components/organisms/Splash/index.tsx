@@ -1,5 +1,5 @@
 import StorytellerLogo from "@/public/assets/logo/storyteller_logo_rectangle.png";
-import { STImage } from "@StorytellerComponents/atoms";
+import { RedirectButton, STImage, STText } from "@StorytellerComponents/atoms";
 import { SplashBackground, SplashText } from "@StorytellerComponents/molecules";
 
 import { VStack } from "@chakra-ui/react";
@@ -32,9 +32,9 @@ const Splash: React.FC<any> = (): React.ReactNode => {
                     height=""
                 />
                 <SplashText />
-                {/* <RedirectButton href="/contact-us">
+                <RedirectButton href="/contact-us">
                     <STText>Contact Us!</STText>
-                </RedirectButton> */}
+                </RedirectButton>
             </VStack>
         </>
     );
