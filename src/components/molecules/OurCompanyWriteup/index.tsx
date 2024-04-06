@@ -8,9 +8,10 @@ import { OurCompanyWriteupProps } from "./props";
  * The component that is responsible for rendering the text in the Our Company section.
  * Basically the writeup section talking about the company.
  *
+ * @param {OurCompanyWriteupProps} props The properties for the company. Mainly the data for the component.
  * @returns {React.ReactNode} The rendered Writeup for the About Page
  */
-const OurCompanyWriteup: React.FC<OurCompanyWriteupProps> = (props) => {
+const OurCompanyWriteup: React.FC<OurCompanyWriteupProps> = (props: OurCompanyWriteupProps): React.ReactNode => {
     const { aboutUsFullText } = props;
     return (
         <Box

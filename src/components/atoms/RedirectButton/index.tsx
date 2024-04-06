@@ -10,7 +10,7 @@ import NextLink from "next/link";
  * @param {RedirectButtonProps} props The properties for the component, mainly href is important
  * @returns {React.ReactNode} The Button that redirects users
  */
-const RedirectButton: React.FC<RedirectButtonProps> = (props) => {
+const RedirectButton: React.FC<RedirectButtonProps> = (props: RedirectButtonProps): React.ReactNode => {
     const { href, children, nextLinkProps, ...buttonProps } = props;
     return (
         <NextLink {...nextLinkProps} href={href}>

@@ -7,6 +7,7 @@ import { DisplayGalleries } from "@StorytellerComponents/atoms";
 /**
  * The component used to render out the all galleries page. Fetches and showcases data stored in the server.
  *
+ * @param {AllGalleriesProps} props The data for all of the galleries
  * @returns {React.ReactNode} The rendered component with the initial data pre-rendered
  */
 const AllGalleries: React.FC<AllGalleriesProps> = (props) => {

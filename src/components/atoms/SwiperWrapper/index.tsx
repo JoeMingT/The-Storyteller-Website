@@ -22,7 +22,7 @@ import "swiper/swiper-bundle.css";
  * @param {SwiperWrapperProps} props The properties for the component. The children will be wrapped around by the component while the leftButtonProps and rightButtonProps is used to modify the navigation buttons. Box Props is used to allow for different swiper layouts
  * @returns {React.ReactNode} The Swiper wrapping around SwiperSlides
  */
-const SwiperWrapper: React.FC<SwiperWrapperProps> = (props) => {
+const SwiperWrapper: React.FC<SwiperWrapperProps> = (props: SwiperWrapperProps): React.ReactNode => {
     const {
         children,
         leftButtonProps,

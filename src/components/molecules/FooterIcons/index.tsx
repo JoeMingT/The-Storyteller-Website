@@ -11,7 +11,7 @@ import { GridItem } from "@chakra-ui/react";
  *
  * @return {React.ReactNode} The icons in the Footer
  */
-const FooterIcons: React.FC<any> = (props) => {
+const FooterIcons: React.FC<any> = (): React.ReactNode => {
     return (
         <GridItem
             display="flex"

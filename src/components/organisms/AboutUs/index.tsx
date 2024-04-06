@@ -10,9 +10,10 @@ import { AboutUsProps } from "./props";
  *
  * For the component in the About Us PAGE, check Our Company and Our Team component.
  *
+ * @param {AboutUsProps} props The properties for the component. Mainly the data for the component
  * @returns {React.ReactNode} The About Us component
  */
-const AboutUs: React.FC<AboutUsProps> = (props) => {
+const AboutUs: React.FC<AboutUsProps> = (props): React.ReactNode => {
     const { aboutUsPreviewText } = props;
     return (
         <STComponentWrapper>

@@ -15,9 +15,10 @@ import { OurTeamProps } from "./props";
  * It mainly contains the short profile of all the members in the company.
  * ** Plan to add a modal popup that will show more details of the selected members.
  *
+ * @param {OurTeamProps} props The properties for the component. All of the data for the component.
  * @returns {React.ReactNode} The rendered Our Team component in the About Page
  */
-const OurTeam: React.FC<OurTeamProps> = (props) => {
+const OurTeam: React.FC<OurTeamProps> = (props: OurTeamProps): React.ReactNode => {
     const { ourTeamData } = props;
 
     // Props for the buttons

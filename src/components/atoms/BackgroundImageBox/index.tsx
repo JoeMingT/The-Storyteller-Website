@@ -10,7 +10,7 @@ import { Box } from "@chakra-ui/react";
  * @param {BackgroundImageBoxProps} props - The properties for the component. Mainly backgroundImage that's important and is required
  * @returns {React.ReactNode} The rendered Background Image Box component
  */
-const BackgroundImageBox: React.FC<BackgroundImageBoxProps> = (props) => {
+const BackgroundImageBox: React.FC<BackgroundImageBoxProps> = (props: BackgroundImageBoxProps): React.ReactNode => {
     const { backgroundImage, children, ...boxProps } = props;
     return (
         <Box

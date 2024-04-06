@@ -11,7 +11,7 @@ import { SearchBarProps } from "./props";
  * @param {SearchBarProps} props The properties for the component. Mainly properties for styling purposes.
  * @returns {React.ReactNode} The search bar component.
  */
-const SearchBar: React.FC<SearchBarProps> = (props) => {
+const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps): React.ReactNode => {
     const { type = "primary", hStackProps, inputFieldProps } = props;
     const router = useRouter();
 

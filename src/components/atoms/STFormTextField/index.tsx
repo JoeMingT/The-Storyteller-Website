@@ -15,10 +15,11 @@ import { STFormTextFieldProps } from "./props";
  * 
  * This is specifically the Form Field for a Text Input (One line).
  *
+ * @param {STFormTextFieldProps} props The properties for the Text Field. Mainly containing the metadata and also any styling for the text field if required.
  * @returns {React.ReactNode} The Component of a customized form field.
  */
-export const STFormTextField: React.FC<STFormTextFieldProps> = (props) => {
-    const { name, label, placeholder, ...rest } = props;
+export const STFormTextField: React.FC<STFormTextFieldProps> = (props: STFormTextFieldProps): React.ReactNode => {
+    const { name, label, placeholder, ...inputProps } = props;
     const [field, meta] = useField(name);
 
     return (
@@ -37,7 +38,7 @@ export const STFormTextField: React.FC<STFormTextFieldProps> = (props) => {
                 onChange={field.onChange}
                 id={field.name}
                 borderColor={"darkAccent"}
-                {...rest}
+                {...inputProps}
             />
             <FormErrorMessage fontSize="sm">{meta.error}</FormErrorMessage>
         </FormControl>

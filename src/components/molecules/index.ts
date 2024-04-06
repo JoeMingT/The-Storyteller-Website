@@ -18,7 +18,6 @@ import HeaderWrapper from "./HeaderWrapper";
 import OurCompanyLogo from "./OurCompanyLogo";
 import OurCompanyWriteup from "./OurCompanyWriteup";
 import OurTeamCard from "./OurTeamCard";
-import OurTeamModal from "./OurTeamModal";
 import SelectedGalleryContent from "./SelectedGalleryContent";
 import SelectedGalleryModal from "./SelectedGalleryModal";
 import SelectedGalleryTitle from "./SelectedGalleryTitle";
@@ -46,10 +45,10 @@ export {
     OurCompanyLogo,
     OurCompanyWriteup,
     OurTeamCard,
-    OurTeamModal,
     SelectedGalleryContent,
     SelectedGalleryModal,
     SelectedGalleryTitle,
     SplashBackground,
-    SplashText,
+    SplashText
 };
+

@@ -10,7 +10,7 @@ import { ContactUsInfoGridItem } from "@StorytellerComponents/molecules";
  *
  * @returns {React.ReactNode} The Component containing the Contact Us Info Grid of the studio's social media
  */
-const ContactUsInfoGrid: React.FC<any> = () => {
+const ContactUsInfoGrid: React.FC<any> = (): React.ReactNode => {
     return (
         <VStack gap={["1rem", "1.5rem", "2.5rem"]}>
             <Box color="black" textAlign="center">
