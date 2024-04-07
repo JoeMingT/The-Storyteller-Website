@@ -108,7 +108,7 @@ const OurTeam: React.FC<OurTeamProps> = (props: OurTeamProps): React.ReactNode =
                 >
                     {ourTeamData?.map((member) => {
                         return (
-                            <SwiperSlide key={member.id}>
+                            <SwiperSlide key={member._id}>
                                 <OurTeamCard
                                     name={member.name}
                                     imgUrl={member.profilePic}
