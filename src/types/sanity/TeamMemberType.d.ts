@@ -1,5 +1,5 @@
 export type TeamMemberType = {
-    id: string;
+    _id: string;
     name: string;
     position: string;
     profilePic: string;

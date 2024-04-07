@@ -1,5 +1,5 @@
 export type SelectedGalleryType = {
-    id: string;
+    _id: string;
     name: string;
     venue: string;
     clients: string[];
