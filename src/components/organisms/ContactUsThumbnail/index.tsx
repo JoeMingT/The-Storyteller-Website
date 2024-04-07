@@ -12,7 +12,7 @@ import { Box } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The Component that displays the thumbnail for Contact Us Page
  */
-const ContactUsThumbnail: React.FC<any> = () => {
+const ContactUsThumbnail: React.FC<any> = (): React.ReactNode => {
     return (
         <BackgroundImageBox
             // Require a lot of tinkering

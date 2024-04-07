@@ -9,7 +9,7 @@ import { useEffect } from "react";
  *
  * @returns {React.ReactNode} The background image and linear gradient for the splash component
  */
-const SplashBackground: React.FC<any> = () => {
+const SplashBackground: React.FC<any> = (): React.ReactNode => {
     const { isMobile, checkIsMobile } = useCheckIsMobile();
 
     useEffect(() => {

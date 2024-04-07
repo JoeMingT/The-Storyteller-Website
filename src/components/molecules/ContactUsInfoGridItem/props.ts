@@ -1,5 +1,4 @@
 export interface ContactUsInfoGridItemProps {
-    key: string;
     iconAlt: string;
     iconSrc: string;
     url: string;

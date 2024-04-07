@@ -9,7 +9,7 @@ import NextImage from "next/image";
  *
  * @returns {React.ReactNode} The rendered showcase Image in the About Us component
  */
-const AboutUsImage: React.FC<any> = () => {
+const AboutUsImage: React.FC<any> = (): React.ReactNode => {
     return (
         <GridItem
             w="100%"

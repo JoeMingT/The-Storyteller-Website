@@ -11,7 +11,7 @@ import { Stack } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The rendered header for the all gallery component
  */
-const AllGalleriesHeader: React.FC<any> = () => {
+const AllGalleriesHeader: React.FC<any> = (): React.ReactNode => {
     return (
         <Stack
             justifyContent={"space-between"}

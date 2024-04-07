@@ -5,10 +5,10 @@ import { Flex } from "@chakra-ui/react";
 /**
  * The wrapper component that wraps around both Mobile and Desktop view Headers
  *
- * @param {HeaderWrapperProps} props Properties for the component
+ * @param {HeaderWrapperProps} props Properties for the component. Containing th reference for the 
  * @returns {React.ReactNode} The wrapper that wraps the entire Header component
  */
-const HeaderWrapper: React.FC<HeaderWrapperProps> = (props) => {
+const HeaderWrapper: React.FC<HeaderWrapperProps> = (props: HeaderWrapperProps): React.ReactNode => {
     const { children, headerRef } = props;
 
     return (

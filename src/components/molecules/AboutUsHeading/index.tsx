@@ -10,7 +10,7 @@ import { Box, Divider } from "@chakra-ui/react";
  * @param {AboutUsHeadingProps} props The properties of the component. Most important is "text" props that represents the text in the Heading
  * @returns {React.ReactNode} The Heading text in the About Us section
  */
-const AboutUsHeading: React.FC<AboutUsHeadingProps> = (props) => {
+const AboutUsHeading: React.FC<AboutUsHeadingProps> = (props: AboutUsHeadingProps): React.ReactNode => {
     const { text } = props;
 
     return (

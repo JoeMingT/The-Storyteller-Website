@@ -11,7 +11,7 @@ import NextLink from "next/link";
  * @param {HeaderItemProps} props Properties for the component
  * @returns {React.ReactNode} The each individual text in the Header that redirects users
  */
-const HeaderItem: React.FC<HeaderItemProps> = (props) => {
+const HeaderItem: React.FC<HeaderItemProps> = (props: HeaderItemProps): React.ReactNode => {
     const { children, href, ...textProps } = props;
 
     return (

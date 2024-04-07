@@ -9,19 +9,20 @@ import NextImage from "next/image";
  * However, for important images that needs to be rendered immediately, we will not use this
  * and use regular Chakra UI Image component. Either that, or we use the priority tag in NextImage
  *
- * @param {STImageProps} props The properties of the Image. Mainly height, width, src, and alt
+ * @param {STImageProps} props The properties of the Image. Mainly height, width, src, and alt. No styling.
  * @return {React.ReactNode} The component Image
  */
-const STImage: React.FC<STImageProps> = (props) => {
-    const width = useBreakpointValue(props?.width)?.replace("px", "") || 0;
-    const height = useBreakpointValue(props?.height)?.replace("px", "") || 0;
+const STImage: React.FC<STImageProps> = (props: STImageProps): React.ReactNode => {
+    const { width, height, src, alt, ...rest } = props;
+    const imgWidth = useBreakpointValue(props?.width)?.replace("px", "") || 0;
+    const imgHeight = useBreakpointValue(props?.height)?.replace("px", "") || 0;
 
     return (
         <NextImage
             src={props.src}
             alt={props.alt}
-            width={width}
-            height={height}
+            width={imgWidth}
+            height={imgHeight}
             placeholder="blur"
         />
     );

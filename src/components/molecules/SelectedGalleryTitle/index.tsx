@@ -14,7 +14,7 @@ import { Box, Center, Divider } from "@chakra-ui/react";
  * @param {SelectedGalleryTitleProps} props The props containing the information required for the title section.
  * @returns {React.ReactNode} The rendered Selected Gallery title / top part
  */
-const SelectedGalleryTitle: React.FC<SelectedGalleryTitleProps> = (props) => {
+const SelectedGalleryTitle: React.FC<SelectedGalleryTitleProps> = (props: SelectedGalleryTitleProps): React.ReactNode => {
     const { galleryName, clients, photographers, venue } = props;
 
     const mergeNames = (arrOfNames: string[]) => {
