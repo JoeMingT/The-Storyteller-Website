@@ -1,6 +1,6 @@
 import { CardProps } from "@chakra-ui/react";
 
-export interface AllGalleriesCardProps extends CardProps {
+export interface DisplayGalleriesCardProps extends CardProps {
     imgUrl: string;
     galleryTitle: string;
     galleryUrl: string;

@@ -1,6 +1,5 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
-import { STHeading, STIconButton } from "@StorytellerComponents/atoms";
-import { AllGalleriesCard } from "@StorytellerComponents/molecules";
+import { DisplayGalleriesCard, STHeading, STIconButton } from "@StorytellerComponents/atoms";
 import {
     getAllGalleriesThumbnail,
     getQueriedGalleriesThumbnail,
@@ -17,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import ReactPagination from "react-paginate";
 
+import { defaultGalleryData } from "@Storyteller/data/defaultGalleryData";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DisplayGalleriesProps } from "./props";
@@ -94,7 +94,7 @@ const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props: DisplayGalleri
                 {galleryData.map((gallery) => {
                     return (
                         <GridItem key={`${gallery._id}`}>
-                            <AllGalleriesCard
+                            <DisplayGalleriesCard
                                 imgUrl={gallery.thumbnail}
                                 galleryTitle={gallery.name}
                                 galleryUrl={gallery.slug}
@@ -198,7 +198,7 @@ const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props: DisplayGalleri
                     )
                         .then((data) => {
                             // If success update the data accordingly
-                            setGalleryData(data);
+                            setGalleryData(data ? data : defaultGalleryData.slice(page.selected*9, page.selected*9+9));
                             setCurrPage(page.selected);
                             // Update the href to include a query parameter (for users who want to access it in the future)
                             router.push(
