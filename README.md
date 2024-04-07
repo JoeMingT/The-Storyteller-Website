@@ -34,6 +34,8 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+However, due to the use of Environment Variables which is private, you may not be able to access the website. If that's the case, please switch the branch to `demo-app` and run `npm run dev` there, which will load default data and images fetched from other data.
+
 <br />
 
 ## Prerequisites
@@ -156,23 +158,23 @@ continues to develop.
 
 Essentially this is a compilation of future features, ideas, and items that will be good to include for the website whether for extra user-friendliness, accessibility, or even documentation purposes.
 
--   [x] Add a Custom 404 Page
--   [x] Consider using NextImage for optimizing the SelectedGallery images (Done as much as I could)
--   [x] Rework some of the designs to make it more stand out (Dropped)
--   [ ] Add a logger for the application to log any problems and errors encountered
--   [ ] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself
--   [x] Add a Contact Us Page
--   [x] Add a Search Result Function / Feature for the Gallery
--   [x] Add a Category Field and Filter by Category for the Gallery (Dropped, Maybe in future)
--   [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)
--   [x] Bug: When There's no Gallery in database, the display is wrong.
--   [ ] Bug: When no ImgSrc for Our Team, it will display a text. Should display a default profile picture image.
--   [ ] Reformat all code to follow the same format (All use Arrow function, all have props, etc.)
--   [ ] Add features where users can change the image or most of the other info in the website from sanity itself
--   [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
--   [x] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
--   [x] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context) [Dropped, could not figure out a good method to do this. Considered to check at server side, but can't check state at SSR. Considered using default data before fetching but may caused visual glitching.]
--   [ ] Gallery Preview No Data Check
--   [ ] Recheck Display and View in Larger Monitor Screen. Probably have to set MaxWidth or MaxHeight for some components so it doesn't become too big.
--   [ ] Add Accessibilities (type in inputs / buttons, alt in images, etc.)
--   [x] Check all data value (In case there are invalid values or unable to load cases)
+- [x] Add a Custom 404 Page
+- [x] Consider using NextImage for optimizing the SelectedGallery images (Done as much as I could)
+- [x] Rework some of the designs to make it more stand out (Dropped)
+- [ ] Add a logger for the application to log any problems and errors encountered
+- [x] Consider migrating to a self-created / self-hosted backend, where most info is stored in database while the images are stored in Google Drive itself (In Consideration, )
+- [x] Add a Contact Us Page
+- [x] Add a Search Result Function / Feature for the Gallery
+- [x] Add a Category Field and Filter by Category for the Gallery (Dropped, Maybe in future)
+- [ ] Test for Apple Device compatibility (iPhone, iPad, etc.)
+- [x] Bug: When There's no Gallery in database, the display is wrong.
+- [x] Bug: When no ImgSrc for Our Team, it will display a text. Should display a default profile picture image.
+- [x] Reformat all code to follow the same format (All use Arrow function, all have props, etc.)
+- [ ] Add features where users can change the image or most of the other info in the website from sanity itself
+- [ ] Have a Container Padding / Margin Size theme (Like font size "xl" "2xl" etc.)
+- [x] Create multiple components that have been reused (Home About Us Line, Gallery Preview Line)
+- [x] Optimize the way of fetching data. This includes: Displaying Search Result (Pass all gallery data and filter data client-side instead of server-side in order to reduce query amount). May consider using context management (React Redux/React Context) [Dropped, could not figure out a good method to do this. Considered to check at server side, but can't check state at SSR. Considered using default data before fetching but may caused visual glitching.]
+- [x] Gallery Preview No Data Check
+- [ ] Recheck Display and View in Larger Monitor Screen. Probably have to set MaxWidth or MaxHeight for some components so it doesn't become too big.
+- [ ] Add Accessibilities (type in inputs / buttons, alt in images, etc.)
+- [x] Check all data value (In case there are invalid values or unable to load cases)
