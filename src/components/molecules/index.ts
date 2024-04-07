@@ -2,7 +2,6 @@ import AboutUsDetails from "./AboutUsDetails";
 import AboutUsHeading from "./AboutUsHeading";
 import AboutUsImage from "./AboutUsImage";
 import AboutUsText from "./AboutUsText";
-import AllGalleriesCard from "./AllGalleriesCard";
 import AllGalleriesHeader from "./AllGalleriesHeader";
 import ContactUsInfoGridItem from "./ContactUsInfoGridItem";
 import FooterIcons from "./FooterIcons";
@@ -29,7 +28,6 @@ export {
     AboutUsHeading,
     AboutUsImage,
     AboutUsText,
-    AllGalleriesCard,
     AllGalleriesHeader,
     ContactUsInfoGridItem,
     FooterIcons,

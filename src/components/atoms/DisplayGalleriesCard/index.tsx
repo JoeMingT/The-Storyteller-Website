@@ -3,7 +3,7 @@ import {
     STHeading,
     STText,
 } from "@StorytellerComponents/atoms";
-import { AllGalleriesCardProps } from "./props";
+import { DisplayGalleriesCardProps } from "./props";
 
 import {
     Box,
@@ -18,10 +18,10 @@ import NextImage from "next/image";
  * The Card component that renders an overview / summary of the galleries data.
  * Each card will display a Thumbnail image, the title, and a button that redirects the user to the selected gallery.
  *
- * @param {AllGalleriesCardProps} props The properties required to render the card. For the image, title and link for the button.
+ * @param {DisplayGalleriesCardProps} props The properties required to render the card. For the image, title and link for the button.
  * @returns {React.ReactNode} The rendered card component with the details passed into it.
  */
-const AllGalleriesCard: React.FC<AllGalleriesCardProps> = (props: AllGalleriesCardProps): React.ReactNode => {
+const DisplayGalleriesCard: React.FC<DisplayGalleriesCardProps> = (props: DisplayGalleriesCardProps): React.ReactNode => {
     const { imgUrl, galleryTitle, galleryUrl, ...cardProps } = props;
     const borderRadius = useBreakpointValue({ base: "25px", sm: "50px" });
 
@@ -91,4 +91,4 @@ const AllGalleriesCard: React.FC<AllGalleriesCardProps> = (props: AllGalleriesCa
     );
 };
 
-export default AllGalleriesCard;
+export default DisplayGalleriesCard;

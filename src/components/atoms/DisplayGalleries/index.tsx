@@ -1,6 +1,5 @@
 import { ThumbnailGalleryType } from "@Storyteller/types";
-import { STHeading, STIconButton } from "@StorytellerComponents/atoms";
-import { AllGalleriesCard } from "@StorytellerComponents/molecules";
+import { DisplayGalleriesCard, STHeading, STIconButton } from "@StorytellerComponents/atoms";
 import {
     getAllGalleriesThumbnail,
     getQueriedGalleriesThumbnail,
@@ -94,7 +93,7 @@ const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props: DisplayGalleri
                 {galleryData.map((gallery) => {
                     return (
                         <GridItem key={`${gallery._id}`}>
-                            <AllGalleriesCard
+                            <DisplayGalleriesCard
                                 imgUrl={gallery.thumbnail}
                                 galleryTitle={gallery.name}
                                 galleryUrl={gallery.slug}
