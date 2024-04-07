@@ -1,5 +1,6 @@
 import BackgroundImageBox from "./BackgroundImageBox";
 import DisplayGalleries from "./DisplayGalleries";
+import DisplayGalleriesCard from "./DisplayGalleriesCard";
 import RedirectButton from "./RedirectButton";
 import STButton from "./STButton";
 import STComponentWrapper from "./STComponentWrapper";
@@ -16,8 +17,7 @@ import SwiperWrapper from "./SwiperWrapper";
 
 export {
     BackgroundImageBox,
-    DisplayGalleries,
-    RedirectButton,
+    DisplayGalleries, DisplayGalleriesCard, RedirectButton,
     STButton,
     STComponentWrapper,
     STDivider1,
@@ -29,5 +29,6 @@ export {
     STImage,
     STText,
     SearchBar,
-    SwiperWrapper,
+    SwiperWrapper
 };
+
