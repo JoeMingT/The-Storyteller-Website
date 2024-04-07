@@ -21,7 +21,7 @@ import NextImage from "next/image";
  * @param {AllGalleriesCardProps} props The properties required to render the card. For the image, title and link for the button.
  * @returns {React.ReactNode} The rendered card component with the details passed into it.
  */
-const AllGalleriesCard: React.FC<AllGalleriesCardProps> = (props) => {
+const AllGalleriesCard: React.FC<AllGalleriesCardProps> = (props: AllGalleriesCardProps): React.ReactNode => {
     const { imgUrl, galleryTitle, galleryUrl, ...cardProps } = props;
     const borderRadius = useBreakpointValue({ base: "25px", sm: "50px" });
 

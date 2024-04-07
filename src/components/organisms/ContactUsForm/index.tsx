@@ -22,7 +22,7 @@ import ReCAPTCHA from "react-google-recaptcha";
  *
  * @returns {React.ReactNode} The Component containing the Form that the user should fill in.
  */
-const ContactUsForm: React.FC<any> = () => {
+const ContactUsForm: React.FC<any> = (): React.ReactNode => {
     // Use to set the "loading" props for the button
     const [isLoading, setIsLoading] = useState<boolean>(false);
     // The session token of the Captcha

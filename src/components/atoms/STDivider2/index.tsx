@@ -7,7 +7,7 @@ import { STDivider2Props } from "./props";
  *
  * @returns {React.ReactNode} The Component for a Divider Ver 2.
  */
-const STDivider2: React.FC<STDivider2Props> = (props: STDivider2Props) => {
+const STDivider2: React.FC<STDivider2Props> = (props: STDivider2Props): React.ReactNode => {
     const { boxProps, leftLineProps, rightLineProps } = props;
 
     return (

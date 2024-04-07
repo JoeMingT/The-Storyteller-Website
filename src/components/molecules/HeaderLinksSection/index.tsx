@@ -12,7 +12,7 @@ import { Stack } from "@chakra-ui/react";
  * @param {HeaderLinksSectionProps} props Properties for the component. `onClose` function is important for Mobile Header (for closing ChakraUI drawer)
  * @returns {React.ReactNode} The entire section of text in Header that redirect users
  */
-const HeaderLinksSection: React.FC<HeaderLinksSectionProps> = (props) => {
+const HeaderLinksSection: React.FC<HeaderLinksSectionProps> = (props: HeaderLinksSectionProps): React.ReactNode => {
     const { onClose, ...stackProps } = props;
     return (
         <Stack

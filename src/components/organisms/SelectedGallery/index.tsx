@@ -11,7 +11,7 @@ import { SelectedGalleryProps } from "./props";
  * @param {SelectedGalleryProps} props The props containing the selected gallery data fetch from backend
  * @returns {React.ReactNode} The rendered Selected Gallery component
  */
-const SelectedGallery: React.FC<SelectedGalleryProps> = (props) => {
+const SelectedGallery: React.FC<SelectedGalleryProps> = (props: SelectedGalleryProps): React.ReactNode => {
     const { selectedGalleryData } = props;
     const { name, venue, clients, photographers, images } = selectedGalleryData;
 

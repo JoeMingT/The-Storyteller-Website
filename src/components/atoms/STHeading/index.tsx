@@ -8,7 +8,7 @@ import { Heading } from "@chakra-ui/react";
  * @param {STHeadingProps} props Properties for the component
  * @returns {React.ReactNode} The Heading text component
  */
-const STHeading: React.FC<STHeadingProps> = (props) => {
+const STHeading: React.FC<STHeadingProps> = (props: STHeadingProps): React.ReactNode => {
     const { children, ...headingProps } = props;
 
     return (

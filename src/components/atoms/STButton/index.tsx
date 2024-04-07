@@ -18,7 +18,7 @@ function renderColor(color: string | undefined, type: string): string {
  * @param {STButtonProps} props Properties for the component
  * @returns {React.ReactNode} The Button component
  */
-const STButton: React.FC<STButtonProps> = (props) => {
+const STButton: React.FC<STButtonProps> = (props: STButtonProps): React.ReactNode => {
     const { children, primaryColor, secondaryColor, ...buttonProps } = props;
 
     return (

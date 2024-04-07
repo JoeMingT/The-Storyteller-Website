@@ -29,7 +29,7 @@ import { DisplayGalleriesProps } from "./props";
  * @param {DisplayGalleriesProps} props The properties for the component. All of it is mainly used for the first load of the component. Subsequent loads are fetched from backend database.
  * @returns {React.ReactNode} The rendered content of the component with pagination.
  */
-const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props) => {
+const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props: DisplayGalleriesProps): React.ReactNode => {
     const { noOfPages, initialData, itemsPerPage, initialPage } = props;
 
     const toast = useToast();

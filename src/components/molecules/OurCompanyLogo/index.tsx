@@ -8,7 +8,7 @@ import { Box } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The rendered Logo with a background color
  */
-const OurCompanyLogo: React.FC<any> = (props) => {
+const OurCompanyLogo: React.FC<any> = (): React.ReactNode => {
     return (
         <Box
             background={"secondary"}

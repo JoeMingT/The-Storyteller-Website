@@ -9,7 +9,7 @@ import { VStack } from "@chakra-ui/react";
  *
  * @returns {React.ReactNode} The Splash Component for the website
  */
-const Splash: React.FC<any> = () => {
+const Splash: React.FC<any> = (): React.ReactNode => {
     return (
         <>
             <SplashBackground />
@@ -32,9 +32,9 @@ const Splash: React.FC<any> = () => {
                     height=""
                 />
                 <SplashText />
-                {/* <RedirectButton href="/contact-us">
+                <RedirectButton href="/contact-us">
                     <STText>Contact Us!</STText>
-                </RedirectButton> */}
+                </RedirectButton>
             </VStack>
         </>
     );
