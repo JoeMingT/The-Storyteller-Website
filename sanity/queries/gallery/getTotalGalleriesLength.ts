@@ -1,8 +1,8 @@
 import { client } from "@StorytellerSanity/lib/client";
 import { groq } from "next-sanity";
 
-export async function getTotalGalleriesLength(): Promise<any[]> {
+export async function getTotalGalleriesLength(): Promise<any[] | null> {
     const query = `count(*[_type == "gallery"])`;
 
-    return client.fetch(groq`${query}`);
+    return client ? client.fetch(groq`${query}`) : null;
 }

@@ -5,7 +5,7 @@ import { client } from "../../lib/client";
 export async function getAllGalleriesThumbnail(
     itemsPerPage: number,
     page: number
-): Promise<ThumbnailGalleryType[]> {
+): Promise<ThumbnailGalleryType[] | null> {
     const offSet = itemsPerPage * page;
     let startIndex = offSet;
     let endIndex = startIndex + itemsPerPage;
@@ -17,5 +17,5 @@ export async function getAllGalleriesThumbnail(
         "thumbnail": thumbnail.asset->url,
     }`;
 
-    return client.fetch(groq`${query}`, { startIndex, endIndex });
+    return client ? client.fetch(groq`${query}`, { startIndex, endIndex }) : null;
 }

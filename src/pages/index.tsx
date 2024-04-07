@@ -1,3 +1,5 @@
+import { defaultAboutUsData } from "@Storyteller/data/defaultAboutUsData";
+import { defaultGalleryData } from "@Storyteller/data/defaultGalleryData";
 import { ThumbnailGalleryType } from "@Storyteller/types";
 import {
     AboutUs,
@@ -38,7 +40,9 @@ export default function Landing({
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const galleryPreviewData = await getAllGalleriesThumbnail(3, 0);
     const aboutUsPreviewText = await getAboutUsPreviewText();
-    const formattedAboutUsText = aboutUsPreviewText.preview
+    // Checking if client failed to initialized and return null. Return default data if no client initialized.
+
+    const formattedAboutUsText = aboutUsPreviewText ? aboutUsPreviewText.preview
         // loop through each block
         .map((block) => {
             // if it's not a text block with children,
@@ -51,10 +55,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             return block.children.map((child: any) => child.text).join("");
         })
         // join the paragraphs leaving split by two linebreaks
-        .join("\n\n");
+        .join("\n\n") : defaultAboutUsData.preview.body;
     return {
         props: {
-            galleryPreviewData: galleryPreviewData,
+            galleryPreviewData: galleryPreviewData ? galleryPreviewData : defaultGalleryData.slice(0,3),
             aboutUsPreviewText: formattedAboutUsText,
         },
     };

@@ -4,7 +4,7 @@ import { client } from "../../lib/client";
 
 export async function getSelectedGallery(
     slug: string
-): Promise<SelectedGalleryType[]> {
+): Promise<SelectedGalleryType[] | null> {
     // GROQ Query time
     // * Grabs everything in dataset
     // [] Filter or Query (Conditions)
@@ -20,5 +20,5 @@ export async function getSelectedGallery(
         }
     }`;
 
-    return client.fetch(groq`${query}`, { slug });
+    return client ? client.fetch(groq`${query}`, { slug }) : null;
 }

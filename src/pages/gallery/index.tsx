@@ -1,3 +1,4 @@
+import { defaultGalleryData } from "@Storyteller/data/defaultGalleryData";
 import { AllGalleries } from "@StorytellerComponents/organisms";
 import {
     getAllGalleriesThumbnail,
@@ -56,10 +57,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         initialPage
     );
 
+    // Filter to check if client is initialized
+    
+
     return {
         props: {
-            totalGalleries,
-            initialData,
+            totalGalleries: totalGalleries ? totalGalleries : defaultGalleryData.length,
+            initialData: initialData ? initialData : defaultGalleryData.slice(initialPage*9, initialPage*9 + 9),
             itemsPerPage,
             initialPage,
         },

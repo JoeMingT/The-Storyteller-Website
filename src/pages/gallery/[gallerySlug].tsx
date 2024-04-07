@@ -1,3 +1,5 @@
+
+import { defaultGalleryData } from "@Storyteller/data/defaultGalleryData";
 import { SelectedGalleryType } from "@Storyteller/types/sanity/SelectedGalleryType";
 import { SelectedGallery } from "@StorytellerComponents/organisms";
 import { getSelectedGallery } from "@StorytellerSanity/queries";
@@ -34,8 +36,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     return {
         props: {
-            selectedGalleryData,
+            selectedGalleryData: selectedGalleryData ? selectedGalleryData : defaultGalleryData.find((data) => {return data.slug == currSlug}),
         },
-        notFound: !selectedGalleryData,
+        // notFound: !selectedGalleryData,
     };
 };

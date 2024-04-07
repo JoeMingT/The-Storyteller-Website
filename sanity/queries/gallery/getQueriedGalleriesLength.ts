@@ -3,7 +3,7 @@ import { groq } from "next-sanity";
 
 export async function getQueriedGalleriesLength(
     searchQuery: string[]
-): Promise<any[]> {
+): Promise<any[] | null> {
     let matchStr = "";
     for (const word of searchQuery) {
         const filteredWord = word.replace(/\\/g, "");
@@ -25,5 +25,5 @@ export async function getQueriedGalleriesLength(
       } [score > 0]
     )`;
 
-    return client.fetch(groq`${query}`, { searchQuery });
+    return client ? client.fetch(groq`${query}`, { searchQuery }) : null;
 }

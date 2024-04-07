@@ -6,7 +6,7 @@ export async function getQueriedGalleriesThumbnail(
     itemsPerPage: number,
     page: number,
     searchQuery: string[]
-): Promise<ThumbnailGalleryType[]> {
+): Promise<ThumbnailGalleryType[] | null> {
     const offSet = itemsPerPage * page;
     let startIndex = offSet;
     let endIndex = startIndex + itemsPerPage;
@@ -32,5 +32,5 @@ export async function getQueriedGalleriesThumbnail(
       "score": _score
     } [score > 0] [$startIndex...$endIndex]`;
 
-    return client.fetch(groq`${query}`, { startIndex, endIndex });
+    return client ? client.fetch(groq`${query}`, { startIndex, endIndex }) : null;
 }
