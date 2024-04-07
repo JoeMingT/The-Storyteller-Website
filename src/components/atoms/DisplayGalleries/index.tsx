@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import ReactPagination from "react-paginate";
 
+import { defaultGalleryData } from "@Storyteller/data/defaultGalleryData";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DisplayGalleriesProps } from "./props";
@@ -197,7 +198,7 @@ const DisplayGalleries: React.FC<DisplayGalleriesProps> = (props: DisplayGalleri
                     )
                         .then((data) => {
                             // If success update the data accordingly
-                            setGalleryData(data);
+                            setGalleryData(data ? data : defaultGalleryData.slice(page.selected*9, page.selected*9+9));
                             setCurrPage(page.selected);
                             // Update the href to include a query parameter (for users who want to access it in the future)
                             router.push(
