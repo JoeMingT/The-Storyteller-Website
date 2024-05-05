@@ -36,6 +36,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 However, due to the use of Environment Variables which is private, you may not be able to access the website. If that's the case, please switch the branch to `demo-app` and run `npm run dev` there, which will load default data and images fetched from other data.
 
+If you do not want to view it, you can view the official website directly at [https://www.thestorytellerstudio.net/](https://www.thestorytellerstudio.net/)
+
 <br />
 
 ## Prerequisites
