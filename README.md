@@ -1,6 +1,6 @@
 # The-Storyteller-Website
 
-This is the source code for "The Storyteller by Joe" website. Comissioned by Tham Joe Ping, website created and maintained by Tham Joe Ming.
+This is the source code for "The Storyteller Studio Malaysia" website. Comissioned by Tham Joe Ping, website created and maintained by Tham Joe Ming.
 This ReadMe document will contain the information regarding the source code itself such as setting up and running the application, what is the packages used, what is the third party services used and so on.
 
 <br />
