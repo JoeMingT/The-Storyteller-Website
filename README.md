@@ -66,6 +66,16 @@ git switch demo-app
 
 ## Screenshots and Demo Video
 
+### Demo Video (Website View)
+
+https://github.com/user-attachments/assets/92bddf20-55fd-4aba-9ce6-5c5b81c2ca8c
+
+### Demo Video (Mobile View)
+
+https://github.com/user-attachments/assets/efe7281b-0310-4d04-a1f8-f0d428b2e577
+
+### Screenshots
+
 ![Home Page Screenshot](./samples/Home.png)
 ![About Page Screenshot](./samples/About.png)
 ![Gallery Page Screenshot](./samples/Gallery.png)
