@@ -2,9 +2,9 @@ import { SelectedGalleryModal } from "@StorytellerComponents/molecules";
 import { SelectedGalleryContentProps } from "./props";
 
 import { Box, Image, useDisclosure } from "@chakra-ui/react";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 
 /**
  * The main content of a selected gallery that renders all of the images of said gallery. Essentially, it will load images in a masonry layout (a layout
@@ -20,6 +20,21 @@ const SelectedGalleryContent: React.FC<SelectedGalleryContentProps> = (
     props: SelectedGalleryContentProps
 ): React.ReactNode => {
     const { galleryName, images } = props;
+
+    const ResponsiveMasonry = dynamic(
+      () => import("react-responsive-masonry").then((mod) => mod.ResponsiveMasonry),
+      {
+        loading: () => <p>Loading...</p>,
+        ssr: false,
+      }
+    );
+    const Masonry = dynamic(
+      () => import("react-responsive-masonry").then((mod) => mod.default),
+      {
+        loading: () => <p>Loading...</p>,
+        ssr: false,
+      }
+    );
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
