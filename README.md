@@ -66,11 +66,11 @@ git switch demo-app
 
 ## Screenshots and Demo Video
 
-### Demo Video (Website View)
+### [Demo Video (Website View)](./samples/Website_View_Demo.mp4)
 
 https://github.com/user-attachments/assets/92bddf20-55fd-4aba-9ce6-5c5b81c2ca8c
 
-### Demo Video (Mobile View)
+### [Demo Video (Mobile View)](./samples/Mobile_View_Demo.mp4)
 
 https://github.com/user-attachments/assets/efe7281b-0310-4d04-a1f8-f0d428b2e577
 
