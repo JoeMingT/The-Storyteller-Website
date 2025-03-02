@@ -66,6 +66,10 @@ git switch demo-app
 
 ## Screenshots and Demo Video
 
+![Home Page Screenshot](./samples/Home.png)
+![About Page Screenshot](./samples/About.png)
+![Gallery Page Screenshot](./samples/Gallery.png)
+![Contact Us Page Screenshot](./samples/Contact_Us.png)
 
 
 ## Roadmap
